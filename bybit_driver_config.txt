@@ -1,0 +1,9 @@
+# Demo
+api_key="HJj6TpeczLQFQXUss7"
+api_secret="AwXAHSVqKXCdXH533YLVIeEudaxTKqEAw3P9"
+
+# Real
+api_key="beERCRcFrsJl19mupg"
+api_secret="e9kHWxgBwhWjVWC5U7CheH0sAWDawUVtpXUY"
+
+demo=False

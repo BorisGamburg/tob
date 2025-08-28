@@ -1,0 +1,1 @@
+python tb_bg.py --config cfg/blast_sell.cfg

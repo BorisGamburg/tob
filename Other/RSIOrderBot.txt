@@ -1,0 +1,8 @@
+symbol = "DOGEUSDT"
+rsi_threshold_high = 69
+rsi_threshold_low = 31
+interval = "5"
+check_interval = 30
+order_quantity = 1
+enable_buy_order = True
+enable_sell_order = False

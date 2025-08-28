@@ -1,0 +1,42 @@
+from pybit.unified_trading import HTTP
+import pandas as pd
+
+# Инициализация клиента Bybit
+session = HTTP(
+    testnet=False,  # Укажите True для тестовой сети
+    api_key="ВАШ_API_КЛЮЧ",  # Замените на ваш API ключ (опционально)
+    api_secret="ВАШ_API_СЕКРЕТ"  # Замените на ваш API секрет (опционально)
+)
+
+# Функция для получения всех бессрочных USDT-перпетуалов
+def get_perpetual_tokens():
+    try:
+        # Запрос списка торговых пар для категории linear (USDT-перпетуалы)
+        response = session.get_instruments_info(category="linear")
+        
+        # Проверка успешности запроса
+        if response['retCode'] == 0:
+            symbols = response['result']['list']
+            # Извлекаем только символы (торговые пары)
+            token_list = [symbol['symbol'] for symbol in symbols]
+            return token_list
+        else:
+            print(f"Ошибка API: {response['retMsg']}")
+            return []
+    except Exception as e:
+        print(f"Произошла ошибка: {e}")
+        return []
+
+# Получение списка токенов
+tokens = get_perpetual_tokens()
+
+# Вывод списка токенов
+if tokens:
+    print("Список бессрочных USDT-перпетуалов на Bybit:")
+    for token in tokens:
+        print(token)
+
+# Сохранение в DataFrame для удобства
+df = pd.DataFrame(tokens, columns=["Symbol"])
+print("\nСписок токенов в формате DataFrame:")
+print(df)

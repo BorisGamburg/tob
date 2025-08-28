@@ -1,0 +1,3 @@
+telegram_token="8190251974:AAFDd3JQ7fxAsACE4oooPCo9BI7bGo5-7oA"
+telegram_chat_id="851624075"
+
