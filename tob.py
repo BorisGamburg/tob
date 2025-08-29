@@ -38,6 +38,7 @@ class TradeOverBot:
         self.check_interval=None
         self.order_aver_down_extrem=None
         self.avdo_amount=None
+        self.debug=False
 
         self.logger = logger
         self.telegram = telegram
@@ -50,6 +51,9 @@ class TradeOverBot:
         )
         self.config_manager.load_config_to_instance()
         self.log_parameters()
+        if self.debug:
+            self.logger.setLevel(logging.DEBUG)
+            self.logger.debug("Debug mode is ON")
 
         self.order_stack = Stack()
         self.order_stack.from_string(self.order_stack_str)

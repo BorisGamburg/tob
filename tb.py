@@ -193,7 +193,7 @@ class TradingBot:
     def check_profit_taking(self, base_cond_price):
             if base_cond_price is None:
                 # Базовой цены нет => еще ничего не открыто => закрывать нечего. Выходим
-                #self.logger.info("Базовая цена не задана. Profit taking не выполняем.")
+                #self.logger.debug("Базовая цена не задана. Profit taking не выполняем.")
                 return False   
 
             # *** Проверяем достигла ли цена предыдущую позицию ***
@@ -205,13 +205,14 @@ class TradingBot:
             # *** Проверяем RSI, HA_Resvers, Price_Cond
             # Проверяем rsi
             rsi_prof_take_snapped = self.rsi_check_prof_take.rsi_snapped(self.rsi_threshold_prof_take, side=self.inverse_side())
+            self.logger.debug(f"rsi_prof_take_snapped: {rsi_prof_take_snapped}")
 
             # Если RSI пересек 50, то сбрасываем защелку
             if ((self.rsi_check_prof_take.rsi_curr > 50) and (self.side == "Sell")) or \
                ((self.rsi_check_prof_take.rsi_curr < 50) and (self.side == "Buy")):
                 self.rsi_check_prof_take.is_rsi_snapped = False
-                #self.logger.debug(f"self.rsi_check_prof_take.is_rsi_snapped сброшен")
-                #self.logger.debug(f"rsi_cur={self.rsi_check_prof_take.rsi_curr}")
+                self.logger.debug(f"self.rsi_check_prof_take.is_rsi_snapped сброшен")
+                self.logger.debug(f"rsi_cur={self.rsi_check_prof_take.rsi_curr}")
 
             # Проверяем price cond 
             price_cond_filled =  self.price_check.check_price_cond(
