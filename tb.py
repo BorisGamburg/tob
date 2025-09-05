@@ -193,10 +193,11 @@ class TradingBot:
     def check_profit_taking(self, base_cond_price):
             if base_cond_price is None:
                 # Базовой цены нет => еще ничего не открыто => закрывать нечего. Выходим
-                #self.logger.debug("Базовая цена не задана. Profit taking не выполняем.")
+                self.logger.debug("Базовая цена не задана. Profit taking не выполняем.")
                 return False   
 
             # *** Проверяем достигла ли цена предыдущую позицию ***
+            #self.logger.debug(f"stack_second_last_price: {self.stack_second_last_price}")
             if self.stack_second_last_price != None:
                 price_cur = self.bybit_driver.get_last_price(self.symbol)
                 if (price_cur < float(self.stack_second_last_price)) and (price_cur < price_cur * (1 - self.offset_prof_take)):
@@ -204,15 +205,17 @@ class TradingBot:
 
             # *** Проверяем RSI, HA_Resvers, Price_Cond
             # Проверяем rsi
+            #self.logger.debug(f"Checking profit taking conditions.")
             rsi_prof_take_snapped = self.rsi_check_prof_take.rsi_snapped(self.rsi_threshold_prof_take, side=self.inverse_side())
-            self.logger.debug(f"rsi_prof_take_snapped: {rsi_prof_take_snapped}")
+            if rsi_prof_take_snapped:   
+                self.logger.debug(f"rsi_prof_take_snapped = {rsi_prof_take_snapped}")
 
             # Если RSI пересек 50, то сбрасываем защелку
             if ((self.rsi_check_prof_take.rsi_curr > 50) and (self.side == "Sell")) or \
                ((self.rsi_check_prof_take.rsi_curr < 50) and (self.side == "Buy")):
                 self.rsi_check_prof_take.is_rsi_snapped = False
-                self.logger.debug(f"self.rsi_check_prof_take.is_rsi_snapped сброшен")
-                self.logger.debug(f"rsi_cur={self.rsi_check_prof_take.rsi_curr}")
+                #self.logger.debug(f"self.rsi_check_prof_take.is_rsi_snapped сброшен")
+                #self.logger.debug(f"rsi_cur({self.rsi_tf_prof_take})={self.rsi_check_prof_take.rsi_curr}")
 
             # Проверяем price cond 
             price_cond_filled =  self.price_check.check_price_cond(
@@ -223,6 +226,7 @@ class TradingBot:
             )
 
             # Проверяем разворот HA
+            #self.logger.debug(f"Проверяем HA Prof Take") 
             HA_reversed =  self.ha_rev_prof_take.check_HA_revers(self.inverse_side())
             if HA_reversed:
                 self.logger.debug(f"")
@@ -300,14 +304,11 @@ class TradingBot:
             self.ha_rev_prof_take._check_HA_revers()            
             self.ha_rev_aver_down._check_HA_revers()
 
-            self.ha_rev_prof_take._check_HA_revers()
-
             # Проверяем averaging down
             res_aver_down = self.check_averaging_down(base_cond_price=base_cond_price)
             if res_aver_down:
                 res = "average_down"
                 break
-
 
             # Проверяем profit taking
             if self.check_profit_taking(base_cond_price=base_cond_price):

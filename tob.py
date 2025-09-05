@@ -17,7 +17,7 @@ logging.getLogger('urllib3').setLevel(logging.WARNING)
 
 # Функция для запуска Flask-сервера
 class TradeOverBot:
-    def __init__(self, config_file_path=None, logger=None, telegram=None, shared_dict=None):
+    def __init__(self, config_tag=None, logger=None, telegram=None, shared_dict=None):
         self.api_key = None
         self.api_secret = None
         self.symbol = None
@@ -45,7 +45,7 @@ class TradeOverBot:
         self.shared_dict = shared_dict        
 
         self.config_manager = ConfigManager(
-            config_file=config_file_path, 
+            config_file="CFG/" + config_tag + ".cfg", 
             instance=self, 
             logger=self.logger
         )
@@ -198,6 +198,29 @@ class TradeOverBot:
         self.logger.info("# Интервал опроса")
         self.logger.info(f"Check Interval: {self.check_interval}")
         self.logger.info("")
+        self.logger.info("# Кол-во avdo")
+        self.logger.info(f"AvDo amount: {self.avdo_amount}")
+        self.logger.info("")
+
+def setup_logging(config_tag):
+    # Создаем основной логгер
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s-%(levelname)s-%(message)s', datefmt='%d %H:%M:%S')
+    #formatter = logging.Formatter('%(asctime)s - %(levelname)s - PID:%(process)d - %(message)s')
+
+    # Обработчик для вывода в консоль
+    ch = logging.StreamHandler()
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+
+    # Обработчик для вывода в файл
+    fh = logging.FileHandler("LOG/" + config_tag + ".log")  # Создаем обработчик для файла 'bot.log'
+    fh.setFormatter(formatter)           # Устанавливаем тот же формат
+    logger.addHandler(fh)                # Добавляем обработчик к логгеру
+
+    return logger
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run trading bot with a specified config file")
@@ -205,13 +228,7 @@ if __name__ == '__main__':
                         help='Path to the configuration file (e.g., trad_bot.txt)')
     args = parser.parse_args()
 
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - PID:%(process)d - %(message)s')
-    if not logger.handlers:
-        ch = logging.StreamHandler()
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
+    logger = setup_logging(args.config)
 
     telegram = Telegram(logger=logger)
 
@@ -219,7 +236,7 @@ if __name__ == '__main__':
         shared_dict = manager.dict()
 
         tob = TradeOverBot(
-            config_file_path=args.config, 
+            config_tag=args.config, 
             logger=logger, 
             telegram=telegram, 
             shared_dict=shared_dict
@@ -232,5 +249,4 @@ if __name__ == '__main__':
             logger.info("Получен KeyboardInterrupt. Завершение работы...")
         finally:
             tob.stop()
-            logger.info("Завершение Flask-сервера...")
             logger.info("Все процессы завершены.")

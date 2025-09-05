@@ -1,0 +1,1680 @@
+2025-08-30 16:06:56,681 - INFO - PID:64086 - # Символ
+2025-08-30 16:06:56,682 - INFO - PID:64086 - Symbol: TAUSDT
+2025-08-30 16:06:56,682 - INFO - PID:64086 - 
+2025-08-30 16:06:56,682 - INFO - PID:64086 - # Aver Down
+2025-08-30 16:06:56,682 - INFO - PID:64086 - Timeframe RSI Aver Down: 1
+2025-08-30 16:06:56,682 - INFO - PID:64086 - RSI Threshold Aver Down: 70
+2025-08-30 16:06:56,682 - INFO - PID:64086 - Timeframe HA Aver Down: 1
+2025-08-30 16:06:56,682 - INFO - PID:64086 - offset_aver_down=0.03
+2025-08-30 16:06:56,682 - INFO - PID:64086 - 
+2025-08-30 16:06:56,682 - INFO - PID:64086 - Prof Take
+2025-08-30 16:06:56,683 - INFO - PID:64086 - Timeframe RSI Prof Take: 1
+2025-08-30 16:06:56,683 - INFO - PID:64086 - RSI Threshold Profit Take: 30
+2025-08-30 16:06:56,683 - INFO - PID:64086 - Timeframe HA Prof Take: 1
+2025-08-30 16:06:56,683 - INFO - PID:64086 - offset_prof_take=0.03
+2025-08-30 16:06:56,683 - INFO - PID:64086 - 
+2025-08-30 16:06:56,684 - INFO - PID:64086 - # Рыночный ордер
+2025-08-30 16:06:56,684 - INFO - PID:64086 - Side: Sell
+2025-08-30 16:06:56,684 - INFO - PID:64086 - Position Index: 1
+2025-08-30 16:06:56,684 - INFO - PID:64086 - Quantity: 1
+2025-08-30 16:06:56,685 - INFO - PID:64086 - 
+2025-08-30 16:06:56,685 - INFO - PID:64086 - # Стек строка
+2025-08-30 16:06:56,685 - INFO - PID:64086 - order_stack_str: [(0.12935, 1)]
+2025-08-30 16:06:56,685 - INFO - PID:64086 - 
+2025-08-30 16:06:56,685 - INFO - PID:64086 - # Интервал опроса
+2025-08-30 16:06:56,686 - INFO - PID:64086 - Check Interval: 15
+2025-08-30 16:06:56,686 - INFO - PID:64086 - 
+2025-08-30 16:06:56,686 - DEBUG - PID:64086 - Debug mode is ON
+2025-08-30 16:06:56,687 - INFO - PID:64086 - Стек установлен из строки: '[(0.12935, 1)]'.
+2025-08-30 16:06:56,688 - DEBUG - PID:64086 - OrderManager initialized.
+2025-08-30 16:06:57,601 - INFO - PID:64086 - Запуск основного цикла TradeOverBot...
+2025-08-30 16:06:57,601 - INFO - PID:64086 - 
+2025-08-30 16:06:57,601 - INFO - PID:64086 - Iteration 1
+2025-08-30 16:06:57,601 - DEBUG - PID:64086 - Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+2025-08-30 16:10:11,393 - DEBUG - PID:64086 - ----- NEW SIGNAL -----
+2025-08-30 16:10:11,394 - DEBUG - PID:64086 - Time: 2025-08-30 14:10:00
+2025-08-30 16:10:11,394 - DEBUG - PID:64086 - Type: Buy
+2025-08-30 16:10:11,394 - DEBUG - PID:64086 - Price: 0.131
+2025-08-30 16:10:11,394 - DEBUG - PID:64086 - Description: Heikin Ashi Bullish Reversal (Buy Signal)
+2025-08-30 16:10:11,394 - DEBUG - PID:64086 - -------------------------
+2025-08-30 16:10:12,112 - DEBUG - PID:64086 - ----- NEW SIGNAL -----
+2025-08-30 16:10:12,112 - DEBUG - PID:64086 - Time: 2025-08-30 14:10:00
+2025-08-30 16:10:12,112 - DEBUG - PID:64086 - Type: Buy
+2025-08-30 16:10:12,112 - DEBUG - PID:64086 - Price: 0.131
+2025-08-30 16:10:12,112 - DEBUG - PID:64086 - Description: Heikin Ashi Bullish Reversal (Buy Signal)
+2025-08-30 16:10:12,112 - DEBUG - PID:64086 - -------------------------
+2025-08-30 16:10:13,478 - DEBUG - PID:64086 - 
+2025-08-30 16:10:13,479 - DEBUG - PID:64086 - Checking profit taking.
+2025-08-30 16:10:13,479 - DEBUG - PID:64086 - HA Prof Take развернулся. TF=1
+2025-08-30 16:10:13,479 - DEBUG - PID:64086 - rsi_prof_take_snapped: False
+2025-08-30 16:10:13,479 - DEBUG - PID:64086 - price_cond_filled: False
+2025-08-30 16:10:13,479 - DEBUG - PID:64086 - Price condition: < 0.1254002
+2025-08-30 16:20:06,171 - DEBUG - PID:64086 - ----- NEW SIGNAL -----
+2025-08-30 16:20:06,171 - DEBUG - PID:64086 - Time: 2025-08-30 14:20:00
+2025-08-30 16:20:06,171 - DEBUG - PID:64086 - Type: Sell
+2025-08-30 16:20:06,172 - DEBUG - PID:64086 - Price: 0.133
+2025-08-30 16:20:06,172 - DEBUG - PID:64086 - Description: Heikin Ashi Bearish Reversal (Sell Signal)
+2025-08-30 16:20:06,172 - DEBUG - PID:64086 - -------------------------
+2025-08-30 16:20:07,048 - DEBUG - PID:64086 - ----- NEW SIGNAL -----
+2025-08-30 16:20:07,048 - DEBUG - PID:64086 - Time: 2025-08-30 14:20:00
+2025-08-30 16:20:07,048 - DEBUG - PID:64086 - Type: Sell
+2025-08-30 16:20:07,048 - DEBUG - PID:64086 - Price: 0.133
+2025-08-30 16:20:07,048 - DEBUG - PID:64086 - Description: Heikin Ashi Bearish Reversal (Sell Signal)
+2025-08-30 16:20:07,048 - DEBUG - PID:64086 - -------------------------
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - 
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - check_averaging_down
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - rsi_aver_down_snapped: False
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - price_cond_filled: False
+2025-08-30 16:20:07,886 - DEBUG - PID:64086 - Price condition: > 0.1333436
+2025-08-30 16:21:01,300 - DEBUG - PID:64086 - ----- NEW SIGNAL -----
+2025-08-30 16:21:01,300 - DEBUG - PID:64086 - Time: 2025-08-30 14:21:00
+2025-08-30 16:21:01,300 - DEBUG - PID:64086 - Type: Buy
+2025-08-30 16:21:01,300 - DEBUG - PID:64086 - Price: 0.133
+2025-08-30 16:21:01,300 - DEBUG - PID:64086 - Description: Heikin Ashi Bullish Reversal (Buy Signal)
+2025-08-30 16:21:01,300 - DEBUG - PID:64086 - -------------------------
+2025-08-30 16:21:18,392 - DEBUG - PID:64086 - ----- NEW SIGNAL -----
+2025-08-30 16:21:18,392 - DEBUG - PID:64086 - Time: 2025-08-30 14:21:00
+2025-08-30 16:21:18,392 - DEBUG - PID:64086 - Type: Buy
+2025-08-30 16:21:18,392 - DEBUG - PID:64086 - Price: 0.133
+2025-08-30 16:21:18,392 - DEBUG - PID:64086 - Description: Heikin Ashi Bullish Reversal (Buy Signal)
+2025-08-30 16:21:18,392 - DEBUG - PID:64086 - -------------------------
+2025-08-30 16:21:20,094 - DEBUG - PID:64086 - 
+2025-08-30 16:21:20,095 - DEBUG - PID:64086 - Checking profit taking.
+2025-08-30 16:21:20,095 - DEBUG - PID:64086 - HA Prof Take развернулся. TF=1
+2025-08-30 16:21:20,095 - DEBUG - PID:64086 - rsi_prof_take_snapped: False
+2025-08-30 16:21:20,095 - DEBUG - PID:64086 - price_cond_filled: False
+2025-08-30 16:21:20,095 - DEBUG - PID:64086 - Price condition: < 0.1253378
+2025-08-30 16:23:59,273 - INFO - PID:64086 - Получен KeyboardInterrupt. Завершение работы...
+2025-08-30 16:23:59,274 - INFO - PID:64086 - Параметр order_stack_str успешно установлен в значение [(0.12935, 1)]
+2025-08-30 16:23:59,274 - INFO - PID:64086 - Все процессы завершены.
+2025-08-30 16:24:03,123 - INFO - PID:64824 - # Символ
+2025-08-30 16:24:03,124 - INFO - PID:64824 - Symbol: TAUSDT
+2025-08-30 16:24:03,124 - INFO - PID:64824 - 
+2025-08-30 16:24:03,124 - INFO - PID:64824 - # Aver Down
+2025-08-30 16:24:03,124 - INFO - PID:64824 - Timeframe RSI Aver Down: 1
+2025-08-30 16:24:03,124 - INFO - PID:64824 - RSI Threshold Aver Down: 70
+2025-08-30 16:24:03,124 - INFO - PID:64824 - Timeframe HA Aver Down: 1
+2025-08-30 16:24:03,124 - INFO - PID:64824 - offset_aver_down=0.03
+2025-08-30 16:24:03,125 - INFO - PID:64824 - 
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Prof Take
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Timeframe RSI Prof Take: 1
+2025-08-30 16:24:03,125 - INFO - PID:64824 - RSI Threshold Profit Take: 30
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Timeframe HA Prof Take: 1
+2025-08-30 16:24:03,125 - INFO - PID:64824 - offset_prof_take=0.03
+2025-08-30 16:24:03,125 - INFO - PID:64824 - 
+2025-08-30 16:24:03,125 - INFO - PID:64824 - # Рыночный ордер
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Side: Sell
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Position Index: 1
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Quantity: 1
+2025-08-30 16:24:03,125 - INFO - PID:64824 - 
+2025-08-30 16:24:03,125 - INFO - PID:64824 - # Стек строка
+2025-08-30 16:24:03,125 - INFO - PID:64824 - order_stack_str: [(0.12935, 1)]
+2025-08-30 16:24:03,125 - INFO - PID:64824 - 
+2025-08-30 16:24:03,125 - INFO - PID:64824 - # Интервал опроса
+2025-08-30 16:24:03,125 - INFO - PID:64824 - Check Interval: 15
+2025-08-30 16:24:03,125 - INFO - PID:64824 - 
+2025-08-30 16:24:03,125 - DEBUG - PID:64824 - Debug mode is ON
+2025-08-30 16:24:03,126 - INFO - PID:64824 - Стек установлен из строки: '[(0.12935, 1)]'.
+2025-08-30 16:24:03,127 - DEBUG - PID:64824 - OrderManager initialized.
+2025-08-30 16:24:03,961 - INFO - PID:64824 - Запуск основного цикла TradeOverBot...
+2025-08-30 16:24:03,962 - INFO - PID:64824 - 
+2025-08-30 16:24:03,962 - INFO - PID:64824 - Iteration 1
+2025-08-30 16:24:03,962 - DEBUG - PID:64824 - Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+2025-08-30 16:26:08,982 - DEBUG - PID:64824 - 
+2025-08-30 16:26:08,983 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 16:26:08,983 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 16:26:08,983 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 16:26:08,983 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 16:26:08,983 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:26:08,984 - DEBUG - PID:64824 - Price condition: > 0.13334179999999998
+2025-08-30 16:28:13,288 - DEBUG - PID:64824 - 
+2025-08-30 16:28:13,288 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 16:28:13,289 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 16:28:13,289 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 16:28:13,289 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:28:13,289 - DEBUG - PID:64824 - Price condition: < 0.1253549
+2025-08-30 16:37:14,591 - DEBUG - PID:64824 - 
+2025-08-30 16:37:14,592 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 16:37:14,592 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 16:37:14,592 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 16:37:14,592 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 16:37:14,592 - DEBUG - PID:64824 - price_cond_filled: True
+2025-08-30 16:37:14,592 - DEBUG - PID:64824 - Price condition: > 0.1333604
+2025-08-30 16:43:05,170 - DEBUG - PID:64824 - TAUSDT: RSI 80.86513008038568 больше порога 70
+2025-08-30 16:43:05,170 - DEBUG - PID:64824 - rsi_snapped. Sell TF=1
+2025-08-30 16:43:06,361 - DEBUG - PID:64824 - 
+2025-08-30 16:43:06,361 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 16:43:06,361 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 16:43:06,361 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 16:43:06,361 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:43:06,362 - DEBUG - PID:64824 - Price condition: < 0.1250981
+2025-08-30 16:47:11,775 - DEBUG - PID:64824 - 
+2025-08-30 16:47:11,776 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 16:47:11,776 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 16:47:11,776 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 16:47:11,776 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 16:47:11,776 - DEBUG - PID:64824 - price_cond_filled: True
+2025-08-30 16:47:11,776 - DEBUG - PID:64824 - Price condition: > 0.13581922089590406
+2025-08-30 16:47:11,944 - DEBUG - PID:64824 - Попытка открыть Sell позицию размером 1 (position_idx=1)
+2025-08-30 16:47:12,130 - DEBUG - PID:64824 - Ответ на рыночный ордер Sell: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '9a7265a3-76a4-4662-bb1b-8d1f58e150ca', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1756565232047}
+2025-08-30 16:47:12,130 - INFO - PID:64824 - Элемент добавлен в стек: (0.14006, 1). Текущий размер стека: 2
+2025-08-30 16:47:12,130 - INFO - PID:64824 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14006
+Стек: [(0.12935, 1), (0.14006, 1)]
+2025-08-30 16:47:12,230 - INFO - PID:64824 - 
+2025-08-30 16:47:12,230 - INFO - PID:64824 - Iteration 2
+2025-08-30 16:47:12,402 - INFO - PID:64824 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12935
+2025-08-30 16:48:07,050 - DEBUG - PID:64824 - 
+2025-08-30 16:48:07,050 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 16:48:07,050 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 16:48:07,050 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 16:48:07,050 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:48:07,050 - DEBUG - PID:64824 - Price condition: < 0.1332856235711323
+2025-08-30 16:51:18,748 - DEBUG - PID:64824 - 
+2025-08-30 16:51:18,748 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 16:51:18,749 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 16:51:18,749 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 16:51:18,749 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 16:51:18,749 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:51:18,749 - DEBUG - PID:64824 - Price condition: > 0.14729873497235532
+2025-08-30 16:51:53,168 - DEBUG - PID:64824 - TAUSDT: RSI 73.54495730931554 больше порога 70
+2025-08-30 16:51:53,168 - DEBUG - PID:64824 - rsi_snapped. Sell TF=1
+2025-08-30 16:52:13,939 - DEBUG - PID:64824 - 
+2025-08-30 16:52:13,940 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 16:52:13,940 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 16:52:13,940 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 16:52:13,940 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:52:13,940 - DEBUG - PID:64824 - Price condition: < 0.13209666878749854
+2025-08-30 16:56:04,471 - DEBUG - PID:64824 - 
+2025-08-30 16:56:04,471 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 16:56:04,471 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 16:56:04,471 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 16:56:04,471 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 16:56:04,472 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:56:04,472 - DEBUG - PID:64824 - Price condition: > 0.14875407867459248
+2025-08-30 16:57:15,744 - DEBUG - PID:64824 - 
+2025-08-30 16:57:15,744 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 16:57:15,744 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 16:57:15,744 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 16:57:15,745 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 16:57:15,745 - DEBUG - PID:64824 - Price condition: < 0.13151614723909613
+2025-08-30 17:02:14,902 - DEBUG - PID:64824 - 
+2025-08-30 17:02:14,902 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:02:14,902 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:02:14,902 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:02:14,903 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 17:02:14,903 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:02:14,903 - DEBUG - PID:64824 - Price condition: > 0.1443188
+2025-08-30 17:06:06,437 - DEBUG - PID:64824 - 
+2025-08-30 17:06:06,438 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:06:06,438 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:06:06,438 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:06:06,438 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:06:06,438 - DEBUG - PID:64824 - Price condition: < 0.1357823
+2025-08-30 17:08:09,458 - DEBUG - PID:64824 - 
+2025-08-30 17:08:09,459 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:08:09,459 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:08:09,459 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:08:09,459 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 17:08:09,459 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:08:09,459 - DEBUG - PID:64824 - Price condition: > 0.14428339999999998
+2025-08-30 17:11:07,306 - DEBUG - PID:64824 - 
+2025-08-30 17:11:07,306 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:11:07,306 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:11:07,306 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:11:07,306 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:11:07,306 - DEBUG - PID:64824 - Price condition: < 0.13581949999999998
+2025-08-30 17:16:07,480 - DEBUG - PID:64824 - 
+2025-08-30 17:16:07,480 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:16:07,480 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:16:07,480 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:16:07,480 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 17:16:07,480 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:16:07,481 - DEBUG - PID:64824 - Price condition: > 0.1443002
+2025-08-30 17:18:12,315 - DEBUG - PID:64824 - 
+2025-08-30 17:18:12,316 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:18:12,316 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:18:12,316 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:18:12,316 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:18:12,316 - DEBUG - PID:64824 - Price condition: < 0.13579429999999998
+2025-08-30 17:19:56,539 - DEBUG - PID:64824 - TAUSDT: RSI 77.9584391193421 больше порога 70
+2025-08-30 17:19:56,539 - DEBUG - PID:64824 - rsi_snapped. Sell TF=1
+2025-08-30 17:26:13,353 - DEBUG - PID:64824 - 
+2025-08-30 17:26:13,353 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:26:13,353 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:26:13,353 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:26:13,353 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 17:26:13,354 - DEBUG - PID:64824 - price_cond_filled: True
+2025-08-30 17:26:13,354 - DEBUG - PID:64824 - Price condition: > 0.15472893124941237
+2025-08-30 17:26:13,354 - DEBUG - PID:64824 - Попытка отменить ордер 3271e6d5-8d0f-45e1-bb6d-0b772d18bd48, symbol=TAUSDT
+2025-08-30 17:26:13,523 - INFO - PID:64824 - order_prof_take_lim удален
+2025-08-30 17:26:13,690 - DEBUG - PID:64824 - Попытка открыть Sell позицию размером 1 (position_idx=1)
+2025-08-30 17:26:13,860 - DEBUG - PID:64824 - Ответ на рыночный ордер Sell: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': 'a802ceff-6a61-4bb0-9124-24dc34ca7910', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1756567573777}
+2025-08-30 17:26:13,861 - INFO - PID:64824 - Элемент добавлен в стек: (0.15663, 1). Текущий размер стека: 3
+2025-08-30 17:26:13,861 - INFO - PID:64824 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.15663
+Стек: [(0.12935, 1), (0.14006, 1), (0.15663, 1)]
+2025-08-30 17:26:13,972 - INFO - PID:64824 - 
+2025-08-30 17:26:13,973 - INFO - PID:64824 - Iteration 3
+2025-08-30 17:26:14,142 - INFO - PID:64824 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14006
+2025-08-30 17:26:15,160 - DEBUG - PID:64824 - TAUSDT: RSI 72.65738439367041 больше порога 70
+2025-08-30 17:26:15,160 - DEBUG - PID:64824 - rsi_snapped. Sell TF=1
+2025-08-30 17:27:10,231 - DEBUG - PID:64824 - 
+2025-08-30 17:27:10,231 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:27:10,231 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:27:10,231 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:27:10,231 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:27:10,231 - DEBUG - PID:64824 - Price condition: < 0.14154304855181066
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - 
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:29:12,942 - DEBUG - PID:64824 - Price condition: > 0.17153042210811434
+2025-08-30 17:34:14,166 - DEBUG - PID:64824 - 
+2025-08-30 17:34:14,166 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:34:14,167 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:34:14,167 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:34:14,167 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:34:14,167 - DEBUG - PID:64824 - Price condition: < 0.1446326721725196
+2025-08-30 17:37:10,407 - DEBUG - PID:64824 - 
+2025-08-30 17:37:10,407 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:37:10,408 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:37:10,408 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:37:10,408 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 17:37:10,408 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:37:10,408 - DEBUG - PID:64824 - Price condition: > 0.16290297784150165
+2025-08-30 17:40:08,324 - DEBUG - PID:64824 - 
+2025-08-30 17:40:08,324 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:40:08,324 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:40:08,325 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:40:08,325 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:40:08,325 - DEBUG - PID:64824 - Price condition: < 0.1518936
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - 
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:44:15,156 - DEBUG - PID:64824 - Price condition: > 0.16136309999999998
+2025-08-30 17:49:16,531 - DEBUG - PID:64824 - 
+2025-08-30 17:49:16,532 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:49:16,532 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:49:16,532 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:49:16,532 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:49:16,532 - DEBUG - PID:64824 - Price condition: < 0.1518873
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - 
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:51:02,055 - DEBUG - PID:64824 - Price condition: > 0.161316
+2025-08-30 17:54:17,670 - DEBUG - PID:64824 - 
+2025-08-30 17:54:17,670 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:54:17,670 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:54:17,670 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:54:17,670 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:54:17,670 - DEBUG - PID:64824 - Price condition: < 0.15188549999999998
+2025-08-30 17:56:01,472 - DEBUG - PID:64824 - 
+2025-08-30 17:56:01,473 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 17:56:01,473 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 17:56:01,473 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 17:56:01,473 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 17:56:01,473 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:56:01,474 - DEBUG - PID:64824 - Price condition: > 0.16132169999999998
+2025-08-30 17:58:06,518 - DEBUG - PID:64824 - 
+2025-08-30 17:58:06,518 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 17:58:06,518 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 17:58:06,518 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 17:58:06,518 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 17:58:06,518 - DEBUG - PID:64824 - Price condition: < 0.1518993
+2025-08-30 18:02:11,485 - DEBUG - PID:64824 - 
+2025-08-30 18:02:11,485 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:02:11,485 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:02:11,485 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:02:11,486 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:02:11,486 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:02:11,486 - DEBUG - PID:64824 - Price condition: > 0.1613154
+2025-08-30 18:12:13,162 - DEBUG - PID:64824 - 
+2025-08-30 18:12:13,162 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:12:13,163 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:12:13,163 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:12:13,163 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:12:13,163 - DEBUG - PID:64824 - Price condition: < 0.15131076358863702
+2025-08-30 18:21:04,806 - DEBUG - PID:64824 - 
+2025-08-30 18:21:04,807 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:21:04,807 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:21:04,807 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:21:04,807 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:21:04,807 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:21:04,807 - DEBUG - PID:64824 - Price condition: > 0.161747713845065
+2025-08-30 18:23:09,785 - DEBUG - PID:64824 - 
+2025-08-30 18:23:09,785 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:23:09,785 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:23:09,785 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:23:09,785 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:23:09,786 - DEBUG - PID:64824 - Price condition: < 0.15151521642686902
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - 
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:28:08,806 - DEBUG - PID:64824 - Price condition: > 0.16133789999999998
+2025-08-30 18:32:17,587 - DEBUG - PID:64824 - 
+2025-08-30 18:32:17,588 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:32:17,588 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:32:17,588 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:32:17,588 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:32:17,588 - DEBUG - PID:64824 - Price condition: < 0.15188849999999998
+2025-08-30 18:35:14,505 - DEBUG - PID:64824 - 
+2025-08-30 18:35:14,505 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:35:14,505 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:35:14,505 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:35:14,505 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:35:14,506 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:35:14,506 - DEBUG - PID:64824 - Price condition: > 0.1613364
+2025-08-30 18:37:18,838 - DEBUG - PID:64824 - 
+2025-08-30 18:37:18,839 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:37:18,839 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:37:18,839 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:37:18,839 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:37:18,839 - DEBUG - PID:64824 - Price condition: < 0.1519182
+2025-08-30 18:38:11,834 - DEBUG - PID:64824 - 
+2025-08-30 18:38:11,834 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:38:11,834 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:38:11,834 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:38:11,834 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:38:11,835 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:38:11,835 - DEBUG - PID:64824 - Price condition: > 0.1613484
+2025-08-30 18:40:16,358 - DEBUG - PID:64824 - 
+2025-08-30 18:40:16,358 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:40:16,359 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:40:16,359 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:40:16,359 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:40:16,359 - DEBUG - PID:64824 - Price condition: < 0.1519113
+2025-08-30 18:45:17,848 - DEBUG - PID:64824 - 
+2025-08-30 18:45:17,849 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:45:17,849 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:45:17,849 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:45:17,849 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:45:17,849 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:45:17,849 - DEBUG - PID:64824 - Price condition: > 0.1613808
+2025-08-30 18:48:18,546 - DEBUG - PID:64824 - 
+2025-08-30 18:48:18,547 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:48:18,547 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:48:18,547 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:48:18,547 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:48:18,547 - DEBUG - PID:64824 - Price condition: < 0.1518582
+2025-08-30 18:50:03,838 - DEBUG - PID:64824 - 
+2025-08-30 18:50:03,839 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:50:03,839 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:50:03,839 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:50:03,839 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:50:03,839 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:50:03,839 - DEBUG - PID:64824 - Price condition: > 0.16135919999999998
+2025-08-30 18:52:08,621 - DEBUG - PID:64824 - 
+2025-08-30 18:52:08,622 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:52:08,622 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:52:08,622 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:52:08,622 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:52:08,622 - DEBUG - PID:64824 - Price condition: < 0.1518882
+2025-08-30 18:54:09,888 - DEBUG - PID:64824 - 
+2025-08-30 18:54:09,888 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:54:09,888 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:54:09,888 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:54:09,888 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:54:09,889 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:54:09,889 - DEBUG - PID:64824 - Price condition: > 0.1613481
+2025-08-30 18:56:14,186 - DEBUG - PID:64824 - 
+2025-08-30 18:56:14,186 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 18:56:14,186 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 18:56:14,186 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 18:56:14,186 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:56:14,186 - DEBUG - PID:64824 - Price condition: < 0.1519056
+2025-08-30 18:57:05,434 - DEBUG - PID:64824 - 
+2025-08-30 18:57:05,435 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 18:57:05,435 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 18:57:05,435 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 18:57:05,435 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 18:57:05,436 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 18:57:05,436 - DEBUG - PID:64824 - Price condition: > 0.16135439999999998
+2025-08-30 19:02:03,752 - DEBUG - PID:64824 - 
+2025-08-30 19:02:03,752 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:02:03,752 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:02:03,752 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:02:03,753 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:02:03,753 - DEBUG - PID:64824 - Price condition: < 0.15188459999999998
+2025-08-30 19:05:17,875 - DEBUG - PID:64824 - 
+2025-08-30 19:05:17,875 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:05:17,875 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:05:17,875 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:05:17,875 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:05:17,876 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:05:17,876 - DEBUG - PID:64824 - Price condition: > 0.1613223
+2025-08-30 19:08:17,176 - DEBUG - PID:64824 - 
+2025-08-30 19:08:17,176 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:08:17,176 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:08:17,177 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:08:17,177 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:08:17,177 - DEBUG - PID:64824 - Price condition: < 0.1519182
+2025-08-30 19:11:14,763 - DEBUG - PID:64824 - 
+2025-08-30 19:11:14,763 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:11:14,763 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:11:14,763 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:11:14,763 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:11:14,763 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:11:14,764 - DEBUG - PID:64824 - Price condition: > 0.161343
+2025-08-30 19:16:17,745 - DEBUG - PID:64824 - 
+2025-08-30 19:16:17,745 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:16:17,745 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:16:17,745 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:16:17,745 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:16:17,745 - DEBUG - PID:64824 - Price condition: < 0.15192239999999999
+2025-08-30 19:22:12,764 - DEBUG - PID:64824 - 
+2025-08-30 19:22:12,764 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:22:12,764 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:22:12,765 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:22:12,765 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:22:12,765 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:22:12,765 - DEBUG - PID:64824 - Price condition: > 0.1613454
+2025-08-30 19:24:17,507 - DEBUG - PID:64824 - 
+2025-08-30 19:24:17,507 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:24:17,507 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:24:17,507 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:24:17,507 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:24:17,507 - DEBUG - PID:64824 - Price condition: < 0.15187679999999998
+2025-08-30 19:25:10,275 - DEBUG - PID:64824 - 
+2025-08-30 19:25:10,275 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:25:10,275 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:25:10,275 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:25:10,276 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:25:10,276 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:25:10,276 - DEBUG - PID:64824 - Price condition: > 0.16133429999999999
+2025-08-30 19:29:20,332 - DEBUG - PID:64824 - 
+2025-08-30 19:29:20,332 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:29:20,332 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:29:20,332 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:29:20,332 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:29:20,332 - DEBUG - PID:64824 - Price condition: < 0.1519326
+2025-08-30 19:30:13,240 - DEBUG - PID:64824 - 
+2025-08-30 19:30:13,241 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:30:13,241 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:30:13,241 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:30:13,241 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:30:13,241 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:30:13,241 - DEBUG - PID:64824 - Price condition: > 0.1613181
+2025-08-30 19:31:06,447 - DEBUG - PID:64824 - 
+2025-08-30 19:31:06,448 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:31:06,448 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:31:06,448 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:31:06,448 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:31:06,448 - DEBUG - PID:64824 - Price condition: < 0.15192119999999998
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - 
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:35:17,009 - DEBUG - PID:64824 - Price condition: > 0.1613637
+2025-08-30 19:36:10,611 - DEBUG - PID:64824 - 
+2025-08-30 19:36:10,612 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:36:10,612 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:36:10,612 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:36:10,612 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:36:10,612 - DEBUG - PID:64824 - Price condition: < 0.151896
+2025-08-30 19:39:06,792 - DEBUG - PID:64824 - 
+2025-08-30 19:39:06,793 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:39:06,793 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:39:06,793 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:39:06,793 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:39:06,793 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:39:06,793 - DEBUG - PID:64824 - Price condition: > 0.1613547
+2025-08-30 19:48:05,499 - DEBUG - PID:64824 - 
+2025-08-30 19:48:05,499 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:48:05,499 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:48:05,499 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:48:05,500 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:48:05,500 - DEBUG - PID:64824 - Price condition: < 0.1519161
+2025-08-30 19:51:06,529 - DEBUG - PID:64824 - 
+2025-08-30 19:51:06,530 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 19:51:06,530 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 19:51:06,530 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 19:51:06,530 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 19:51:06,530 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:51:06,530 - DEBUG - PID:64824 - Price condition: > 0.16132439999999998
+2025-08-30 19:57:09,372 - DEBUG - PID:64824 - 
+2025-08-30 19:57:09,372 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 19:57:09,373 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 19:57:09,373 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 19:57:09,373 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 19:57:09,373 - DEBUG - PID:64824 - Price condition: < 0.15194639999999998
+2025-08-30 20:00:06,999 - DEBUG - PID:64824 - 
+2025-08-30 20:00:07,000 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:00:07,000 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:00:07,000 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:00:07,000 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:00:07,000 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:00:07,000 - DEBUG - PID:64824 - Price condition: > 0.1613028
+2025-08-30 20:01:19,080 - DEBUG - PID:64824 - 
+2025-08-30 20:01:19,081 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:01:19,081 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:01:19,081 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:01:19,081 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:01:19,081 - DEBUG - PID:64824 - Price condition: < 0.1519488
+2025-08-30 20:08:05,076 - DEBUG - PID:64824 - 
+2025-08-30 20:08:05,076 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:08:05,076 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:08:05,076 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:08:05,076 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:08:05,077 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:08:05,077 - DEBUG - PID:64824 - Price condition: > 0.1613484
+2025-08-30 20:09:17,234 - DEBUG - PID:64824 - 
+2025-08-30 20:09:17,234 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:09:17,235 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:09:17,235 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:09:17,235 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:09:17,235 - DEBUG - PID:64824 - Price condition: < 0.1519062
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - 
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:11:05,839 - DEBUG - PID:64824 - Price condition: > 0.1613556
+2025-08-30 20:23:04,412 - DEBUG - PID:64824 - 
+2025-08-30 20:23:04,412 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:23:04,413 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:23:04,413 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:23:04,413 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:23:04,413 - DEBUG - PID:64824 - Price condition: < 0.1519458
+2025-08-30 20:25:09,092 - DEBUG - PID:64824 - 
+2025-08-30 20:25:09,093 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:25:09,093 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:25:09,093 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:25:09,093 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:25:09,093 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:25:09,093 - DEBUG - PID:64824 - Price condition: > 0.1613049
+2025-08-30 20:30:13,338 - DEBUG - PID:64824 - 
+2025-08-30 20:30:13,339 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:30:13,339 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:30:13,339 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:30:13,339 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:30:13,339 - DEBUG - PID:64824 - Price condition: < 0.1519701
+2025-08-30 20:31:06,603 - DEBUG - PID:64824 - 
+2025-08-30 20:31:06,603 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:31:06,604 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:31:06,604 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:31:06,604 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:31:06,604 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:31:06,604 - DEBUG - PID:64824 - Price condition: > 0.1612938
+2025-08-30 20:35:19,447 - DEBUG - PID:64824 - 
+2025-08-30 20:35:19,447 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:35:19,447 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:35:19,447 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:35:19,447 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:35:19,447 - DEBUG - PID:64824 - Price condition: < 0.15194939999999998
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - 
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:41:14,347 - DEBUG - PID:64824 - Price condition: > 0.16133999999999998
+2025-08-30 20:42:09,163 - DEBUG - PID:64824 - 
+2025-08-30 20:42:09,163 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:42:09,163 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:42:09,163 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:42:09,163 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:42:09,163 - DEBUG - PID:64824 - Price condition: < 0.1519293
+2025-08-30 20:43:18,505 - DEBUG - PID:64824 - 
+2025-08-30 20:43:18,505 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:43:18,505 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:43:18,505 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:43:18,505 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:43:18,506 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:43:18,506 - DEBUG - PID:64824 - Price condition: > 0.1613055
+2025-08-30 20:46:16,149 - DEBUG - PID:64824 - 
+2025-08-30 20:46:16,150 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:46:16,150 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:46:16,150 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:46:16,150 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:46:16,150 - DEBUG - PID:64824 - Price condition: < 0.1519182
+2025-08-30 20:50:07,507 - DEBUG - PID:64824 - 
+2025-08-30 20:50:07,507 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:50:07,507 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:50:07,507 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:50:07,508 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 20:50:07,508 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:50:07,508 - DEBUG - PID:64824 - Price condition: > 0.1613415
+2025-08-30 20:52:10,685 - DEBUG - PID:64824 - TAUSDT: RSI 78.49877751975967 больше порога 70
+2025-08-30 20:52:10,685 - DEBUG - PID:64824 - rsi_snapped. Sell TF=1
+2025-08-30 20:52:12,077 - DEBUG - PID:64824 - 
+2025-08-30 20:52:12,078 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 20:52:12,078 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 20:52:12,078 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 20:52:12,078 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:52:12,078 - DEBUG - PID:64824 - Price condition: < 0.1517802
+2025-08-30 20:54:15,267 - DEBUG - PID:64824 - 
+2025-08-30 20:54:15,267 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 20:54:15,267 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 20:54:15,267 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 20:54:15,267 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 20:54:15,267 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 20:54:15,268 - DEBUG - PID:64824 - Price condition: > 0.16137269999999998
+2025-08-30 21:00:47,513 - DEBUG - PID:64824 - TAUSDT: RSI 29.54646499261412 меньше порога 30
+2025-08-30 21:00:47,513 - DEBUG - PID:64824 - rsi_snapped. Buy TF=1
+2025-08-30 21:00:47,513 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:01:05,354 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:01:22,601 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:01:40,523 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:01:58,400 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:02:16,404 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:02:33,802 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:02:51,395 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:03:09,413 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:03:09,938 - DEBUG - PID:64824 - 
+2025-08-30 21:03:09,938 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:03:09,938 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:03:09,938 - DEBUG - PID:64824 - rsi_prof_take_snapped: True
+2025-08-30 21:03:09,938 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:03:09,939 - DEBUG - PID:64824 - Price condition: < 0.15200909999999998
+2025-08-30 21:03:26,718 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:03:44,914 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:04:02,949 - DEBUG - PID:64824 - 
+2025-08-30 21:04:02,949 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:04:02,949 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:04:02,950 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:04:02,950 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:04:02,950 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:04:02,950 - DEBUG - PID:64824 - Price condition: > 0.16123859999999998
+2025-08-30 21:04:03,309 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:04:20,575 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:04:38,017 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:04:55,911 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:05:13,770 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:05:31,042 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:05:49,778 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:06:08,136 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:06:08,655 - DEBUG - PID:64824 - 
+2025-08-30 21:06:08,655 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:06:08,655 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:06:08,655 - DEBUG - PID:64824 - rsi_prof_take_snapped: True
+2025-08-30 21:06:08,655 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:06:08,655 - DEBUG - PID:64824 - Price condition: < 0.1520085
+2025-08-30 21:06:25,543 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:06:42,824 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:07:00,907 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:07:19,239 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:07:36,962 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:07:54,206 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:08:11,940 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:08:29,346 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:08:47,791 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:09:05,674 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:09:22,929 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:09:40,376 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:09:58,178 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - 
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:10:15,703 - DEBUG - PID:64824 - Price condition: > 0.1612257
+2025-08-30 21:10:16,062 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:10:33,666 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:10:52,041 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:11:09,761 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:11:27,036 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:11:44,357 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:12:03,523 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:12:20,979 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:12:38,283 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:12:55,569 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - 
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:13:12,935 - DEBUG - PID:64824 - Price condition: > 0.161205
+2025-08-30 21:13:13,773 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:13:31,337 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:13:48,627 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:14:07,475 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:14:25,201 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:14:42,486 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:14:59,920 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:15:18,276 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:15:35,569 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:15:53,632 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:16:11,481 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:16:28,748 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:16:46,352 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:17:05,045 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:17:23,106 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:17:40,876 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:17:58,459 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:18:16,170 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:18:17,172 - DEBUG - PID:64824 - 
+2025-08-30 21:18:17,173 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:18:17,173 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:18:17,173 - DEBUG - PID:64824 - rsi_prof_take_snapped: True
+2025-08-30 21:18:17,173 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:18:17,173 - DEBUG - PID:64824 - Price condition: < 0.1520319
+2025-08-30 21:18:34,391 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:18:51,970 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:19:09,689 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:19:27,005 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:19:44,905 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:20:04,483 - DEBUG - PID:64824 - 
+2025-08-30 21:20:04,484 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:20:04,484 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:20:04,484 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:20:04,484 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:20:04,484 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:20:04,484 - DEBUG - PID:64824 - Price condition: > 0.16120679999999998
+2025-08-30 21:20:05,307 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:20:22,880 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:20:40,367 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:20:58,913 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:21:18,173 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:21:35,752 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:21:53,328 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:22:11,812 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:22:29,909 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:22:47,682 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:23:06,700 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:23:25,583 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:23:43,350 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:24:00,843 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:24:19,735 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:24:37,040 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:24:54,294 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:25:12,799 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:25:13,349 - DEBUG - PID:64824 - 
+2025-08-30 21:25:13,349 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:25:13,349 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:25:13,349 - DEBUG - PID:64824 - rsi_prof_take_snapped: True
+2025-08-30 21:25:13,349 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:25:13,350 - DEBUG - PID:64824 - Price condition: < 0.15206219999999998
+2025-08-30 21:25:30,100 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:25:47,831 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:26:07,590 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:26:24,883 - DEBUG - PID:64824 - rsi_prof_take_snapped = True
+2025-08-30 21:32:04,376 - DEBUG - PID:64824 - 
+2025-08-30 21:32:04,377 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:32:04,377 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:32:04,377 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:32:04,378 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:32:04,378 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:32:04,378 - DEBUG - PID:64824 - Price condition: > 0.1612506
+2025-08-30 21:41:19,810 - DEBUG - PID:64824 - 
+2025-08-30 21:41:19,810 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:41:19,810 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:41:19,810 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 21:41:19,810 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:41:19,810 - DEBUG - PID:64824 - Price condition: < 0.15201779999999998
+2025-08-30 21:50:18,114 - DEBUG - PID:64824 - 
+2025-08-30 21:50:18,114 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:50:18,114 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:50:18,114 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:50:18,115 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:50:18,115 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:50:18,115 - DEBUG - PID:64824 - Price condition: > 0.1612458
+2025-08-30 21:54:12,716 - DEBUG - PID:64824 - 
+2025-08-30 21:54:12,716 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:54:12,716 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:54:12,716 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 21:54:12,716 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:54:12,717 - DEBUG - PID:64824 - Price condition: < 0.1520124
+2025-08-30 21:57:08,267 - DEBUG - PID:64824 - 
+2025-08-30 21:57:08,267 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 21:57:08,268 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 21:57:08,268 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 21:57:08,268 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 21:57:08,268 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:57:08,268 - DEBUG - PID:64824 - Price condition: > 0.16125779999999998
+2025-08-30 21:58:19,934 - DEBUG - PID:64824 - 
+2025-08-30 21:58:19,935 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 21:58:19,935 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 21:58:19,935 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 21:58:19,935 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 21:58:19,935 - DEBUG - PID:64824 - Price condition: < 0.15200039999999998
+2025-08-30 22:02:10,734 - DEBUG - PID:64824 - 
+2025-08-30 22:02:10,734 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:02:10,734 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:02:10,734 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:02:10,735 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 22:02:10,735 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:02:10,735 - DEBUG - PID:64824 - Price condition: > 0.1612422
+2025-08-30 22:05:08,253 - DEBUG - PID:64824 - 
+2025-08-30 22:05:08,253 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:05:08,254 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:05:08,254 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:05:08,254 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:05:08,254 - DEBUG - PID:64824 - Price condition: < 0.1519962
+2025-08-30 22:05:41,872 - DEBUG - PID:64824 - TAUSDT: RSI 74.07565948504023 больше порога 70
+2025-08-30 22:05:41,872 - DEBUG - PID:64824 - rsi_snapped. Sell TF=1
+2025-08-30 22:10:07,384 - DEBUG - PID:64824 - 
+2025-08-30 22:10:07,384 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:10:07,384 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:10:07,385 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:10:07,385 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 22:10:07,385 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:10:07,385 - DEBUG - PID:64824 - Price condition: > 0.16129349999999998
+2025-08-30 22:12:12,529 - DEBUG - PID:64824 - 
+2025-08-30 22:12:12,529 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:12:12,529 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:12:12,529 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:12:12,530 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:12:12,530 - DEBUG - PID:64824 - Price condition: < 0.15195209999999998
+2025-08-30 22:17:08,342 - DEBUG - PID:64824 - 
+2025-08-30 22:17:08,343 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:17:08,343 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:17:08,343 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:17:08,343 - DEBUG - PID:64824 - rsi_aver_down_snapped: True
+2025-08-30 22:17:08,343 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:17:08,343 - DEBUG - PID:64824 - Price condition: > 0.1613181
+2025-08-30 22:20:03,614 - DEBUG - PID:64824 - 
+2025-08-30 22:20:03,615 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:20:03,615 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:20:03,616 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:20:03,616 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:20:03,616 - DEBUG - PID:64824 - Price condition: < 0.1519428
+2025-08-30 22:21:12,533 - DEBUG - PID:64824 - 
+2025-08-30 22:21:12,533 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:21:12,533 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:21:12,533 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:21:12,534 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 22:21:12,534 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:21:12,534 - DEBUG - PID:64824 - Price condition: > 0.1613067
+2025-08-30 22:24:08,646 - DEBUG - PID:64824 - 
+2025-08-30 22:24:08,647 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:24:08,647 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:24:08,647 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:24:08,647 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:24:08,647 - DEBUG - PID:64824 - Price condition: < 0.1519509
+2025-08-30 22:32:03,996 - DEBUG - PID:64824 - 
+2025-08-30 22:32:03,996 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:32:03,996 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:32:03,996 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:32:03,996 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 22:32:03,996 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:32:03,997 - DEBUG - PID:64824 - Price condition: > 0.1613562
+2025-08-30 22:36:13,220 - DEBUG - PID:64824 - 
+2025-08-30 22:36:13,220 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:36:13,220 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:36:13,221 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:36:13,221 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:36:13,221 - DEBUG - PID:64824 - Price condition: < 0.1519215
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - 
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:37:05,052 - DEBUG - PID:64824 - Price condition: > 0.1613364
+2025-08-30 22:38:16,087 - DEBUG - PID:64824 - 
+2025-08-30 22:38:16,087 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:38:16,087 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:38:16,087 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:38:16,087 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:38:16,087 - DEBUG - PID:64824 - Price condition: < 0.1519005
+2025-08-30 22:43:18,280 - DEBUG - PID:64824 - 
+2025-08-30 22:43:18,281 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:43:18,281 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:43:18,281 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:43:18,281 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 22:43:18,281 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:43:18,281 - DEBUG - PID:64824 - Price condition: > 0.1613454
+2025-08-30 22:47:09,579 - DEBUG - PID:64824 - 
+2025-08-30 22:47:09,579 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:47:09,579 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:47:09,579 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:47:09,580 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:47:09,580 - DEBUG - PID:64824 - Price condition: < 0.15190979999999998
+2025-08-30 22:57:13,746 - DEBUG - PID:64824 - 
+2025-08-30 22:57:13,746 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 22:57:13,746 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 22:57:13,746 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 22:57:13,747 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:57:13,747 - DEBUG - PID:64824 - Price condition: < 0.15196949999999998
+2025-08-30 22:59:16,448 - DEBUG - PID:64824 - 
+2025-08-30 22:59:16,448 - DEBUG - PID:64824 - check_averaging_down
+2025-08-30 22:59:16,449 - DEBUG - PID:64824 - HA Rev Aver Down развернулся. TF=1
+2025-08-30 22:59:16,449 - DEBUG - PID:64824 - HA Rev Prof Take развернулся. TF=1
+2025-08-30 22:59:16,449 - DEBUG - PID:64824 - rsi_aver_down_snapped: False
+2025-08-30 22:59:16,449 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 22:59:16,449 - DEBUG - PID:64824 - Price condition: > 0.1612833
+2025-08-30 23:02:14,076 - DEBUG - PID:64824 - 
+2025-08-30 23:02:14,076 - DEBUG - PID:64824 - Checking profit taking.
+2025-08-30 23:02:14,076 - DEBUG - PID:64824 - HA Prof Take развернулся. TF=1
+2025-08-30 23:02:14,076 - DEBUG - PID:64824 - rsi_prof_take_snapped: False
+2025-08-30 23:02:14,076 - DEBUG - PID:64824 - price_cond_filled: False
+2025-08-30 23:02:14,076 - DEBUG - PID:64824 - Price condition: < 0.1519626
+2025-08-30 23:02:55,483 - DEBUG - PID:64824 - Попытка отменить ордер 8793dca8-73cc-45ae-8043-a0dde071199b, symbol=TAUSDT
+2025-08-30 23:02:55,656 - INFO - PID:64824 - order_prof_take_lim удален
+2025-08-30 23:02:55,656 - INFO - PID:64824 - Получен KeyboardInterrupt. Завершение работы...
+2025-08-30 23:02:55,658 - INFO - PID:64824 - Параметр order_stack_str успешно установлен в значение [(0.12935, 1), (0.14006, 1), (0.15663, 1)]
+2025-08-30 23:02:55,658 - INFO - PID:64824 - Все процессы завершены.
+2025-08-30 23:03:29,860 - INFO - PID:67733 - # Символ
+2025-08-30 23:03:29,861 - INFO - PID:67733 - Symbol: TAUSDT
+2025-08-30 23:03:29,861 - INFO - PID:67733 - 
+2025-08-30 23:03:29,861 - INFO - PID:67733 - # Aver Down
+2025-08-30 23:03:29,862 - INFO - PID:67733 - Timeframe RSI Aver Down: 1
+2025-08-30 23:03:29,862 - INFO - PID:67733 - RSI Threshold Aver Down: 70
+2025-08-30 23:03:29,862 - INFO - PID:67733 - Timeframe HA Aver Down: 1
+2025-08-30 23:03:29,863 - INFO - PID:67733 - offset_aver_down=0.03
+2025-08-30 23:03:29,863 - INFO - PID:67733 - 
+2025-08-30 23:03:29,863 - INFO - PID:67733 - Prof Take
+2025-08-30 23:03:29,863 - INFO - PID:67733 - Timeframe RSI Prof Take: 1
+2025-08-30 23:03:29,863 - INFO - PID:67733 - RSI Threshold Profit Take: 30
+2025-08-30 23:03:29,863 - INFO - PID:67733 - Timeframe HA Prof Take: 1
+2025-08-30 23:03:29,863 - INFO - PID:67733 - offset_prof_take=0.03
+2025-08-30 23:03:29,863 - INFO - PID:67733 - 
+2025-08-30 23:03:29,864 - INFO - PID:67733 - # Рыночный ордер
+2025-08-30 23:03:29,864 - INFO - PID:67733 - Side: Sell
+2025-08-30 23:03:29,864 - INFO - PID:67733 - Position Index: 1
+2025-08-30 23:03:29,864 - INFO - PID:67733 - Quantity: 1
+2025-08-30 23:03:29,864 - INFO - PID:67733 - 
+2025-08-30 23:03:29,864 - INFO - PID:67733 - # Стек строка
+2025-08-30 23:03:29,864 - INFO - PID:67733 - order_stack_str: [(0.12935, 1), (0.14006, 1), (0.15663, 1)]
+2025-08-30 23:03:29,864 - INFO - PID:67733 - 
+2025-08-30 23:03:29,864 - INFO - PID:67733 - # Интервал опроса
+2025-08-30 23:03:29,865 - INFO - PID:67733 - Check Interval: 15
+2025-08-30 23:03:29,865 - INFO - PID:67733 - 
+2025-08-30 23:03:29,865 - INFO - PID:67733 - # Кол-во avdo
+2025-08-30 23:03:29,865 - INFO - PID:67733 - AvDo amount: 3
+2025-08-30 23:03:29,865 - INFO - PID:67733 - 
+2025-08-30 23:03:29,865 - INFO - PID:67733 - Стек установлен из строки: '[(0.12935, 1), (0.14006, 1), (0.15663, 1)]'.
+2025-08-30 23:03:30,885 - INFO - PID:67733 - Запуск основного цикла TradeOverBot...
+2025-08-30 23:03:30,885 - INFO - PID:67733 - 
+2025-08-30 23:03:30,885 - INFO - PID:67733 - Iteration 1
+2025-08-30 23:03:31,120 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14006
+2025-08-31 02:45:08,718 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 02:45:09,055 - INFO - PID:67733 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1473. Закрыта позиция по цене 0.15663
+Стек: [(0.12935, 1), (0.14006, 1)]
+2025-08-31 02:45:09,173 - INFO - PID:67733 - 
+2025-08-31 02:45:09,174 - INFO - PID:67733 - Iteration 2
+2025-08-31 02:45:09,344 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12935
+2025-08-31 04:20:19,655 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 04:20:19,994 - INFO - PID:67733 - Элемент добавлен в стек: (0.14936, 1). Текущий размер стека: 3
+2025-08-31 04:20:19,994 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14936
+Стек: [(0.12935, 1), (0.14006, 1), (0.14936, 1)]
+2025-08-31 04:20:20,218 - INFO - PID:67733 - 
+2025-08-31 04:20:20,218 - INFO - PID:67733 - Iteration 3
+2025-08-31 04:20:20,387 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14006
+2025-08-31 04:43:51,347 - ERROR - PID:67733 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: Connection to remote host was lost..
+2025-08-31 04:43:51,992 - ERROR - PID:67733 - Connection to remote host was lost. - goodbye
+2025-08-31 06:47:05,824 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 06:47:06,162 - INFO - PID:67733 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.14484. Закрыта позиция по цене 0.14936
+Стек: [(0.12935, 1), (0.14006, 1)]
+2025-08-31 06:47:06,298 - INFO - PID:67733 - 
+2025-08-31 06:47:06,299 - INFO - PID:67733 - Iteration 4
+2025-08-31 06:47:06,481 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12935
+2025-08-31 07:57:15,329 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 07:57:15,670 - INFO - PID:67733 - Элемент добавлен в стек: (0.14722, 1). Текущий размер стека: 3
+2025-08-31 07:57:15,671 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14722
+Стек: [(0.12935, 1), (0.14006, 1), (0.14722, 1)]
+2025-08-31 07:57:15,769 - INFO - PID:67733 - 
+2025-08-31 07:57:15,770 - INFO - PID:67733 - Iteration 5
+2025-08-31 07:57:15,942 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14006
+2025-08-31 08:05:58,926 - ERROR - PID:67733 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: Connection to remote host was lost..
+2025-08-31 08:05:59,593 - ERROR - PID:67733 - Connection to remote host was lost. - goodbye
+2025-08-31 13:38:06,436 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 13:38:06,775 - INFO - PID:67733 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.14267. Закрыта позиция по цене 0.14722
+Стек: [(0.12935, 1), (0.14006, 1)]
+2025-08-31 13:38:06,905 - INFO - PID:67733 - 
+2025-08-31 13:38:06,906 - INFO - PID:67733 - Iteration 6
+2025-08-31 13:38:07,090 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12935
+2025-08-31 14:12:07,089 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 14:12:07,443 - INFO - PID:67733 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1355. Закрыта позиция по цене 0.14006
+Стек: [(0.12935, 1)]
+2025-08-31 14:12:07,551 - INFO - PID:67733 - 
+2025-08-31 14:12:07,552 - INFO - PID:67733 - Iteration 7
+2025-08-31 14:40:14,116 - INFO - PID:67733 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.11583. Закрыта позиция по цене 0.12935
+Стек: []
+2025-08-31 14:40:14,229 - INFO - PID:67733 - 
+2025-08-31 14:40:14,230 - INFO - PID:67733 - Iteration 8
+2025-08-31 18:33:09,785 - INFO - PID:67733 - Элемент добавлен в стек: (0.09643, 1). Текущий размер стека: 1
+2025-08-31 18:33:09,785 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.09643
+Стек: [(0.09643, 1)]
+2025-08-31 18:33:09,891 - INFO - PID:67733 - 
+2025-08-31 18:33:09,892 - INFO - PID:67733 - Iteration 9
+2025-08-31 19:15:12,891 - INFO - PID:67733 - Элемент добавлен в стек: (0.10365, 1). Текущий размер стека: 2
+2025-08-31 19:15:12,892 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.10365
+Стек: [(0.09643, 1), (0.10365, 1)]
+2025-08-31 19:15:13,037 - INFO - PID:67733 - 
+2025-08-31 19:15:13,038 - INFO - PID:67733 - Iteration 10
+2025-08-31 19:15:13,233 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.09643
+2025-08-31 19:41:15,976 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 19:41:16,339 - INFO - PID:67733 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.09851. Закрыта позиция по цене 0.10365
+Стек: [(0.09643, 1)]
+2025-08-31 19:41:16,445 - INFO - PID:67733 - 
+2025-08-31 19:41:16,446 - INFO - PID:67733 - Iteration 11
+2025-08-31 20:19:02,980 - INFO - PID:67733 - Элемент добавлен в стек: (0.11182, 1). Текущий размер стека: 2
+2025-08-31 20:19:02,980 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.11182
+Стек: [(0.09643, 1), (0.11182, 1)]
+2025-08-31 20:19:03,107 - INFO - PID:67733 - 
+2025-08-31 20:19:03,108 - INFO - PID:67733 - Iteration 12
+2025-08-31 20:19:03,280 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.09643
+2025-08-31 20:45:15,814 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 20:45:16,169 - INFO - PID:67733 - Элемент добавлен в стек: (0.11825, 1). Текущий размер стека: 3
+2025-08-31 20:45:16,170 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.11825
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1)]
+2025-08-31 20:45:16,389 - INFO - PID:67733 - 
+2025-08-31 20:45:16,390 - INFO - PID:67733 - Iteration 13
+2025-08-31 20:45:16,572 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-08-31 22:54:10,322 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 22:54:10,675 - INFO - PID:67733 - Элемент добавлен в стек: (0.1231, 1). Текущий размер стека: 4
+2025-08-31 22:54:10,675 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.1231
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.1231, 1)]
+2025-08-31 22:54:10,771 - INFO - PID:67733 - 
+2025-08-31 22:54:10,772 - INFO - PID:67733 - Iteration 14
+2025-08-31 22:54:10,942 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11825
+2025-08-31 23:08:18,043 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 23:08:18,382 - INFO - PID:67733 - Элемент добавлен в стек: (0.12824, 1). Текущий размер стека: 5
+2025-08-31 23:08:18,382 - INFO - PID:67733 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.12824
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.1231, 1), (0.12824, 1)]
+2025-08-31 23:08:18,514 - INFO - PID:67733 - 
+2025-08-31 23:08:18,514 - INFO - PID:67733 - Iteration 15
+2025-08-31 23:08:18,684 - INFO - PID:67733 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.1231
+2025-08-31 23:27:08,003 - INFO - PID:67733 - order_prof_take_lim удален
+2025-08-31 23:27:08,003 - INFO - PID:67733 - Получен KeyboardInterrupt. Завершение работы...
+2025-08-31 23:27:08,008 - INFO - PID:67733 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.1231, 1), (0.12824, 1)]
+2025-08-31 23:27:08,009 - INFO - PID:67733 - Все процессы завершены.
+2025-08-31 23:27:13,549 - INFO - PID:82118 - # Символ
+2025-08-31 23:27:13,550 - INFO - PID:82118 - Symbol: TAUSDT
+2025-08-31 23:27:13,550 - INFO - PID:82118 - 
+2025-08-31 23:27:13,550 - INFO - PID:82118 - # Aver Down
+2025-08-31 23:27:13,550 - INFO - PID:82118 - Timeframe RSI Aver Down: 1
+2025-08-31 23:27:13,550 - INFO - PID:82118 - RSI Threshold Aver Down: 70
+2025-08-31 23:27:13,550 - INFO - PID:82118 - Timeframe HA Aver Down: 1
+2025-08-31 23:27:13,550 - INFO - PID:82118 - offset_aver_down=0.05
+2025-08-31 23:27:13,550 - INFO - PID:82118 - 
+2025-08-31 23:27:13,551 - INFO - PID:82118 - Prof Take
+2025-08-31 23:27:13,551 - INFO - PID:82118 - Timeframe RSI Prof Take: 1
+2025-08-31 23:27:13,551 - INFO - PID:82118 - RSI Threshold Profit Take: 30
+2025-08-31 23:27:13,551 - INFO - PID:82118 - Timeframe HA Prof Take: 1
+2025-08-31 23:27:13,551 - INFO - PID:82118 - offset_prof_take=0.05
+2025-08-31 23:27:13,551 - INFO - PID:82118 - 
+2025-08-31 23:27:13,551 - INFO - PID:82118 - # Рыночный ордер
+2025-08-31 23:27:13,552 - INFO - PID:82118 - Side: Sell
+2025-08-31 23:27:13,552 - INFO - PID:82118 - Position Index: 1
+2025-08-31 23:27:13,552 - INFO - PID:82118 - Quantity: 1
+2025-08-31 23:27:13,552 - INFO - PID:82118 - 
+2025-08-31 23:27:13,552 - INFO - PID:82118 - # Стек строка
+2025-08-31 23:27:13,552 - INFO - PID:82118 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.1231, 1), (0.12824, 1)]
+2025-08-31 23:27:13,552 - INFO - PID:82118 - 
+2025-08-31 23:27:13,553 - INFO - PID:82118 - # Интервал опроса
+2025-08-31 23:27:13,553 - INFO - PID:82118 - Check Interval: 15
+2025-08-31 23:27:13,553 - INFO - PID:82118 - 
+2025-08-31 23:27:13,553 - INFO - PID:82118 - # Кол-во avdo
+2025-08-31 23:27:13,553 - INFO - PID:82118 - AvDo amount: 3
+2025-08-31 23:27:13,553 - INFO - PID:82118 - 
+2025-08-31 23:27:13,554 - INFO - PID:82118 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.1231, 1), (0.12824, 1)]'.
+2025-08-31 23:27:14,177 - INFO - PID:82118 - Запуск основного цикла TradeOverBot...
+2025-08-31 23:27:14,177 - INFO - PID:82118 - 
+2025-08-31 23:27:14,177 - INFO - PID:82118 - Iteration 1
+2025-08-31 23:27:14,422 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.1231
+2025-08-31 23:28:24,829 - INFO - PID:82118 - Profit Take lim order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1231
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.1231, 1)]
+2025-08-31 23:28:25,044 - INFO - PID:82118 - 
+2025-08-31 23:28:25,045 - INFO - PID:82118 - Iteration 2
+2025-08-31 23:28:25,214 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11825
+2025-09-01 02:17:26,264 - INFO - PID:82118 - Profit Take lim order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.11825
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1)]
+2025-09-01 02:17:26,362 - INFO - PID:82118 - 
+2025-09-01 02:17:26,363 - INFO - PID:82118 - Iteration 3
+2025-09-01 02:17:26,532 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-01 03:23:05,981 - INFO - PID:82118 - order_prof_take_lim удален
+2025-09-01 03:23:06,322 - INFO - PID:82118 - Элемент добавлен в стек: (0.12459, 1). Текущий размер стека: 4
+2025-09-01 03:23:06,323 - INFO - PID:82118 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.12459
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1), (0.12459, 1)]
+2025-09-01 03:23:06,418 - INFO - PID:82118 - 
+2025-09-01 03:23:06,418 - INFO - PID:82118 - Iteration 4
+2025-09-01 03:23:06,599 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11825
+2025-09-01 03:54:44,922 - ERROR - PID:82118 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-01 03:54:48,685 - ERROR - PID:82118 - ping/pong timed out - goodbye
+2025-09-01 08:07:14,040 - INFO - PID:82118 - Profit Take lim order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.11825
+Стек: [(0.09643, 1), (0.11182, 1), (0.11825, 1)]
+2025-09-01 08:07:14,142 - INFO - PID:82118 - 
+2025-09-01 08:07:14,143 - INFO - PID:82118 - Iteration 5
+2025-09-01 08:07:14,328 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-02 02:00:06,035 - ERROR - PID:82118 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-02 02:00:06,035 - INFO - PID:82118 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-02 02:00:06,147 - INFO - PID:82118 - Пересоздаем клиент
+2025-09-02 07:19:14,835 - INFO - PID:82118 - Profit Take lim order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.11182
+Стек: [(0.09643, 1), (0.11182, 1)]
+2025-09-02 07:19:14,965 - INFO - PID:82118 - 
+2025-09-02 07:19:14,966 - INFO - PID:82118 - Iteration 6
+2025-09-02 07:19:15,136 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.09643
+2025-09-02 11:41:04,087 - INFO - PID:82118 - order_prof_take_lim удален
+2025-09-02 11:41:04,428 - INFO - PID:82118 - Элемент добавлен в стек: (0.14884, 1). Текущий размер стека: 3
+2025-09-02 11:41:04,429 - INFO - PID:82118 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14884
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1)]
+2025-09-02 11:41:04,688 - INFO - PID:82118 - 
+2025-09-02 11:41:04,689 - INFO - PID:82118 - Iteration 7
+2025-09-02 11:41:04,866 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-02 12:40:04,744 - INFO - PID:82118 - order_prof_take_lim удален
+2025-09-02 12:40:05,084 - INFO - PID:82118 - Элемент добавлен в стек: (0.15804, 1). Текущий размер стека: 4
+2025-09-02 12:40:05,084 - INFO - PID:82118 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.15804
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1)]
+2025-09-02 12:40:05,219 - INFO - PID:82118 - 
+2025-09-02 12:40:05,219 - INFO - PID:82118 - Iteration 8
+2025-09-02 12:40:05,390 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14884
+2025-09-02 13:33:03,717 - INFO - PID:82118 - order_prof_take_lim удален
+2025-09-02 13:33:04,069 - INFO - PID:82118 - Элемент добавлен в стек: (0.17406, 1). Текущий размер стека: 5
+2025-09-02 13:33:04,070 - INFO - PID:82118 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.17406
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1)]
+2025-09-02 13:33:04,197 - INFO - PID:82118 - 
+2025-09-02 13:33:04,198 - INFO - PID:82118 - Iteration 9
+2025-09-02 13:33:04,368 - INFO - PID:82118 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.15804
+2025-09-02 14:08:23,304 - INFO - PID:82118 - order_prof_take_lim удален
+2025-09-02 14:08:23,304 - INFO - PID:82118 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-02 14:08:23,307 - INFO - PID:82118 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1)]
+2025-09-02 14:08:23,307 - INFO - PID:82118 - Все процессы завершены.
+2025-09-02 14:08:26,108 - INFO - PID:105516 - # Символ
+2025-09-02 14:08:26,108 - INFO - PID:105516 - Symbol: TAUSDT
+2025-09-02 14:08:26,108 - INFO - PID:105516 - 
+2025-09-02 14:08:26,108 - INFO - PID:105516 - # Aver Down
+2025-09-02 14:08:26,108 - INFO - PID:105516 - Timeframe RSI Aver Down: 1
+2025-09-02 14:08:26,108 - INFO - PID:105516 - RSI Threshold Aver Down: 70
+2025-09-02 14:08:26,108 - INFO - PID:105516 - Timeframe HA Aver Down: 1
+2025-09-02 14:08:26,108 - INFO - PID:105516 - offset_aver_down=0.08
+2025-09-02 14:08:26,108 - INFO - PID:105516 - 
+2025-09-02 14:08:26,108 - INFO - PID:105516 - Prof Take
+2025-09-02 14:08:26,108 - INFO - PID:105516 - Timeframe RSI Prof Take: 1
+2025-09-02 14:08:26,108 - INFO - PID:105516 - RSI Threshold Profit Take: 30
+2025-09-02 14:08:26,108 - INFO - PID:105516 - Timeframe HA Prof Take: 1
+2025-09-02 14:08:26,109 - INFO - PID:105516 - offset_prof_take=0.08
+2025-09-02 14:08:26,109 - INFO - PID:105516 - 
+2025-09-02 14:08:26,109 - INFO - PID:105516 - # Рыночный ордер
+2025-09-02 14:08:26,109 - INFO - PID:105516 - Side: Sell
+2025-09-02 14:08:26,109 - INFO - PID:105516 - Position Index: 1
+2025-09-02 14:08:26,109 - INFO - PID:105516 - Quantity: 1
+2025-09-02 14:08:26,109 - INFO - PID:105516 - 
+2025-09-02 14:08:26,109 - INFO - PID:105516 - # Стек строка
+2025-09-02 14:08:26,109 - INFO - PID:105516 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1)]
+2025-09-02 14:08:26,109 - INFO - PID:105516 - 
+2025-09-02 14:08:26,109 - INFO - PID:105516 - # Интервал опроса
+2025-09-02 14:08:26,109 - INFO - PID:105516 - Check Interval: 15
+2025-09-02 14:08:26,109 - INFO - PID:105516 - 
+2025-09-02 14:08:26,109 - INFO - PID:105516 - # Кол-во avdo
+2025-09-02 14:08:26,109 - INFO - PID:105516 - AvDo amount: 3
+2025-09-02 14:08:26,109 - INFO - PID:105516 - 
+2025-09-02 14:08:26,110 - INFO - PID:105516 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1)]'.
+2025-09-02 14:08:26,854 - INFO - PID:105516 - Запуск основного цикла TradeOverBot...
+2025-09-02 14:08:26,855 - INFO - PID:105516 - 
+2025-09-02 14:08:26,855 - INFO - PID:105516 - Iteration 1
+2025-09-02 14:08:27,086 - INFO - PID:105516 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.15804
+2025-09-02 15:06:12,551 - INFO - PID:105516 - order_prof_take_lim удален
+2025-09-02 15:06:12,906 - INFO - PID:105516 - Элемент добавлен в стек: (0.19733, 1). Текущий размер стека: 6
+2025-09-02 15:06:12,906 - INFO - PID:105516 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.19733
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1)]
+2025-09-02 15:06:13,019 - INFO - PID:105516 - 
+2025-09-02 15:06:13,019 - INFO - PID:105516 - Iteration 2
+2025-09-02 15:06:13,189 - INFO - PID:105516 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.17406
+2025-09-02 15:28:12,191 - INFO - PID:105516 - order_prof_take_lim удален
+2025-09-02 15:28:12,530 - INFO - PID:105516 - Элемент добавлен в стек: (0.21964, 1). Текущий размер стека: 7
+2025-09-02 15:28:12,530 - INFO - PID:105516 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.21964
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1), (0.21964, 1)]
+2025-09-02 15:28:12,652 - INFO - PID:105516 - 
+2025-09-02 15:28:12,653 - INFO - PID:105516 - Iteration 3
+2025-09-02 15:28:13,143 - INFO - PID:105516 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.19733
+2025-09-02 17:00:02,065 - INFO - PID:105516 - order_prof_take_lim удален
+2025-09-02 17:00:02,408 - INFO - PID:105516 - Элемент добавлен в стек: (0.3322, 1). Текущий размер стека: 8
+2025-09-02 17:00:02,409 - INFO - PID:105516 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.3322
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1), (0.21964, 1), (0.3322, 1)]
+2025-09-02 17:00:02,528 - INFO - PID:105516 - Все итерации выполнены.
+2025-09-02 17:00:02,654 - INFO - PID:105516 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1), (0.21964, 1), (0.3322, 1)]
+2025-09-02 17:00:02,654 - INFO - PID:105516 - Все процессы завершены.
+2025-09-02 20:24:29,245 - INFO - PID:108624 - # Символ
+2025-09-02 20:24:29,246 - INFO - PID:108624 - Symbol: TAUSDT
+2025-09-02 20:24:29,246 - INFO - PID:108624 - 
+2025-09-02 20:24:29,246 - INFO - PID:108624 - # Aver Down
+2025-09-02 20:24:29,246 - INFO - PID:108624 - Timeframe RSI Aver Down: 1
+2025-09-02 20:24:29,247 - INFO - PID:108624 - RSI Threshold Aver Down: 70
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Timeframe HA Aver Down: 1
+2025-09-02 20:24:29,247 - INFO - PID:108624 - offset_aver_down=0.08
+2025-09-02 20:24:29,247 - INFO - PID:108624 - 
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Prof Take
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Timeframe RSI Prof Take: 1
+2025-09-02 20:24:29,247 - INFO - PID:108624 - RSI Threshold Profit Take: 30
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Timeframe HA Prof Take: 1
+2025-09-02 20:24:29,247 - INFO - PID:108624 - offset_prof_take=0.08
+2025-09-02 20:24:29,247 - INFO - PID:108624 - 
+2025-09-02 20:24:29,247 - INFO - PID:108624 - # Рыночный ордер
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Side: Sell
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Position Index: 1
+2025-09-02 20:24:29,247 - INFO - PID:108624 - Quantity: 1
+2025-09-02 20:24:29,247 - INFO - PID:108624 - 
+2025-09-02 20:24:29,247 - INFO - PID:108624 - # Стек строка
+2025-09-02 20:24:29,247 - INFO - PID:108624 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1), (0.21964, 1), (0.3322, 1)]
+2025-09-02 20:24:29,247 - INFO - PID:108624 - 
+2025-09-02 20:24:29,247 - INFO - PID:108624 - # Интервал опроса
+2025-09-02 20:24:29,248 - INFO - PID:108624 - Check Interval: 15
+2025-09-02 20:24:29,248 - INFO - PID:108624 - 
+2025-09-02 20:24:29,248 - INFO - PID:108624 - # Кол-во avdo
+2025-09-02 20:24:29,248 - INFO - PID:108624 - AvDo amount: 3
+2025-09-02 20:24:29,248 - INFO - PID:108624 - 
+2025-09-02 20:24:29,248 - INFO - PID:108624 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1), (0.21964, 1), (0.3322, 1)]'.
+2025-09-02 20:24:30,026 - INFO - PID:108624 - Запуск основного цикла TradeOverBot...
+2025-09-02 20:24:30,026 - INFO - PID:108624 - 
+2025-09-02 20:24:30,026 - INFO - PID:108624 - Iteration 1
+2025-09-02 20:24:30,278 - INFO - PID:108624 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.21964
+2025-09-02 20:30:09,939 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1459. Закрыта позиция по цене 0.3322
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1), (0.21964, 1)]
+2025-09-02 20:30:10,311 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1459. Закрыта позиция по цене 0.21964
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1), (0.19733, 1)]
+2025-09-02 20:30:10,621 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1459. Закрыта позиция по цене 0.19733
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1), (0.17406, 1)]
+2025-09-02 20:30:10,913 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1459. Закрыта позиция по цене 0.17406
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1), (0.15804, 1)]
+2025-09-02 20:30:11,196 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.1459. Закрыта позиция по цене 0.15804
+Стек: [(0.09643, 1), (0.11182, 1), (0.14884, 1)]
+2025-09-02 20:30:11,311 - INFO - PID:108624 - 
+2025-09-02 20:30:11,312 - INFO - PID:108624 - Iteration 2
+2025-09-02 20:30:11,481 - INFO - PID:108624 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-03 04:00:10,887 - ERROR - PID:108624 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 04:00:10,887 - INFO - PID:108624 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 04:00:10,980 - INFO - PID:108624 - Пересоздаем клиент
+2025-09-03 04:52:10,720 - ERROR - PID:108624 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: Connection to remote host was lost..
+2025-09-03 04:52:11,419 - ERROR - PID:108624 - Connection to remote host was lost. - goodbye
+2025-09-03 05:10:19,614 - INFO - PID:108624 - order_prof_take_lim удален
+2025-09-03 05:10:20,014 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.13755. Закрыта позиция по цене 0.14884
+Стек: [(0.09643, 1), (0.11182, 1)]
+2025-09-03 05:10:20,166 - INFO - PID:108624 - 
+2025-09-03 05:10:20,166 - INFO - PID:108624 - Iteration 3
+2025-09-03 05:10:20,377 - INFO - PID:108624 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.09643
+2025-09-03 07:03:20,004 - INFO - PID:108624 - order_prof_take_lim удален
+2025-09-03 07:03:20,389 - INFO - PID:108624 - Элемент добавлен в стек: (0.13259, 1). Текущий размер стека: 3
+2025-09-03 07:03:20,389 - INFO - PID:108624 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.13259
+Стек: [(0.09643, 1), (0.11182, 1), (0.13259, 1)]
+2025-09-03 07:03:20,502 - INFO - PID:108624 - 
+2025-09-03 07:03:20,503 - INFO - PID:108624 - Iteration 4
+2025-09-03 07:03:20,691 - INFO - PID:108624 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-03 11:04:16,388 - INFO - PID:108624 - order_prof_take_lim удален
+2025-09-03 11:04:16,729 - INFO - PID:108624 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.12251. Закрыта позиция по цене 0.13259
+Стек: [(0.09643, 1), (0.11182, 1)]
+2025-09-03 11:04:16,896 - INFO - PID:108624 - 
+2025-09-03 11:04:16,897 - INFO - PID:108624 - Iteration 5
+2025-09-03 11:04:17,076 - INFO - PID:108624 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.09643
+2025-09-03 11:58:04,622 - INFO - PID:108624 - order_prof_take_lim удален
+2025-09-03 11:58:04,968 - INFO - PID:108624 - Элемент добавлен в стек: (0.12745, 1). Текущий размер стека: 3
+2025-09-03 11:58:04,969 - INFO - PID:108624 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.12745
+Стек: [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-03 11:58:05,143 - INFO - PID:108624 - 
+2025-09-03 11:58:05,144 - INFO - PID:108624 - Iteration 6
+2025-09-03 11:58:05,325 - INFO - PID:108624 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-03 12:19:19,865 - INFO - PID:108624 - order_prof_take_lim удален
+2025-09-03 12:19:19,865 - INFO - PID:108624 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-03 12:19:19,866 - INFO - PID:108624 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-03 12:19:19,867 - INFO - PID:108624 - Все процессы завершены.
+2025-09-03 12:19:23,719 - INFO - PID:114729 - # Символ
+2025-09-03 12:19:23,719 - INFO - PID:114729 - Symbol: TAUSDT
+2025-09-03 12:19:23,719 - INFO - PID:114729 - 
+2025-09-03 12:19:23,719 - INFO - PID:114729 - # Aver Down
+2025-09-03 12:19:23,720 - INFO - PID:114729 - Timeframe RSI Aver Down: 1
+2025-09-03 12:19:23,720 - INFO - PID:114729 - RSI Threshold Aver Down: 70
+2025-09-03 12:19:23,720 - INFO - PID:114729 - Timeframe HA Aver Down: 1
+2025-09-03 12:19:23,720 - INFO - PID:114729 - offset_aver_down=0.1
+2025-09-03 12:19:23,720 - INFO - PID:114729 - 
+2025-09-03 12:19:23,720 - INFO - PID:114729 - Prof Take
+2025-09-03 12:19:23,720 - INFO - PID:114729 - Timeframe RSI Prof Take: 1
+2025-09-03 12:19:23,720 - INFO - PID:114729 - RSI Threshold Profit Take: 30
+2025-09-03 12:19:23,720 - INFO - PID:114729 - Timeframe HA Prof Take: 1
+2025-09-03 12:19:23,720 - INFO - PID:114729 - offset_prof_take=0.1
+2025-09-03 12:19:23,720 - INFO - PID:114729 - 
+2025-09-03 12:19:23,721 - INFO - PID:114729 - # Рыночный ордер
+2025-09-03 12:19:23,721 - INFO - PID:114729 - Side: Sell
+2025-09-03 12:19:23,721 - INFO - PID:114729 - Position Index: 1
+2025-09-03 12:19:23,721 - INFO - PID:114729 - Quantity: 1
+2025-09-03 12:19:23,721 - INFO - PID:114729 - 
+2025-09-03 12:19:23,721 - INFO - PID:114729 - # Стек строка
+2025-09-03 12:19:23,721 - INFO - PID:114729 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-03 12:19:23,721 - INFO - PID:114729 - 
+2025-09-03 12:19:23,721 - INFO - PID:114729 - # Интервал опроса
+2025-09-03 12:19:23,721 - INFO - PID:114729 - Check Interval: 15
+2025-09-03 12:19:23,721 - INFO - PID:114729 - 
+2025-09-03 12:19:23,721 - INFO - PID:114729 - # Кол-во avdo
+2025-09-03 12:19:23,721 - INFO - PID:114729 - AvDo amount: 3
+2025-09-03 12:19:23,721 - INFO - PID:114729 - 
+2025-09-03 12:19:23,722 - INFO - PID:114729 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1)]'.
+2025-09-03 12:19:24,430 - INFO - PID:114729 - Запуск основного цикла TradeOverBot...
+2025-09-03 12:19:24,430 - INFO - PID:114729 - 
+2025-09-03 12:19:24,430 - INFO - PID:114729 - Iteration 1
+2025-09-03 12:19:24,674 - INFO - PID:114729 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-03 13:06:15,134 - INFO - PID:114729 - order_prof_take_lim удален
+2025-09-03 13:06:15,826 - INFO - PID:114729 - Элемент добавлен в стек: (0.14637, 1). Текущий размер стека: 4
+2025-09-03 13:06:15,826 - INFO - PID:114729 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14637
+Стек: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14637, 1)]
+2025-09-03 13:06:16,029 - INFO - PID:114729 - 
+2025-09-03 13:06:16,029 - INFO - PID:114729 - Iteration 2
+2025-09-03 13:06:16,199 - INFO - PID:114729 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12745
+2025-09-03 13:11:13,442 - INFO - PID:114729 - order_prof_take_lim удален
+2025-09-03 13:11:13,442 - INFO - PID:114729 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-03 13:11:13,443 - INFO - PID:114729 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14637, 1)]
+2025-09-03 13:11:13,443 - INFO - PID:114729 - Все процессы завершены.
+2025-09-03 13:11:15,557 - INFO - PID:115851 - # Символ
+2025-09-03 13:11:15,558 - INFO - PID:115851 - Symbol: TAUSDT
+2025-09-03 13:11:15,558 - INFO - PID:115851 - 
+2025-09-03 13:11:15,559 - INFO - PID:115851 - # Aver Down
+2025-09-03 13:11:15,559 - INFO - PID:115851 - Timeframe RSI Aver Down: 60
+2025-09-03 13:11:15,559 - INFO - PID:115851 - RSI Threshold Aver Down: 70
+2025-09-03 13:11:15,560 - INFO - PID:115851 - Timeframe HA Aver Down: 1
+2025-09-03 13:11:15,560 - INFO - PID:115851 - offset_aver_down=0.1
+2025-09-03 13:11:15,560 - INFO - PID:115851 - 
+2025-09-03 13:11:15,560 - INFO - PID:115851 - Prof Take
+2025-09-03 13:11:15,560 - INFO - PID:115851 - Timeframe RSI Prof Take: 1
+2025-09-03 13:11:15,560 - INFO - PID:115851 - RSI Threshold Profit Take: 30
+2025-09-03 13:11:15,560 - INFO - PID:115851 - Timeframe HA Prof Take: 1
+2025-09-03 13:11:15,561 - INFO - PID:115851 - offset_prof_take=0.1
+2025-09-03 13:11:15,561 - INFO - PID:115851 - 
+2025-09-03 13:11:15,561 - INFO - PID:115851 - # Рыночный ордер
+2025-09-03 13:11:15,561 - INFO - PID:115851 - Side: Sell
+2025-09-03 13:11:15,561 - INFO - PID:115851 - Position Index: 1
+2025-09-03 13:11:15,562 - INFO - PID:115851 - Quantity: 1
+2025-09-03 13:11:15,562 - INFO - PID:115851 - 
+2025-09-03 13:11:15,562 - INFO - PID:115851 - # Стек строка
+2025-09-03 13:11:15,562 - INFO - PID:115851 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14637, 1)]
+2025-09-03 13:11:15,562 - INFO - PID:115851 - 
+2025-09-03 13:11:15,562 - INFO - PID:115851 - # Интервал опроса
+2025-09-03 13:11:15,562 - INFO - PID:115851 - Check Interval: 15
+2025-09-03 13:11:15,562 - INFO - PID:115851 - 
+2025-09-03 13:11:15,562 - INFO - PID:115851 - # Кол-во avdo
+2025-09-03 13:11:15,562 - INFO - PID:115851 - AvDo amount: 2
+2025-09-03 13:11:15,562 - INFO - PID:115851 - 
+2025-09-03 13:11:15,563 - INFO - PID:115851 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14637, 1)]'.
+2025-09-03 13:11:16,442 - INFO - PID:115851 - Запуск основного цикла TradeOverBot...
+2025-09-03 13:11:16,443 - INFO - PID:115851 - 
+2025-09-03 13:11:16,444 - INFO - PID:115851 - Iteration 1
+2025-09-03 13:11:16,695 - INFO - PID:115851 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12745
+2025-09-03 13:47:08,069 - INFO - PID:115851 - Profit Take lim order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.12745
+Стек: [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-03 13:47:08,795 - INFO - PID:115851 - 
+2025-09-03 13:47:08,796 - INFO - PID:115851 - Iteration 2
+2025-09-03 13:47:08,969 - INFO - PID:115851 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-03 14:33:46,928 - ERROR - PID:115851 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-03 14:33:50,742 - ERROR - PID:115851 - ping/pong timed out - goodbye
+2025-09-03 15:01:10,001 - ERROR - PID:115851 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 15:01:10,001 - INFO - PID:115851 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 15:01:10,114 - INFO - PID:115851 - Пересоздаем клиент
+2025-09-04 09:26:16,712 - INFO - PID:115851 - order_prof_take_lim удален
+2025-09-04 09:26:16,712 - INFO - PID:115851 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-04 09:26:16,712 - INFO - PID:115851 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-04 09:26:16,713 - INFO - PID:115851 - Все процессы завершены.
+2025-09-04 09:27:03,361 - INFO - PID:124861 - # Символ
+2025-09-04 09:27:03,361 - INFO - PID:124861 - Symbol: TAUSDT
+2025-09-04 09:27:03,361 - INFO - PID:124861 - 
+2025-09-04 09:27:03,362 - INFO - PID:124861 - # Aver Down
+2025-09-04 09:27:03,362 - INFO - PID:124861 - Timeframe RSI Aver Down: 60
+2025-09-04 09:27:03,362 - INFO - PID:124861 - RSI Threshold Aver Down: 70
+2025-09-04 09:27:03,362 - INFO - PID:124861 - Timeframe HA Aver Down: 1
+2025-09-04 09:27:03,362 - INFO - PID:124861 - offset_aver_down=0.1
+2025-09-04 09:27:03,362 - INFO - PID:124861 - 
+2025-09-04 09:27:03,362 - INFO - PID:124861 - Prof Take
+2025-09-04 09:27:03,362 - INFO - PID:124861 - Timeframe RSI Prof Take: 1
+2025-09-04 09:27:03,362 - INFO - PID:124861 - RSI Threshold Profit Take: 30
+2025-09-04 09:27:03,362 - INFO - PID:124861 - Timeframe HA Prof Take: 1
+2025-09-04 09:27:03,362 - INFO - PID:124861 - offset_prof_take=0.1
+2025-09-04 09:27:03,362 - INFO - PID:124861 - 
+2025-09-04 09:27:03,362 - INFO - PID:124861 - # Рыночный ордер
+2025-09-04 09:27:03,363 - INFO - PID:124861 - Side: Sell
+2025-09-04 09:27:03,363 - INFO - PID:124861 - Position Index: 1
+2025-09-04 09:27:03,363 - INFO - PID:124861 - Quantity: 1
+2025-09-04 09:27:03,363 - INFO - PID:124861 - 
+2025-09-04 09:27:03,363 - INFO - PID:124861 - # Стек строка
+2025-09-04 09:27:03,363 - INFO - PID:124861 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-04 09:27:03,364 - INFO - PID:124861 - 
+2025-09-04 09:27:03,364 - INFO - PID:124861 - # Интервал опроса
+2025-09-04 09:27:03,364 - INFO - PID:124861 - Check Interval: 15
+2025-09-04 09:27:03,364 - INFO - PID:124861 - 
+2025-09-04 09:27:03,364 - INFO - PID:124861 - # Кол-во avdo
+2025-09-04 09:27:03,364 - INFO - PID:124861 - AvDo amount: 1
+2025-09-04 09:27:03,364 - INFO - PID:124861 - 
+2025-09-04 09:27:03,365 - INFO - PID:124861 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1)]'.
+2025-09-04 09:27:04,101 - INFO - PID:124861 - Запуск основного цикла TradeOverBot...
+2025-09-04 09:27:04,101 - INFO - PID:124861 - 
+2025-09-04 09:27:04,101 - INFO - PID:124861 - Iteration 1
+2025-09-04 09:27:04,351 - INFO - PID:124861 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-04 12:57:09,256 - ERROR - PID:124861 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 12:57:09,257 - INFO - PID:124861 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 12:57:09,369 - INFO - PID:124861 - Пересоздаем клиент
+2025-09-04 14:00:58,735 - ERROR - PID:124861 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 14:00:58,735 - INFO - PID:124861 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 14:00:58,989 - INFO - PID:124861 - Пересоздаем клиент
+2025-09-04 14:01:27,078 - ERROR - PID:124861 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 14:01:27,078 - INFO - PID:124861 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 14:01:27,213 - INFO - PID:124861 - Пересоздаем клиент
+2025-09-04 16:00:47,500 - ERROR - PID:124861 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 16:00:47,500 - INFO - PID:124861 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 16:00:47,676 - INFO - PID:124861 - Пересоздаем клиент
+2025-09-04 19:01:15,818 - ERROR - PID:124861 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 19:01:15,818 - INFO - PID:124861 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 19:01:15,957 - INFO - PID:124861 - Пересоздаем клиент
+2025-09-04 21:20:55,517 - ERROR - PID:124861 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-04 21:20:59,248 - ERROR - PID:124861 - ping/pong timed out - goodbye
+2025-09-05 02:31:50,022 - ERROR - PID:124861 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-05 02:31:53,982 - ERROR - PID:124861 - ping/pong timed out - goodbye
+2025-09-05 09:47:50,531 - INFO - PID:124861 - order_prof_take_lim удален
+2025-09-05 09:47:50,532 - INFO - PID:124861 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-05 09:47:50,532 - INFO - PID:124861 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-05 09:47:50,533 - INFO - PID:124861 - Все процессы завершены.
+2025-09-05 09:47:53,720 - INFO - PID:146972 - # Символ
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Symbol: TAUSDT
+2025-09-05 09:47:53,721 - INFO - PID:146972 - 
+2025-09-05 09:47:53,721 - INFO - PID:146972 - # Aver Down
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Timeframe RSI Aver Down: 1
+2025-09-05 09:47:53,721 - INFO - PID:146972 - RSI Threshold Aver Down: 70
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Timeframe HA Aver Down: 1
+2025-09-05 09:47:53,721 - INFO - PID:146972 - offset_aver_down=0.02
+2025-09-05 09:47:53,721 - INFO - PID:146972 - 
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Prof Take
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Timeframe RSI Prof Take: 1
+2025-09-05 09:47:53,721 - INFO - PID:146972 - RSI Threshold Profit Take: 30
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Timeframe HA Prof Take: 1
+2025-09-05 09:47:53,721 - INFO - PID:146972 - offset_prof_take=0.02
+2025-09-05 09:47:53,721 - INFO - PID:146972 - 
+2025-09-05 09:47:53,721 - INFO - PID:146972 - # Рыночный ордер
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Side: Sell
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Position Index: 1
+2025-09-05 09:47:53,721 - INFO - PID:146972 - Quantity: 1
+2025-09-05 09:47:53,721 - INFO - PID:146972 - 
+2025-09-05 09:47:53,722 - INFO - PID:146972 - # Стек строка
+2025-09-05 09:47:53,722 - INFO - PID:146972 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-05 09:47:53,722 - INFO - PID:146972 - 
+2025-09-05 09:47:53,722 - INFO - PID:146972 - # Интервал опроса
+2025-09-05 09:47:53,722 - INFO - PID:146972 - Check Interval: 15
+2025-09-05 09:47:53,722 - INFO - PID:146972 - 
+2025-09-05 09:47:53,722 - INFO - PID:146972 - # Кол-во avdo
+2025-09-05 09:47:53,722 - INFO - PID:146972 - AvDo amount: 2
+2025-09-05 09:47:53,722 - INFO - PID:146972 - 
+2025-09-05 09:47:53,722 - INFO - PID:146972 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1)]'.
+2025-09-05 09:47:54,692 - INFO - PID:146972 - Запуск основного цикла TradeOverBot...
+2025-09-05 09:47:54,692 - INFO - PID:146972 - 
+2025-09-05 09:47:54,692 - INFO - PID:146972 - Iteration 1
+2025-09-05 09:47:54,942 - INFO - PID:146972 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-05 09:52:03,681 - INFO - PID:146972 - order_prof_take_lim удален
+2025-09-05 09:52:04,035 - INFO - PID:146972 - Элемент добавлен в стек: (0.14331, 1). Текущий размер стека: 4
+2025-09-05 09:52:04,035 - INFO - PID:146972 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14331
+Стек: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1)]
+2025-09-05 09:52:04,228 - INFO - PID:146972 - 
+2025-09-05 09:52:04,229 - INFO - PID:146972 - Iteration 2
+2025-09-05 09:52:04,406 - INFO - PID:146972 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12745
+2025-09-05 10:09:10,728 - INFO - PID:146972 - order_prof_take_lim удален
+2025-09-05 10:09:11,097 - INFO - PID:146972 - Элемент добавлен в стек: (0.14756, 1). Текущий размер стека: 5
+2025-09-05 10:09:11,097 - INFO - PID:146972 - Average down order выполнен. TAUSDT Sell PosIdx=1 Qty=1 Price=0.14756
+Стек: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 10:09:11,263 - INFO - PID:146972 - Все итерации выполнены.
+2025-09-05 10:09:11,410 - INFO - PID:146972 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 10:09:11,410 - INFO - PID:146972 - Все процессы завершены.
+2025-09-05 10:12:53,510 - INFO - PID:147857 - # Символ
+2025-09-05 10:12:53,510 - INFO - PID:147857 - Symbol: TAUSDT
+2025-09-05 10:12:53,510 - INFO - PID:147857 - 
+2025-09-05 10:12:53,510 - INFO - PID:147857 - # Aver Down
+2025-09-05 10:12:53,510 - INFO - PID:147857 - Timeframe RSI Aver Down: 60
+2025-09-05 10:12:53,510 - INFO - PID:147857 - RSI Threshold Aver Down: 70
+2025-09-05 10:12:53,510 - INFO - PID:147857 - Timeframe HA Aver Down: 1
+2025-09-05 10:12:53,510 - INFO - PID:147857 - offset_aver_down=0.03
+2025-09-05 10:12:53,510 - INFO - PID:147857 - 
+2025-09-05 10:12:53,510 - INFO - PID:147857 - Prof Take
+2025-09-05 10:12:53,511 - INFO - PID:147857 - Timeframe RSI Prof Take: 1
+2025-09-05 10:12:53,511 - INFO - PID:147857 - RSI Threshold Profit Take: 30
+2025-09-05 10:12:53,511 - INFO - PID:147857 - Timeframe HA Prof Take: 1
+2025-09-05 10:12:53,511 - INFO - PID:147857 - offset_prof_take=0.02
+2025-09-05 10:12:53,511 - INFO - PID:147857 - 
+2025-09-05 10:12:53,511 - INFO - PID:147857 - # Рыночный ордер
+2025-09-05 10:12:53,511 - INFO - PID:147857 - Side: Sell
+2025-09-05 10:12:53,511 - INFO - PID:147857 - Position Index: 1
+2025-09-05 10:12:53,511 - INFO - PID:147857 - Quantity: 1
+2025-09-05 10:12:53,511 - INFO - PID:147857 - 
+2025-09-05 10:12:53,511 - INFO - PID:147857 - # Стек строка
+2025-09-05 10:12:53,511 - INFO - PID:147857 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 10:12:53,511 - INFO - PID:147857 - 
+2025-09-05 10:12:53,511 - INFO - PID:147857 - # Интервал опроса
+2025-09-05 10:12:53,511 - INFO - PID:147857 - Check Interval: 15
+2025-09-05 10:12:53,511 - INFO - PID:147857 - 
+2025-09-05 10:12:53,511 - INFO - PID:147857 - # Кол-во avdo
+2025-09-05 10:12:53,511 - INFO - PID:147857 - AvDo amount: 1
+2025-09-05 10:12:53,511 - INFO - PID:147857 - 
+2025-09-05 10:12:53,512 - INFO - PID:147857 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]'.
+2025-09-05 10:12:54,328 - INFO - PID:147857 - Запуск основного цикла TradeOverBot...
+2025-09-05 10:12:54,328 - INFO - PID:147857 - 
+2025-09-05 10:12:54,328 - INFO - PID:147857 - Iteration 1
+2025-09-05 10:12:54,590 - INFO - PID:147857 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14331
+2025-09-05 10:15:00,550 - INFO - PID:147857 - order_prof_take_lim удален
+2025-09-05 10:15:00,551 - INFO - PID:147857 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-05 10:15:00,553 - INFO - PID:147857 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 10:15:00,553 - INFO - PID:147857 - Все процессы завершены.
+2025-09-05 10:16:08,152 - INFO - PID:147930 - # Символ
+2025-09-05 10:16:08,152 - INFO - PID:147930 - Symbol: TAUSDT
+2025-09-05 10:16:08,152 - INFO - PID:147930 - 
+2025-09-05 10:16:08,153 - INFO - PID:147930 - # Aver Down
+2025-09-05 10:16:08,153 - INFO - PID:147930 - Timeframe RSI Aver Down: 60
+2025-09-05 10:16:08,153 - INFO - PID:147930 - RSI Threshold Aver Down: 70
+2025-09-05 10:16:08,153 - INFO - PID:147930 - Timeframe HA Aver Down: 1
+2025-09-05 10:16:08,153 - INFO - PID:147930 - offset_aver_down=0.03
+2025-09-05 10:16:08,153 - INFO - PID:147930 - 
+2025-09-05 10:16:08,153 - INFO - PID:147930 - Prof Take
+2025-09-05 10:16:08,154 - INFO - PID:147930 - Timeframe RSI Prof Take: 1
+2025-09-05 10:16:08,154 - INFO - PID:147930 - RSI Threshold Profit Take: 30
+2025-09-05 10:16:08,154 - INFO - PID:147930 - Timeframe HA Prof Take: 1
+2025-09-05 10:16:08,154 - INFO - PID:147930 - offset_prof_take=0.02
+2025-09-05 10:16:08,154 - INFO - PID:147930 - 
+2025-09-05 10:16:08,154 - INFO - PID:147930 - # Рыночный ордер
+2025-09-05 10:16:08,155 - INFO - PID:147930 - Side: Sell
+2025-09-05 10:16:08,155 - INFO - PID:147930 - Position Index: 1
+2025-09-05 10:16:08,155 - INFO - PID:147930 - Quantity: 1
+2025-09-05 10:16:08,155 - INFO - PID:147930 - 
+2025-09-05 10:16:08,155 - INFO - PID:147930 - # Стек строка
+2025-09-05 10:16:08,155 - INFO - PID:147930 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 10:16:08,155 - INFO - PID:147930 - 
+2025-09-05 10:16:08,155 - INFO - PID:147930 - # Интервал опроса
+2025-09-05 10:16:08,155 - INFO - PID:147930 - Check Interval: 15
+2025-09-05 10:16:08,155 - INFO - PID:147930 - 
+2025-09-05 10:16:08,156 - INFO - PID:147930 - # Кол-во avdo
+2025-09-05 10:16:08,156 - INFO - PID:147930 - AvDo amount: 1
+2025-09-05 10:16:08,156 - INFO - PID:147930 - 
+2025-09-05 10:16:08,156 - INFO - PID:147930 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]'.
+2025-09-05 10:16:08,876 - INFO - PID:147930 - Запуск основного цикла TradeOverBot...
+2025-09-05 10:16:08,876 - INFO - PID:147930 - 
+2025-09-05 10:16:08,877 - INFO - PID:147930 - Iteration 1
+2025-09-05 10:16:09,108 - INFO - PID:147930 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14331
+2025-09-05 10:18:52,598 - INFO - PID:147930 - order_prof_take_lim удален
+2025-09-05 10:18:52,598 - INFO - PID:147930 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-05 10:18:52,599 - INFO - PID:147930 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 10:18:52,599 - INFO - PID:147930 - Все процессы завершены.
+2025-09-05 15:50:29,852 - INFO - PID:156651 - # Символ
+2025-09-05 15:50:29,852 - INFO - PID:156651 - Symbol: TAUSDT
+2025-09-05 15:50:29,853 - INFO - PID:156651 - 
+2025-09-05 15:50:29,853 - INFO - PID:156651 - # Aver Down
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Timeframe RSI Aver Down: 60
+2025-09-05 15:50:29,853 - INFO - PID:156651 - RSI Threshold Aver Down: 70
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Timeframe HA Aver Down: 1
+2025-09-05 15:50:29,853 - INFO - PID:156651 - offset_aver_down=0.03
+2025-09-05 15:50:29,853 - INFO - PID:156651 - 
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Prof Take
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Timeframe RSI Prof Take: 1
+2025-09-05 15:50:29,853 - INFO - PID:156651 - RSI Threshold Profit Take: 30
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Timeframe HA Prof Take: 1
+2025-09-05 15:50:29,853 - INFO - PID:156651 - offset_prof_take=0.02
+2025-09-05 15:50:29,853 - INFO - PID:156651 - 
+2025-09-05 15:50:29,853 - INFO - PID:156651 - # Рыночный ордер
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Side: Sell
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Position Index: 1
+2025-09-05 15:50:29,853 - INFO - PID:156651 - Quantity: 1
+2025-09-05 15:50:29,853 - INFO - PID:156651 - 
+2025-09-05 15:50:29,853 - INFO - PID:156651 - # Стек строка
+2025-09-05 15:50:29,853 - INFO - PID:156651 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 15:50:29,853 - INFO - PID:156651 - 
+2025-09-05 15:50:29,853 - INFO - PID:156651 - # Интервал опроса
+2025-09-05 15:50:29,854 - INFO - PID:156651 - Check Interval: 15
+2025-09-05 15:50:29,854 - INFO - PID:156651 - 
+2025-09-05 15:50:29,854 - INFO - PID:156651 - # Кол-во avdo
+2025-09-05 15:50:29,854 - INFO - PID:156651 - AvDo amount: 1
+2025-09-05 15:50:29,854 - INFO - PID:156651 - 
+2025-09-05 15:50:29,854 - INFO - PID:156651 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]'.
+2025-09-05 15:50:30,549 - INFO - PID:156651 - Запуск основного цикла TradeOverBot...
+2025-09-05 15:50:30,549 - INFO - PID:156651 - 
+2025-09-05 15:50:30,549 - INFO - PID:156651 - Iteration 1
+2025-09-05 15:50:30,820 - INFO - PID:156651 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.14331
+2025-09-05 16:04:22,657 - INFO - PID:156651 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-05 16:04:22,658 - INFO - PID:156651 - Параметр order_stack_str успешно установлен в значение [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), (0.14756, 1)]
+2025-09-05 16:04:22,658 - INFO - PID:156651 - Все процессы завершены.
+2025-09-05 16:07:19,655 - INFO - PID:156800 - # Символ
+2025-09-05 16:07:19,656 - INFO - PID:156800 - Symbol: TAUSDT
+2025-09-05 16:07:19,656 - INFO - PID:156800 - 
+2025-09-05 16:07:19,656 - INFO - PID:156800 - # Aver Down
+2025-09-05 16:07:19,656 - INFO - PID:156800 - Timeframe RSI Aver Down: 60
+2025-09-05 16:07:19,656 - INFO - PID:156800 - RSI Threshold Aver Down: 70
+2025-09-05 16:07:19,656 - INFO - PID:156800 - Timeframe HA Aver Down: 1
+2025-09-05 16:07:19,656 - INFO - PID:156800 - offset_aver_down=0.03
+2025-09-05 16:07:19,656 - INFO - PID:156800 - 
+2025-09-05 16:07:19,656 - INFO - PID:156800 - Prof Take
+2025-09-05 16:07:19,656 - INFO - PID:156800 - Timeframe RSI Prof Take: 1
+2025-09-05 16:07:19,656 - INFO - PID:156800 - RSI Threshold Profit Take: 30
+2025-09-05 16:07:19,656 - INFO - PID:156800 - Timeframe HA Prof Take: 1
+2025-09-05 16:07:19,657 - INFO - PID:156800 - offset_prof_take=0.02
+2025-09-05 16:07:19,657 - INFO - PID:156800 - 
+2025-09-05 16:07:19,657 - INFO - PID:156800 - # Рыночный ордер
+2025-09-05 16:07:19,657 - INFO - PID:156800 - Side: Sell
+2025-09-05 16:07:19,657 - INFO - PID:156800 - Position Index: 1
+2025-09-05 16:07:19,657 - INFO - PID:156800 - Quantity: 1
+2025-09-05 16:07:19,657 - INFO - PID:156800 - 
+2025-09-05 16:07:19,657 - INFO - PID:156800 - # Стек строка
+2025-09-05 16:07:19,657 - INFO - PID:156800 - order_stack_str: [(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), ]
+2025-09-05 16:07:19,657 - INFO - PID:156800 - 
+2025-09-05 16:07:19,657 - INFO - PID:156800 - # Интервал опроса
+2025-09-05 16:07:19,657 - INFO - PID:156800 - Check Interval: 15
+2025-09-05 16:07:19,657 - INFO - PID:156800 - 
+2025-09-05 16:07:19,658 - INFO - PID:156800 - # Кол-во avdo
+2025-09-05 16:07:19,658 - INFO - PID:156800 - AvDo amount: 1
+2025-09-05 16:07:19,658 - INFO - PID:156800 - 
+2025-09-05 16:07:19,658 - INFO - PID:156800 - Стек установлен из строки: '[(0.09643, 1), (0.11182, 1), (0.12745, 1), (0.14331, 1), ]'.
+2025-09-05 16:07:20,574 - INFO - PID:156800 - Запуск основного цикла TradeOverBot...
+2025-09-05 16:07:20,574 - INFO - PID:156800 - 
+2025-09-05 16:07:20,575 - INFO - PID:156800 - Iteration 1
+2025-09-05 16:07:20,832 - INFO - PID:156800 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.12745
+2025-09-05 16:47:05,356 - INFO - PID:156800 - order_prof_take_lim удален
+2025-09-05 16:47:05,720 - INFO - PID:156800 - Profit take market order выполнен. TAUSDT Buy PosIdx=2 Qty=1 Price=0.13849. Закрыта позиция по цене 0.14331
+Стек: [(0.09643, 1), (0.11182, 1), (0.12745, 1)]
+2025-09-05 16:47:05,888 - INFO - PID:156800 - 
+2025-09-05 16:47:05,889 - INFO - PID:156800 - Iteration 2
+2025-09-05 16:47:06,072 - INFO - PID:156800 - order_prof_take_lim установлен. TAUSDT Buy PosIdx=2 Qty=1 Price= 0.11182
+2025-09-05 20:37:20,433 - ERROR - PID:156800 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:20,434 - INFO - PID:156800 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:20,531 - INFO - PID:156800 - Пересоздаем клиент
+2025-09-05 20:37:30,752 - ERROR - PID:156800 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:30,752 - INFO - PID:156800 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:30,865 - INFO - PID:156800 - Пересоздаем клиент
+2025-09-05 20:37:44,278 - ERROR - PID:156800 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:44,278 - INFO - PID:156800 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:44,414 - INFO - PID:156800 - Пересоздаем клиент
+2025-09-05 20:38:09,999 - ERROR - PID:156800 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:38:09,999 - INFO - PID:156800 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:38:10,122 - INFO - PID:156800 - Пересоздаем клиент

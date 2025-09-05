@@ -1,0 +1,517 @@
+2025-09-01 11:14:43,810 - INFO - PID:88525 - # Символ
+2025-09-01 11:14:43,810 - INFO - PID:88525 - Symbol: MAVUSDT
+2025-09-01 11:14:43,810 - INFO - PID:88525 - 
+2025-09-01 11:14:43,810 - INFO - PID:88525 - # Aver Down
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Timeframe RSI Aver Down: 1
+2025-09-01 11:14:43,811 - INFO - PID:88525 - RSI Threshold Aver Down: 70
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Timeframe HA Aver Down: 1
+2025-09-01 11:14:43,811 - INFO - PID:88525 - offset_aver_down=0.02
+2025-09-01 11:14:43,811 - INFO - PID:88525 - 
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Prof Take
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Timeframe RSI Prof Take: 1
+2025-09-01 11:14:43,811 - INFO - PID:88525 - RSI Threshold Profit Take: 30
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Timeframe HA Prof Take: 1
+2025-09-01 11:14:43,811 - INFO - PID:88525 - offset_prof_take=0.02
+2025-09-01 11:14:43,811 - INFO - PID:88525 - 
+2025-09-01 11:14:43,811 - INFO - PID:88525 - # Рыночный ордер
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Side: Sell
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Position Index: 1
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Quantity: 1
+2025-09-01 11:14:43,811 - INFO - PID:88525 - 
+2025-09-01 11:14:43,811 - INFO - PID:88525 - # Стек строка
+2025-09-01 11:14:43,811 - INFO - PID:88525 - order_stack_str: []
+2025-09-01 11:14:43,811 - INFO - PID:88525 - 
+2025-09-01 11:14:43,811 - INFO - PID:88525 - # Интервал опроса
+2025-09-01 11:14:43,811 - INFO - PID:88525 - Check Interval: 15
+2025-09-01 11:14:43,812 - INFO - PID:88525 - 
+2025-09-01 11:14:43,812 - INFO - PID:88525 - # Кол-во avdo
+2025-09-01 11:14:43,812 - INFO - PID:88525 - AvDo amount: 5
+2025-09-01 11:14:43,812 - INFO - PID:88525 - 
+2025-09-01 11:14:43,812 - INFO - PID:88525 - Стек установлен из строки: '[]'.
+2025-09-01 11:14:44,517 - INFO - PID:88525 - Запуск основного цикла TradeOverBot...
+2025-09-01 11:14:44,518 - INFO - PID:88525 - 
+2025-09-01 11:14:44,518 - INFO - PID:88525 - Iteration 1
+2025-09-01 13:06:15,011 - INFO - PID:88525 - Элемент добавлен в стек: (0.0726, 1). Текущий размер стека: 1
+2025-09-01 13:06:15,011 - INFO - PID:88525 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.0726
+Стек: [(0.0726, 1)]
+2025-09-01 13:06:15,176 - INFO - PID:88525 - 
+2025-09-01 13:06:15,177 - INFO - PID:88525 - Iteration 2
+2025-09-01 17:21:13,739 - INFO - PID:88525 - Элемент добавлен в стек: (0.07426, 1). Текущий размер стека: 2
+2025-09-01 17:21:13,740 - INFO - PID:88525 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07426
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-01 17:21:13,868 - INFO - PID:88525 - 
+2025-09-01 17:21:13,869 - INFO - PID:88525 - Iteration 3
+2025-09-01 17:21:14,039 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-01 18:51:05,791 - INFO - PID:88525 - order_prof_take_lim удален
+2025-09-01 18:51:06,139 - INFO - PID:88525 - Элемент добавлен в стек: (0.07683, 1). Текущий размер стека: 3
+2025-09-01 18:51:06,139 - INFO - PID:88525 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07683
+Стек: [(0.0726, 1), (0.07426, 1), (0.07683, 1)]
+2025-09-01 18:51:06,250 - INFO - PID:88525 - 
+2025-09-01 18:51:06,251 - INFO - PID:88525 - Iteration 4
+2025-09-01 18:51:06,740 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-01 19:36:10,911 - INFO - PID:88525 - order_prof_take_lim удален
+2025-09-01 19:36:11,253 - INFO - PID:88525 - Profit take market order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07457. Закрыта позиция по цене 0.07683
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-01 19:36:11,431 - INFO - PID:88525 - 
+2025-09-01 19:36:11,432 - INFO - PID:88525 - Iteration 5
+2025-09-01 19:36:11,618 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-01 20:32:02,673 - INFO - PID:88525 - order_prof_take_lim удален
+2025-09-01 20:32:03,012 - INFO - PID:88525 - Элемент добавлен в стек: (0.07632, 1). Текущий размер стека: 3
+2025-09-01 20:32:03,013 - INFO - PID:88525 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07632
+Стек: [(0.0726, 1), (0.07426, 1), (0.07632, 1)]
+2025-09-01 20:32:03,120 - INFO - PID:88525 - 
+2025-09-01 20:32:03,120 - INFO - PID:88525 - Iteration 6
+2025-09-01 20:32:03,291 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-01 21:04:08,812 - INFO - PID:88525 - order_prof_take_lim удален
+2025-09-01 21:04:09,162 - INFO - PID:88525 - Profit take market order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07479. Закрыта позиция по цене 0.07632
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-01 21:04:09,342 - INFO - PID:88525 - 
+2025-09-01 21:04:09,343 - INFO - PID:88525 - Iteration 7
+2025-09-01 21:04:09,521 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-01 22:33:06,148 - INFO - PID:88525 - order_prof_take_lim удален
+2025-09-01 22:33:06,487 - INFO - PID:88525 - Элемент добавлен в стек: (0.07627, 1). Текущий размер стека: 3
+2025-09-01 22:33:06,487 - INFO - PID:88525 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07627
+Стек: [(0.0726, 1), (0.07426, 1), (0.07627, 1)]
+2025-09-01 22:33:06,588 - INFO - PID:88525 - 
+2025-09-01 22:33:06,590 - INFO - PID:88525 - Iteration 8
+2025-09-01 22:33:06,761 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-01 22:45:07,485 - INFO - PID:88525 - Profit Take lim order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07426
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-01 22:45:07,589 - INFO - PID:88525 - 
+2025-09-01 22:45:07,589 - INFO - PID:88525 - Iteration 9
+2025-09-01 22:45:07,803 - INFO - PID:88525 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-02 01:48:17,381 - INFO - PID:88525 - order_prof_take_lim удален
+2025-09-02 01:48:17,726 - INFO - PID:88525 - Ошибка API (попытка 1/5): current position is zero, cannot fix reduce-only order qty (ErrCode: 110017) (ErrTime: 23:48:17).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "MAVUSDT", "side": "Sell", "order_type": "Market", "qty": "1", "position_idx": 1}. 
+2025-09-02 01:48:17,855 - INFO - PID:88525 - Пересоздаем клиент
+2025-09-02 01:48:28,398 - INFO - PID:88525 - Ошибка API (попытка 2/5): current position is zero, cannot fix reduce-only order qty (ErrCode: 110017) (ErrTime: 23:48:28).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "MAVUSDT", "side": "Sell", "order_type": "Market", "qty": "1", "position_idx": 1}. 
+2025-09-02 01:48:28,501 - INFO - PID:88525 - Пересоздаем клиент
+2025-09-02 01:48:38,727 - INFO - PID:88525 - Ошибка API (попытка 3/5): current position is zero, cannot fix reduce-only order qty (ErrCode: 110017) (ErrTime: 23:48:38).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "MAVUSDT", "side": "Sell", "order_type": "Market", "qty": "1", "position_idx": 1}. 
+2025-09-02 01:48:38,823 - INFO - PID:88525 - Пересоздаем клиент
+2025-09-02 01:48:49,060 - INFO - PID:88525 - Ошибка API (попытка 4/5): current position is zero, cannot fix reduce-only order qty (ErrCode: 110017) (ErrTime: 23:48:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "MAVUSDT", "side": "Sell", "order_type": "Market", "qty": "1", "position_idx": 1}. 
+2025-09-02 01:48:49,182 - INFO - PID:88525 - Пересоздаем клиент
+2025-09-02 01:48:59,406 - INFO - PID:88525 - Ошибка API (попытка 5/5): current position is zero, cannot fix reduce-only order qty (ErrCode: 110017) (ErrTime: 23:48:59).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "MAVUSDT", "side": "Sell", "order_type": "Market", "qty": "1", "position_idx": 1}. 
+2025-09-02 01:48:59,503 - INFO - PID:88525 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1)]
+2025-09-02 01:48:59,503 - INFO - PID:88525 - Все процессы завершены.
+2025-09-02 10:54:35,385 - INFO - PID:102506 - # Символ
+2025-09-02 10:54:35,385 - INFO - PID:102506 - Symbol: MAVUSDT
+2025-09-02 10:54:35,385 - INFO - PID:102506 - 
+2025-09-02 10:54:35,385 - INFO - PID:102506 - # Aver Down
+2025-09-02 10:54:35,385 - INFO - PID:102506 - Timeframe RSI Aver Down: 1
+2025-09-02 10:54:35,385 - INFO - PID:102506 - RSI Threshold Aver Down: 70
+2025-09-02 10:54:35,385 - INFO - PID:102506 - Timeframe HA Aver Down: 1
+2025-09-02 10:54:35,386 - INFO - PID:102506 - offset_aver_down=0.02
+2025-09-02 10:54:35,386 - INFO - PID:102506 - 
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Prof Take
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Timeframe RSI Prof Take: 1
+2025-09-02 10:54:35,386 - INFO - PID:102506 - RSI Threshold Profit Take: 30
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Timeframe HA Prof Take: 1
+2025-09-02 10:54:35,386 - INFO - PID:102506 - offset_prof_take=0.02
+2025-09-02 10:54:35,386 - INFO - PID:102506 - 
+2025-09-02 10:54:35,386 - INFO - PID:102506 - # Рыночный ордер
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Side: Sell
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Position Index: 1
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Quantity: 1
+2025-09-02 10:54:35,386 - INFO - PID:102506 - 
+2025-09-02 10:54:35,386 - INFO - PID:102506 - # Стек строка
+2025-09-02 10:54:35,386 - INFO - PID:102506 - order_stack_str: [(0.0726, 1), (0.07426, 1)]
+2025-09-02 10:54:35,386 - INFO - PID:102506 - 
+2025-09-02 10:54:35,386 - INFO - PID:102506 - # Интервал опроса
+2025-09-02 10:54:35,386 - INFO - PID:102506 - Check Interval: 15
+2025-09-02 10:54:35,386 - INFO - PID:102506 - 
+2025-09-02 10:54:35,387 - INFO - PID:102506 - # Кол-во avdo
+2025-09-02 10:54:35,387 - INFO - PID:102506 - AvDo amount: 5
+2025-09-02 10:54:35,387 - INFO - PID:102506 - 
+2025-09-02 10:54:35,387 - INFO - PID:102506 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1)]'.
+2025-09-02 10:54:36,294 - INFO - PID:102506 - Запуск основного цикла TradeOverBot...
+2025-09-02 10:54:36,294 - INFO - PID:102506 - 
+2025-09-02 10:54:36,294 - INFO - PID:102506 - Iteration 1
+2025-09-02 10:54:36,523 - INFO - PID:102506 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-02 10:59:49,144 - INFO - PID:102506 - order_prof_take_lim удален
+2025-09-02 10:59:49,145 - INFO - PID:102506 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-02 10:59:49,145 - INFO - PID:102506 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1)]
+2025-09-02 10:59:49,146 - INFO - PID:102506 - Все процессы завершены.
+2025-09-02 10:59:51,448 - INFO - PID:102588 - # Символ
+2025-09-02 10:59:51,448 - INFO - PID:102588 - Symbol: MAVUSDT
+2025-09-02 10:59:51,448 - INFO - PID:102588 - 
+2025-09-02 10:59:51,448 - INFO - PID:102588 - # Aver Down
+2025-09-02 10:59:51,448 - INFO - PID:102588 - Timeframe RSI Aver Down: 1
+2025-09-02 10:59:51,449 - INFO - PID:102588 - RSI Threshold Aver Down: 70
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Timeframe HA Aver Down: 1
+2025-09-02 10:59:51,449 - INFO - PID:102588 - offset_aver_down=0.03
+2025-09-02 10:59:51,449 - INFO - PID:102588 - 
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Prof Take
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Timeframe RSI Prof Take: 1
+2025-09-02 10:59:51,449 - INFO - PID:102588 - RSI Threshold Profit Take: 30
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Timeframe HA Prof Take: 1
+2025-09-02 10:59:51,449 - INFO - PID:102588 - offset_prof_take=0.03
+2025-09-02 10:59:51,449 - INFO - PID:102588 - 
+2025-09-02 10:59:51,449 - INFO - PID:102588 - # Рыночный ордер
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Side: Sell
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Position Index: 1
+2025-09-02 10:59:51,449 - INFO - PID:102588 - Quantity: 1
+2025-09-02 10:59:51,449 - INFO - PID:102588 - 
+2025-09-02 10:59:51,450 - INFO - PID:102588 - # Стек строка
+2025-09-02 10:59:51,450 - INFO - PID:102588 - order_stack_str: [(0.0726, 1), (0.07426, 1)]
+2025-09-02 10:59:51,450 - INFO - PID:102588 - 
+2025-09-02 10:59:51,450 - INFO - PID:102588 - # Интервал опроса
+2025-09-02 10:59:51,450 - INFO - PID:102588 - Check Interval: 15
+2025-09-02 10:59:51,450 - INFO - PID:102588 - 
+2025-09-02 10:59:51,450 - INFO - PID:102588 - # Кол-во avdo
+2025-09-02 10:59:51,450 - INFO - PID:102588 - AvDo amount: 5
+2025-09-02 10:59:51,450 - INFO - PID:102588 - 
+2025-09-02 10:59:51,450 - INFO - PID:102588 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1)]'.
+2025-09-02 10:59:52,084 - INFO - PID:102588 - Запуск основного цикла TradeOverBot...
+2025-09-02 10:59:52,084 - INFO - PID:102588 - 
+2025-09-02 10:59:52,085 - INFO - PID:102588 - Iteration 1
+2025-09-02 10:59:52,318 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-02 12:52:16,619 - INFO - PID:102588 - order_prof_take_lim удален
+2025-09-02 12:52:16,958 - INFO - PID:102588 - Элемент добавлен в стек: (0.08111, 1). Текущий размер стека: 3
+2025-09-02 12:52:16,958 - INFO - PID:102588 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.08111
+Стек: [(0.0726, 1), (0.07426, 1), (0.08111, 1)]
+2025-09-02 12:52:17,072 - INFO - PID:102588 - 
+2025-09-02 12:52:17,073 - INFO - PID:102588 - Iteration 2
+2025-09-02 12:52:17,242 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-03 00:40:06,504 - ERROR - PID:102588 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-03 00:40:07,390 - ERROR - PID:102588 - ping/pong timed out - goodbye
+2025-09-03 02:00:08,859 - ERROR - PID:102588 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 02:00:08,859 - INFO - PID:102588 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 02:00:08,988 - INFO - PID:102588 - Пересоздаем клиент
+2025-09-03 02:21:18,893 - INFO - PID:102588 - order_prof_take_lim удален
+2025-09-03 02:21:19,234 - INFO - PID:102588 - Profit take market order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07818. Закрыта позиция по цене 0.08111
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-03 02:21:19,346 - INFO - PID:102588 - 
+2025-09-03 02:21:19,348 - INFO - PID:102588 - Iteration 3
+2025-09-03 02:21:19,527 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-03 02:41:12,775 - INFO - PID:102588 - order_prof_take_lim удален
+2025-09-03 02:41:13,110 - INFO - PID:102588 - Элемент добавлен в стек: (0.07907, 1). Текущий размер стека: 3
+2025-09-03 02:41:13,111 - INFO - PID:102588 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07907
+Стек: [(0.0726, 1), (0.07426, 1), (0.07907, 1)]
+2025-09-03 02:41:13,204 - INFO - PID:102588 - 
+2025-09-03 02:41:13,205 - INFO - PID:102588 - Iteration 4
+2025-09-03 02:41:13,374 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-03 05:29:21,930 - INFO - PID:102588 - order_prof_take_lim удален
+2025-09-03 05:29:22,332 - INFO - PID:102588 - Profit take market order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07605. Закрыта позиция по цене 0.07907
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-03 05:29:22,453 - INFO - PID:102588 - 
+2025-09-03 05:29:22,453 - INFO - PID:102588 - Iteration 5
+2025-09-03 05:29:22,648 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-03 07:00:05,354 - INFO - PID:102588 - order_prof_take_lim удален
+2025-09-03 07:00:06,088 - INFO - PID:102588 - Элемент добавлен в стек: (0.07662, 1). Текущий размер стека: 3
+2025-09-03 07:00:06,088 - INFO - PID:102588 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07662
+Стек: [(0.0726, 1), (0.07426, 1), (0.07662, 1)]
+2025-09-03 07:00:06,206 - INFO - PID:102588 - 
+2025-09-03 07:00:06,207 - INFO - PID:102588 - Iteration 6
+2025-09-03 07:00:06,400 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-03 10:42:09,823 - INFO - PID:102588 - Profit Take lim order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07426
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-03 10:42:10,058 - INFO - PID:102588 - 
+2025-09-03 10:42:10,059 - INFO - PID:102588 - Iteration 7
+2025-09-03 10:42:10,546 - INFO - PID:102588 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-03 12:47:33,843 - INFO - PID:102588 - order_prof_take_lim удален
+2025-09-03 12:47:33,844 - INFO - PID:102588 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-03 12:47:33,845 - INFO - PID:102588 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1)]
+2025-09-03 12:47:33,845 - INFO - PID:102588 - Все процессы завершены.
+2025-09-03 12:47:37,854 - INFO - PID:115426 - # Символ
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Symbol: MAVUSDT
+2025-09-03 12:47:37,855 - INFO - PID:115426 - 
+2025-09-03 12:47:37,855 - INFO - PID:115426 - # Aver Down
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Timeframe RSI Aver Down: 60
+2025-09-03 12:47:37,855 - INFO - PID:115426 - RSI Threshold Aver Down: 70
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Timeframe HA Aver Down: 1
+2025-09-03 12:47:37,855 - INFO - PID:115426 - offset_aver_down=0.05
+2025-09-03 12:47:37,855 - INFO - PID:115426 - 
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Prof Take
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Timeframe RSI Prof Take: 1
+2025-09-03 12:47:37,855 - INFO - PID:115426 - RSI Threshold Profit Take: 30
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Timeframe HA Prof Take: 1
+2025-09-03 12:47:37,855 - INFO - PID:115426 - offset_prof_take=0.05
+2025-09-03 12:47:37,855 - INFO - PID:115426 - 
+2025-09-03 12:47:37,855 - INFO - PID:115426 - # Рыночный ордер
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Side: Sell
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Position Index: 1
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Quantity: 1
+2025-09-03 12:47:37,855 - INFO - PID:115426 - 
+2025-09-03 12:47:37,855 - INFO - PID:115426 - # Стек строка
+2025-09-03 12:47:37,855 - INFO - PID:115426 - order_stack_str: [(0.0726, 1), (0.07426, 1)]
+2025-09-03 12:47:37,855 - INFO - PID:115426 - 
+2025-09-03 12:47:37,855 - INFO - PID:115426 - # Интервал опроса
+2025-09-03 12:47:37,855 - INFO - PID:115426 - Check Interval: 15
+2025-09-03 12:47:37,855 - INFO - PID:115426 - 
+2025-09-03 12:47:37,855 - INFO - PID:115426 - # Кол-во avdo
+2025-09-03 12:47:37,856 - INFO - PID:115426 - AvDo amount: 3
+2025-09-03 12:47:37,856 - INFO - PID:115426 - 
+2025-09-03 12:47:37,856 - INFO - PID:115426 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1)]'.
+2025-09-03 12:47:38,595 - INFO - PID:115426 - Запуск основного цикла TradeOverBot...
+2025-09-03 12:47:38,596 - INFO - PID:115426 - 
+2025-09-03 12:47:38,596 - INFO - PID:115426 - Iteration 1
+2025-09-03 12:47:38,828 - INFO - PID:115426 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-03 12:48:52,742 - INFO - PID:115426 - order_prof_take_lim удален
+2025-09-03 12:48:52,742 - INFO - PID:115426 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-03 12:48:52,743 - INFO - PID:115426 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1)]
+2025-09-03 12:48:52,744 - INFO - PID:115426 - Все процессы завершены.
+2025-09-03 12:48:54,791 - INFO - PID:115498 - # Символ
+2025-09-03 12:48:54,792 - INFO - PID:115498 - Symbol: MAVUSDT
+2025-09-03 12:48:54,792 - INFO - PID:115498 - 
+2025-09-03 12:48:54,793 - INFO - PID:115498 - # Aver Down
+2025-09-03 12:48:54,793 - INFO - PID:115498 - Timeframe RSI Aver Down: 60
+2025-09-03 12:48:54,793 - INFO - PID:115498 - RSI Threshold Aver Down: 70
+2025-09-03 12:48:54,793 - INFO - PID:115498 - Timeframe HA Aver Down: 1
+2025-09-03 12:48:54,793 - INFO - PID:115498 - offset_aver_down=0.05
+2025-09-03 12:48:54,793 - INFO - PID:115498 - 
+2025-09-03 12:48:54,794 - INFO - PID:115498 - Prof Take
+2025-09-03 12:48:54,794 - INFO - PID:115498 - Timeframe RSI Prof Take: 1
+2025-09-03 12:48:54,794 - INFO - PID:115498 - RSI Threshold Profit Take: 30
+2025-09-03 12:48:54,794 - INFO - PID:115498 - Timeframe HA Prof Take: 1
+2025-09-03 12:48:54,794 - INFO - PID:115498 - offset_prof_take=0.08
+2025-09-03 12:48:54,794 - INFO - PID:115498 - 
+2025-09-03 12:48:54,794 - INFO - PID:115498 - # Рыночный ордер
+2025-09-03 12:48:54,794 - INFO - PID:115498 - Side: Sell
+2025-09-03 12:48:54,794 - INFO - PID:115498 - Position Index: 1
+2025-09-03 12:48:54,794 - INFO - PID:115498 - Quantity: 1
+2025-09-03 12:48:54,794 - INFO - PID:115498 - 
+2025-09-03 12:48:54,794 - INFO - PID:115498 - # Стек строка
+2025-09-03 12:48:54,794 - INFO - PID:115498 - order_stack_str: [(0.0726, 1), (0.07426, 1)]
+2025-09-03 12:48:54,795 - INFO - PID:115498 - 
+2025-09-03 12:48:54,795 - INFO - PID:115498 - # Интервал опроса
+2025-09-03 12:48:54,795 - INFO - PID:115498 - Check Interval: 15
+2025-09-03 12:48:54,795 - INFO - PID:115498 - 
+2025-09-03 12:48:54,795 - INFO - PID:115498 - # Кол-во avdo
+2025-09-03 12:48:54,795 - INFO - PID:115498 - AvDo amount: 3
+2025-09-03 12:48:54,795 - INFO - PID:115498 - 
+2025-09-03 12:48:54,795 - INFO - PID:115498 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1)]'.
+2025-09-03 12:48:55,449 - INFO - PID:115498 - Запуск основного цикла TradeOverBot...
+2025-09-03 12:48:55,450 - INFO - PID:115498 - 
+2025-09-03 12:48:55,450 - INFO - PID:115498 - Iteration 1
+2025-09-03 12:48:55,690 - INFO - PID:115498 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-03 15:00:11,495 - ERROR - PID:115498 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 15:00:11,495 - INFO - PID:115498 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 15:00:11,603 - INFO - PID:115498 - Пересоздаем клиент
+2025-09-03 15:00:56,751 - ERROR - PID:115498 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 15:00:56,751 - INFO - PID:115498 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 15:00:56,871 - INFO - PID:115498 - Пересоздаем клиент
+2025-09-04 05:02:27,146 - ERROR - PID:115498 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-04 05:02:30,839 - ERROR - PID:115498 - ping/pong timed out - goodbye
+2025-09-04 09:38:41,233 - INFO - PID:115498 - order_prof_take_lim удален
+2025-09-04 09:38:41,233 - INFO - PID:115498 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-04 09:38:41,234 - INFO - PID:115498 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1)]
+2025-09-04 09:38:41,235 - INFO - PID:115498 - Все процессы завершены.
+2025-09-04 09:38:44,360 - INFO - PID:125072 - # Символ
+2025-09-04 09:38:44,361 - INFO - PID:125072 - Symbol: MAVUSDT
+2025-09-04 09:38:44,361 - INFO - PID:125072 - 
+2025-09-04 09:38:44,361 - INFO - PID:125072 - # Aver Down
+2025-09-04 09:38:44,361 - INFO - PID:125072 - Timeframe RSI Aver Down: 60
+2025-09-04 09:38:44,362 - INFO - PID:125072 - RSI Threshold Aver Down: 60
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Timeframe HA Aver Down: 1
+2025-09-04 09:38:44,362 - INFO - PID:125072 - offset_aver_down=0.05
+2025-09-04 09:38:44,362 - INFO - PID:125072 - 
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Prof Take
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Timeframe RSI Prof Take: 1
+2025-09-04 09:38:44,362 - INFO - PID:125072 - RSI Threshold Profit Take: 30
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Timeframe HA Prof Take: 1
+2025-09-04 09:38:44,362 - INFO - PID:125072 - offset_prof_take=0.08
+2025-09-04 09:38:44,362 - INFO - PID:125072 - 
+2025-09-04 09:38:44,362 - INFO - PID:125072 - # Рыночный ордер
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Side: Sell
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Position Index: 1
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Quantity: 1
+2025-09-04 09:38:44,362 - INFO - PID:125072 - 
+2025-09-04 09:38:44,362 - INFO - PID:125072 - # Стек строка
+2025-09-04 09:38:44,362 - INFO - PID:125072 - order_stack_str: [(0.0726, 1), (0.07426, 1)]
+2025-09-04 09:38:44,362 - INFO - PID:125072 - 
+2025-09-04 09:38:44,362 - INFO - PID:125072 - # Интервал опроса
+2025-09-04 09:38:44,362 - INFO - PID:125072 - Check Interval: 15
+2025-09-04 09:38:44,362 - INFO - PID:125072 - 
+2025-09-04 09:38:44,362 - INFO - PID:125072 - # Кол-во avdo
+2025-09-04 09:38:44,362 - INFO - PID:125072 - AvDo amount: 2
+2025-09-04 09:38:44,362 - INFO - PID:125072 - 
+2025-09-04 09:38:44,363 - INFO - PID:125072 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1)]'.
+2025-09-04 09:38:45,075 - INFO - PID:125072 - Запуск основного цикла TradeOverBot...
+2025-09-04 09:38:45,075 - INFO - PID:125072 - 
+2025-09-04 09:38:45,075 - INFO - PID:125072 - Iteration 1
+2025-09-04 09:38:45,327 - INFO - PID:125072 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-04 11:01:17,497 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 11:01:17,497 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 11:01:17,603 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 12:01:02,953 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 12:01:02,953 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 12:01:03,086 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 13:57:16,535 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 13:57:16,536 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 13:57:16,645 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 14:01:04,001 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 14:01:04,003 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 14:01:04,115 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 14:01:17,992 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 14:01:17,992 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 14:01:18,099 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 14:01:28,332 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 14:01:28,332 - INFO - PID:125072 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 14:01:28,454 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 15:01:08,837 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 15:01:08,838 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 15:01:08,977 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 16:00:46,594 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 16:00:46,594 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 16:00:46,857 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 16:00:58,641 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 16:00:58,641 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 16:00:58,745 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 16:01:09,337 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 16:01:09,337 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 16:01:09,522 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-04 19:01:17,592 - ERROR - PID:125072 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 19:01:17,593 - INFO - PID:125072 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 19:01:17,719 - INFO - PID:125072 - Пересоздаем клиент
+2025-09-05 09:59:39,703 - INFO - PID:125072 - order_prof_take_lim удален
+2025-09-05 09:59:39,703 - INFO - PID:125072 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-05 09:59:39,704 - INFO - PID:125072 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1)]
+2025-09-05 09:59:39,705 - INFO - PID:125072 - Все процессы завершены.
+2025-09-05 09:59:51,096 - INFO - PID:147454 - # Символ
+2025-09-05 09:59:51,097 - INFO - PID:147454 - Symbol: MAVUSDT
+2025-09-05 09:59:51,097 - INFO - PID:147454 - 
+2025-09-05 09:59:51,098 - INFO - PID:147454 - # Aver Down
+2025-09-05 09:59:51,098 - INFO - PID:147454 - Timeframe RSI Aver Down: 1
+2025-09-05 09:59:51,098 - INFO - PID:147454 - RSI Threshold Aver Down: 70
+2025-09-05 09:59:51,099 - INFO - PID:147454 - Timeframe HA Aver Down: 1
+2025-09-05 09:59:51,099 - INFO - PID:147454 - offset_aver_down=0.02
+2025-09-05 09:59:51,099 - INFO - PID:147454 - 
+2025-09-05 09:59:51,100 - INFO - PID:147454 - Prof Take
+2025-09-05 09:59:51,100 - INFO - PID:147454 - Timeframe RSI Prof Take: 1
+2025-09-05 09:59:51,100 - INFO - PID:147454 - RSI Threshold Profit Take: 30
+2025-09-05 09:59:51,100 - INFO - PID:147454 - Timeframe HA Prof Take: 1
+2025-09-05 09:59:51,100 - INFO - PID:147454 - offset_prof_take=0.02
+2025-09-05 09:59:51,101 - INFO - PID:147454 - 
+2025-09-05 09:59:51,101 - INFO - PID:147454 - # Рыночный ордер
+2025-09-05 09:59:51,101 - INFO - PID:147454 - Side: Sell
+2025-09-05 09:59:51,101 - INFO - PID:147454 - Position Index: 1
+2025-09-05 09:59:51,101 - INFO - PID:147454 - Quantity: 1
+2025-09-05 09:59:51,101 - INFO - PID:147454 - 
+2025-09-05 09:59:51,102 - INFO - PID:147454 - # Стек строка
+2025-09-05 09:59:51,102 - INFO - PID:147454 - order_stack_str: [(0.0726, 1), (0.07426, 1)]
+2025-09-05 09:59:51,102 - INFO - PID:147454 - 
+2025-09-05 09:59:51,102 - INFO - PID:147454 - # Интервал опроса
+2025-09-05 09:59:51,102 - INFO - PID:147454 - Check Interval: 15
+2025-09-05 09:59:51,103 - INFO - PID:147454 - 
+2025-09-05 09:59:51,103 - INFO - PID:147454 - # Кол-во avdo
+2025-09-05 09:59:51,103 - INFO - PID:147454 - AvDo amount: 2
+2025-09-05 09:59:51,103 - INFO - PID:147454 - 
+2025-09-05 09:59:51,104 - INFO - PID:147454 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1)]'.
+2025-09-05 09:59:51,920 - INFO - PID:147454 - Запуск основного цикла TradeOverBot...
+2025-09-05 09:59:51,920 - INFO - PID:147454 - 
+2025-09-05 09:59:51,920 - INFO - PID:147454 - Iteration 1
+2025-09-05 09:59:52,163 - INFO - PID:147454 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-05 10:07:18,221 - INFO - PID:147454 - order_prof_take_lim удален
+2025-09-05 10:07:18,594 - INFO - PID:147454 - Элемент добавлен в стек: (0.07711, 1). Текущий размер стека: 3
+2025-09-05 10:07:18,595 - INFO - PID:147454 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07711
+Стек: [(0.0726, 1), (0.07426, 1), (0.07711, 1)]
+2025-09-05 10:07:18,719 - INFO - PID:147454 - 
+2025-09-05 10:07:18,720 - INFO - PID:147454 - Iteration 2
+2025-09-05 10:07:18,902 - INFO - PID:147454 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-05 11:31:03,260 - INFO - PID:147454 - order_prof_take_lim удален
+2025-09-05 11:31:03,598 - INFO - PID:147454 - Элемент добавлен в стек: (0.07923, 1). Текущий размер стека: 4
+2025-09-05 11:31:03,598 - INFO - PID:147454 - Average down order выполнен. MAVUSDT Sell PosIdx=1 Qty=1 Price=0.07923
+Стек: [(0.0726, 1), (0.07426, 1), (0.07711, 1), (0.07923, 1)]
+2025-09-05 11:31:03,781 - INFO - PID:147454 - Все итерации выполнены.
+2025-09-05 11:31:03,921 - INFO - PID:147454 - Параметр order_stack_str успешно установлен в значение [(0.0726, 1), (0.07426, 1), (0.07711, 1), (0.07923, 1)]
+2025-09-05 11:31:03,921 - INFO - PID:147454 - Все процессы завершены.
+2025-09-05 11:40:00,765 - INFO - PID:149636 - # Символ
+2025-09-05 11:40:00,766 - INFO - PID:149636 - Symbol: MAVUSDT
+2025-09-05 11:40:00,766 - INFO - PID:149636 - 
+2025-09-05 11:40:00,766 - INFO - PID:149636 - # Aver Down
+2025-09-05 11:40:00,766 - INFO - PID:149636 - Timeframe RSI Aver Down: 15
+2025-09-05 11:40:00,766 - INFO - PID:149636 - RSI Threshold Aver Down: 70
+2025-09-05 11:40:00,767 - INFO - PID:149636 - Timeframe HA Aver Down: 15
+2025-09-05 11:40:00,767 - INFO - PID:149636 - offset_aver_down=0.02
+2025-09-05 11:40:00,767 - INFO - PID:149636 - 
+2025-09-05 11:40:00,767 - INFO - PID:149636 - Prof Take
+2025-09-05 11:40:00,767 - INFO - PID:149636 - Timeframe RSI Prof Take: 1
+2025-09-05 11:40:00,767 - INFO - PID:149636 - RSI Threshold Profit Take: 30
+2025-09-05 11:40:00,767 - INFO - PID:149636 - Timeframe HA Prof Take: 1
+2025-09-05 11:40:00,768 - INFO - PID:149636 - offset_prof_take=0.02
+2025-09-05 11:40:00,768 - INFO - PID:149636 - 
+2025-09-05 11:40:00,768 - INFO - PID:149636 - # Рыночный ордер
+2025-09-05 11:40:00,768 - INFO - PID:149636 - Side: Sell
+2025-09-05 11:40:00,768 - INFO - PID:149636 - Position Index: 1
+2025-09-05 11:40:00,768 - INFO - PID:149636 - Quantity: 1
+2025-09-05 11:40:00,768 - INFO - PID:149636 - 
+2025-09-05 11:40:00,769 - INFO - PID:149636 - # Стек строка
+2025-09-05 11:40:00,769 - INFO - PID:149636 - order_stack_str: [(0.0726, 1), (0.07426, 1), (0.07711, 1), (0.07923, 1)]
+2025-09-05 11:40:00,769 - INFO - PID:149636 - 
+2025-09-05 11:40:00,769 - INFO - PID:149636 - # Интервал опроса
+2025-09-05 11:40:00,769 - INFO - PID:149636 - Check Interval: 15
+2025-09-05 11:40:00,769 - INFO - PID:149636 - 
+2025-09-05 11:40:00,769 - INFO - PID:149636 - # Кол-во avdo
+2025-09-05 11:40:00,769 - INFO - PID:149636 - AvDo amount: 1
+2025-09-05 11:40:00,769 - INFO - PID:149636 - 
+2025-09-05 11:40:00,770 - INFO - PID:149636 - Стек установлен из строки: '[(0.0726, 1), (0.07426, 1), (0.07711, 1), (0.07923, 1)]'.
+2025-09-05 11:40:01,753 - INFO - PID:149636 - Запуск основного цикла TradeOverBot...
+2025-09-05 11:40:01,754 - INFO - PID:149636 - 
+2025-09-05 11:40:01,754 - INFO - PID:149636 - Iteration 1
+2025-09-05 11:40:02,000 - INFO - PID:149636 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07711
+2025-09-05 13:40:14,882 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:14,882 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:15,007 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 13:40:25,596 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:25,596 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:25,722 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 13:40:36,307 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:36,307 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:36,429 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 13:40:46,989 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:46,990 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:47,130 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 13:40:57,888 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:57,888 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:58,015 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 13:41:23,943 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:41:23,943 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:41:24,072 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 13:41:35,230 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:41:35,230 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:41:35,344 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 14:00:08,356 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 14:00:08,356 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 14:00:08,488 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 14:23:32,375 - ERROR - PID:149636 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-05 14:23:36,118 - ERROR - PID:149636 - ping/pong timed out - goodbye
+2025-09-05 16:19:07,383 - INFO - PID:149636 - Profit Take lim order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07711
+Стек: [(0.0726, 1), (0.07426, 1), (0.07711, 1)]
+2025-09-05 16:19:07,486 - INFO - PID:149636 - 
+2025-09-05 16:19:07,487 - INFO - PID:149636 - Iteration 2
+2025-09-05 16:19:07,691 - INFO - PID:149636 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.07426
+2025-09-05 18:41:26,878 - ERROR - PID:149636 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-05 18:41:30,780 - ERROR - PID:149636 - ping/pong timed out - goodbye
+2025-09-05 19:34:04,359 - INFO - PID:149636 - order_prof_take_lim удален
+2025-09-05 19:34:04,721 - INFO - PID:149636 - Profit take market order выполнен. MAVUSDT Buy PosIdx=2 Qty=1 Price=0.07521. Закрыта позиция по цене 0.07711
+Стек: [(0.0726, 1), (0.07426, 1)]
+2025-09-05 19:34:04,857 - INFO - PID:149636 - 
+2025-09-05 19:34:04,858 - INFO - PID:149636 - Iteration 3
+2025-09-05 19:34:05,049 - INFO - PID:149636 - order_prof_take_lim установлен. MAVUSDT Buy PosIdx=2 Qty=1 Price= 0.0726
+2025-09-05 19:48:41,251 - ERROR - PID:149636 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-05 19:48:44,932 - ERROR - PID:149636 - ping/pong timed out - goodbye
+2025-09-05 20:37:11,772 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:11,772 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:11,888 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 20:37:22,121 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:22,122 - INFO - PID:149636 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:22,304 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 20:37:32,947 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:32,947 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:33,064 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 20:37:43,285 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:43,285 - INFO - PID:149636 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:43,384 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 20:37:54,578 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:54,578 - INFO - PID:149636 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:54,775 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 20:38:05,019 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:38:05,019 - INFO - PID:149636 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:38:05,121 - INFO - PID:149636 - Пересоздаем клиент
+2025-09-05 20:38:15,363 - ERROR - PID:149636 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:38:15,363 - INFO - PID:149636 - Ошибка API (попытка 3/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:38:15,583 - INFO - PID:149636 - Пересоздаем клиент

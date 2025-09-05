@@ -166,7 +166,6 @@ class HARevers:
             revers_signal, self.signal_data = self.check_for_reversal(ha_df)
             if revers_signal is not None:
                 #self.log_signal(self.signal_data)
-                #self.telegram.send_telegram_message(f"Price: {self.signal_data['price']} {self.signal_data['description']}")
                 return revers_signal
             else:
                 #logger.info(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] No new reversal signals for the closed interval.")
@@ -188,12 +187,12 @@ class HARevers:
     def log_signal(self, signal):
         log_time = signal['time'].strftime('%Y-%m-%d %H:%M:%S')
 
-        self.logger.info(f"----- NEW SIGNAL -----")
-        self.logger.info(f"Time: {log_time}")
-        self.logger.info(f"Type: {signal['type']}")
-        self.logger.info(f"Price: {signal['price']:.3f}")
-        self.logger.info(f"Description: {signal['description']}")
-        self.logger.info(f"-------------------------")
+        self.logger.debug(f"----- NEW SIGNAL -----")
+        self.logger.debug(f"Time: {log_time}")
+        self.logger.debug(f"Type: {signal['type']}")
+        self.logger.debug(f"Price: {signal['price']:.3f}")
+        self.logger.debug(f"Description: {signal['description']}")
+        self.logger.debug(f"-------------------------")
 
 
 

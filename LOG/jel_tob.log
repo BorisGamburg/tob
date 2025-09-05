@@ -1,0 +1,346 @@
+2025-09-02 11:15:33,071 - INFO - PID:103279 - # Символ
+2025-09-02 11:15:33,072 - INFO - PID:103279 - Symbol: JELLYJELLYUSDT
+2025-09-02 11:15:33,072 - INFO - PID:103279 - 
+2025-09-02 11:15:33,072 - INFO - PID:103279 - # Aver Down
+2025-09-02 11:15:33,072 - INFO - PID:103279 - Timeframe RSI Aver Down: 1
+2025-09-02 11:15:33,073 - INFO - PID:103279 - RSI Threshold Aver Down: 70
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Timeframe HA Aver Down: 1
+2025-09-02 11:15:33,073 - INFO - PID:103279 - offset_aver_down=0.03
+2025-09-02 11:15:33,073 - INFO - PID:103279 - 
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Prof Take
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Timeframe RSI Prof Take: 1
+2025-09-02 11:15:33,073 - INFO - PID:103279 - RSI Threshold Profit Take: 30
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Timeframe HA Prof Take: 1
+2025-09-02 11:15:33,073 - INFO - PID:103279 - offset_prof_take=0.03
+2025-09-02 11:15:33,073 - INFO - PID:103279 - 
+2025-09-02 11:15:33,073 - INFO - PID:103279 - # Рыночный ордер
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Side: Sell
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Position Index: 1
+2025-09-02 11:15:33,073 - INFO - PID:103279 - Quantity: 1
+2025-09-02 11:15:33,073 - INFO - PID:103279 - 
+2025-09-02 11:15:33,073 - INFO - PID:103279 - # Стек строка
+2025-09-02 11:15:33,073 - INFO - PID:103279 - order_stack_str: []
+2025-09-02 11:15:33,073 - INFO - PID:103279 - 
+2025-09-02 11:15:33,074 - INFO - PID:103279 - # Интервал опроса
+2025-09-02 11:15:33,074 - INFO - PID:103279 - Check Interval: 15
+2025-09-02 11:15:33,074 - INFO - PID:103279 - 
+2025-09-02 11:15:33,074 - INFO - PID:103279 - # Кол-во avdo
+2025-09-02 11:15:33,074 - INFO - PID:103279 - AvDo amount: 5
+2025-09-02 11:15:33,074 - INFO - PID:103279 - 
+2025-09-02 11:15:33,074 - INFO - PID:103279 - Стек установлен из строки: '[]'.
+2025-09-02 11:15:34,050 - INFO - PID:103279 - Запуск основного цикла TradeOverBot...
+2025-09-02 11:15:34,051 - INFO - PID:103279 - 
+2025-09-02 11:15:34,051 - INFO - PID:103279 - Iteration 1
+2025-09-02 11:26:03,297 - INFO - PID:103279 - Элемент добавлен в стек: (0.024662, 1). Текущий размер стека: 1
+2025-09-02 11:26:03,298 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.024662
+Стек: [(0.024662, 1)]
+2025-09-02 11:26:03,413 - INFO - PID:103279 - 
+2025-09-02 11:26:03,413 - INFO - PID:103279 - Iteration 2
+2025-09-02 11:56:10,007 - INFO - PID:103279 - Profit take market order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.023801. Закрыта позиция по цене 0.024662
+Стек: []
+2025-09-02 11:56:10,117 - INFO - PID:103279 - 
+2025-09-02 11:56:10,117 - INFO - PID:103279 - Iteration 3
+2025-09-02 14:03:13,360 - INFO - PID:103279 - Элемент добавлен в стек: (0.025031, 1). Текущий размер стека: 1
+2025-09-02 14:03:13,360 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.025031
+Стек: [(0.025031, 1)]
+2025-09-02 14:03:13,480 - INFO - PID:103279 - 
+2025-09-02 14:03:13,481 - INFO - PID:103279 - Iteration 4
+2025-09-02 15:58:06,100 - INFO - PID:103279 - Элемент добавлен в стек: (0.026653, 1). Текущий размер стека: 2
+2025-09-02 15:58:06,101 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.026653
+Стек: [(0.025031, 1), (0.026653, 1)]
+2025-09-02 15:58:06,214 - INFO - PID:103279 - 
+2025-09-02 15:58:06,214 - INFO - PID:103279 - Iteration 5
+2025-09-02 15:58:06,385 - INFO - PID:103279 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.025031
+2025-09-02 16:55:07,953 - INFO - PID:103279 - order_prof_take_lim удален
+2025-09-02 16:55:08,292 - INFO - PID:103279 - Элемент добавлен в стек: (0.028517, 1). Текущий размер стека: 3
+2025-09-02 16:55:08,292 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.028517
+Стек: [(0.025031, 1), (0.026653, 1), (0.028517, 1)]
+2025-09-02 16:55:08,400 - INFO - PID:103279 - 
+2025-09-02 16:55:08,401 - INFO - PID:103279 - Iteration 6
+2025-09-02 16:55:08,571 - INFO - PID:103279 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.026653
+2025-09-02 17:16:44,676 - INFO - PID:103279 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.026653
+Стек: [(0.025031, 1), (0.026653, 1)]
+2025-09-02 17:16:44,854 - INFO - PID:103279 - 
+2025-09-02 17:16:44,855 - INFO - PID:103279 - Iteration 7
+2025-09-02 17:16:45,026 - INFO - PID:103279 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.025031
+2025-09-02 17:30:17,637 - INFO - PID:103279 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.025031
+Стек: [(0.025031, 1)]
+2025-09-02 17:30:17,872 - INFO - PID:103279 - 
+2025-09-02 17:30:17,873 - INFO - PID:103279 - Iteration 8
+2025-09-02 17:47:13,004 - INFO - PID:103279 - Profit take market order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.024064. Закрыта позиция по цене 0.025031
+Стек: []
+2025-09-02 17:47:13,113 - INFO - PID:103279 - 
+2025-09-02 17:47:13,114 - INFO - PID:103279 - Iteration 9
+2025-09-02 20:09:15,030 - INFO - PID:103279 - Элемент добавлен в стек: (0.02814, 1). Текущий размер стека: 1
+2025-09-02 20:09:15,030 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.02814
+Стек: [(0.02814, 1)]
+2025-09-02 20:09:15,152 - INFO - PID:103279 - 
+2025-09-02 20:09:15,152 - INFO - PID:103279 - Iteration 10
+2025-09-03 03:15:35,432 - ERROR - PID:103279 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: Connection to remote host was lost..
+2025-09-03 03:15:36,595 - ERROR - PID:103279 - Connection to remote host was lost. - goodbye
+2025-09-03 04:10:18,037 - INFO - PID:103279 - Элемент добавлен в стек: (0.029022, 1). Текущий размер стека: 2
+2025-09-03 04:10:18,037 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.029022
+Стек: [(0.02814, 1), (0.029022, 1)]
+2025-09-03 04:10:18,153 - INFO - PID:103279 - 
+2025-09-03 04:10:18,154 - INFO - PID:103279 - Iteration 11
+2025-09-03 04:10:18,351 - INFO - PID:103279 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.02814
+2025-09-03 08:31:14,430 - INFO - PID:103279 - order_prof_take_lim удален
+2025-09-03 08:31:14,791 - INFO - PID:103279 - Элемент добавлен в стек: (0.030179, 1). Текущий размер стека: 3
+2025-09-03 08:31:14,791 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.030179
+Стек: [(0.02814, 1), (0.029022, 1), (0.030179, 1)]
+2025-09-03 08:31:14,904 - INFO - PID:103279 - 
+2025-09-03 08:31:14,905 - INFO - PID:103279 - Iteration 12
+2025-09-03 08:31:15,082 - INFO - PID:103279 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.029022
+2025-09-03 11:22:08,318 - INFO - PID:103279 - order_prof_take_lim удален
+2025-09-03 11:22:08,656 - INFO - PID:103279 - Элемент добавлен в стек: (0.031867, 1). Текущий размер стека: 4
+2025-09-03 11:22:08,657 - INFO - PID:103279 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.031867
+Стек: [(0.02814, 1), (0.029022, 1), (0.030179, 1), (0.031867, 1)]
+2025-09-03 11:22:08,787 - INFO - PID:103279 - 
+2025-09-03 11:22:08,788 - INFO - PID:103279 - Iteration 13
+2025-09-03 11:22:08,971 - INFO - PID:103279 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.030179
+2025-09-03 12:54:15,852 - INFO - PID:103279 - order_prof_take_lim удален
+2025-09-03 12:54:15,853 - INFO - PID:103279 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-03 12:54:15,855 - INFO - PID:103279 - Параметр order_stack_str успешно установлен в значение [(0.02814, 1), (0.029022, 1), (0.030179, 1), (0.031867, 1)]
+2025-09-03 12:54:15,855 - INFO - PID:103279 - Все процессы завершены.
+2025-09-03 13:00:41,832 - INFO - PID:115630 - # Символ
+2025-09-03 13:00:41,833 - INFO - PID:115630 - Symbol: JELLYJELLYUSDT
+2025-09-03 13:00:41,833 - INFO - PID:115630 - 
+2025-09-03 13:00:41,834 - INFO - PID:115630 - # Aver Down
+2025-09-03 13:00:41,834 - INFO - PID:115630 - Timeframe RSI Aver Down: 240
+2025-09-03 13:00:41,834 - INFO - PID:115630 - RSI Threshold Aver Down: 70
+2025-09-03 13:00:41,834 - INFO - PID:115630 - Timeframe HA Aver Down: 240
+2025-09-03 13:00:41,834 - INFO - PID:115630 - offset_aver_down=0.1
+2025-09-03 13:00:41,834 - INFO - PID:115630 - 
+2025-09-03 13:00:41,835 - INFO - PID:115630 - Prof Take
+2025-09-03 13:00:41,835 - INFO - PID:115630 - Timeframe RSI Prof Take: 1
+2025-09-03 13:00:41,835 - INFO - PID:115630 - RSI Threshold Profit Take: 30
+2025-09-03 13:00:41,835 - INFO - PID:115630 - Timeframe HA Prof Take: 1
+2025-09-03 13:00:41,835 - INFO - PID:115630 - offset_prof_take=0.1
+2025-09-03 13:00:41,835 - INFO - PID:115630 - 
+2025-09-03 13:00:41,836 - INFO - PID:115630 - # Рыночный ордер
+2025-09-03 13:00:41,836 - INFO - PID:115630 - Side: Sell
+2025-09-03 13:00:41,836 - INFO - PID:115630 - Position Index: 1
+2025-09-03 13:00:41,836 - INFO - PID:115630 - Quantity: 1
+2025-09-03 13:00:41,836 - INFO - PID:115630 - 
+2025-09-03 13:00:41,836 - INFO - PID:115630 - # Стек строка
+2025-09-03 13:00:41,836 - INFO - PID:115630 - order_stack_str: [(0.02814, 1), (0.029022, 1), (0.030179, 1), (0.031867, 1)]
+2025-09-03 13:00:41,837 - INFO - PID:115630 - 
+2025-09-03 13:00:41,837 - INFO - PID:115630 - # Интервал опроса
+2025-09-03 13:00:41,837 - INFO - PID:115630 - Check Interval: 15
+2025-09-03 13:00:41,837 - INFO - PID:115630 - 
+2025-09-03 13:00:41,837 - INFO - PID:115630 - # Кол-во avdo
+2025-09-03 13:00:41,837 - INFO - PID:115630 - AvDo amount: 1
+2025-09-03 13:00:41,838 - INFO - PID:115630 - 
+2025-09-03 13:00:41,838 - INFO - PID:115630 - Стек установлен из строки: '[(0.02814, 1), (0.029022, 1), (0.030179, 1), (0.031867, 1)]'.
+2025-09-03 13:00:42,715 - INFO - PID:115630 - Запуск основного цикла TradeOverBot...
+2025-09-03 13:00:42,716 - INFO - PID:115630 - 
+2025-09-03 13:00:42,716 - INFO - PID:115630 - Iteration 1
+2025-09-03 13:00:42,973 - INFO - PID:115630 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.030179
+2025-09-03 15:00:44,016 - ERROR - PID:115630 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 15:00:44,016 - INFO - PID:115630 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 15:00:44,157 - INFO - PID:115630 - Пересоздаем клиент
+2025-09-03 15:00:54,897 - ERROR - PID:115630 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-03 15:00:54,897 - INFO - PID:115630 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-03 15:00:55,192 - INFO - PID:115630 - Пересоздаем клиент
+2025-09-03 17:40:12,243 - INFO - PID:115630 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.030179
+Стек: [(0.02814, 1), (0.029022, 1), (0.030179, 1)]
+2025-09-03 17:40:12,451 - INFO - PID:115630 - 
+2025-09-03 17:40:12,452 - INFO - PID:115630 - Iteration 2
+2025-09-03 17:40:12,623 - INFO - PID:115630 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.029022
+2025-09-03 17:45:27,505 - INFO - PID:115630 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.029022
+Стек: [(0.02814, 1), (0.029022, 1)]
+2025-09-03 17:45:27,617 - INFO - PID:115630 - 
+2025-09-03 17:45:27,618 - INFO - PID:115630 - Iteration 3
+2025-09-03 17:45:27,788 - INFO - PID:115630 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.02814
+2025-09-03 17:47:31,140 - INFO - PID:115630 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.02814
+Стек: [(0.02814, 1)]
+2025-09-03 17:47:31,260 - INFO - PID:115630 - 
+2025-09-03 17:47:31,261 - INFO - PID:115630 - Iteration 4
+2025-09-04 00:05:33,977 - ERROR - PID:115630 - WebSocket Unified V5 (Auth) (wss://stream.bybit.com/v5/private) encountered error: ping/pong timed out.
+2025-09-04 00:05:37,790 - ERROR - PID:115630 - ping/pong timed out - goodbye
+2025-09-04 09:17:50,023 - INFO - PID:115630 - Получен KeyboardInterrupt. Завершение работы...
+2025-09-04 09:17:50,023 - INFO - PID:115630 - Параметр order_stack_str успешно установлен в значение [(0.02814, 1)]
+2025-09-04 09:17:50,024 - INFO - PID:115630 - Все процессы завершены.
+2025-09-04 09:18:10,582 - INFO - PID:124713 - # Символ
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Symbol: JELLYJELLYUSDT
+2025-09-04 09:18:10,583 - INFO - PID:124713 - 
+2025-09-04 09:18:10,583 - INFO - PID:124713 - # Aver Down
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Timeframe RSI Aver Down: 1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - RSI Threshold Aver Down: 70
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Timeframe HA Aver Down: 1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - offset_aver_down=0.1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - 
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Prof Take
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Timeframe RSI Prof Take: 1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - RSI Threshold Profit Take: 30
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Timeframe HA Prof Take: 1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - offset_prof_take=0.1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - 
+2025-09-04 09:18:10,583 - INFO - PID:124713 - # Рыночный ордер
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Side: Sell
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Position Index: 1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - Quantity: 1
+2025-09-04 09:18:10,583 - INFO - PID:124713 - 
+2025-09-04 09:18:10,584 - INFO - PID:124713 - # Стек строка
+2025-09-04 09:18:10,584 - INFO - PID:124713 - order_stack_str: [(0.02814, 1)]
+2025-09-04 09:18:10,584 - INFO - PID:124713 - 
+2025-09-04 09:18:10,584 - INFO - PID:124713 - # Интервал опроса
+2025-09-04 09:18:10,584 - INFO - PID:124713 - Check Interval: 15
+2025-09-04 09:18:10,584 - INFO - PID:124713 - 
+2025-09-04 09:18:10,584 - INFO - PID:124713 - # Кол-во avdo
+2025-09-04 09:18:10,585 - INFO - PID:124713 - AvDo amount: 1
+2025-09-04 09:18:10,585 - INFO - PID:124713 - 
+2025-09-04 09:18:10,585 - INFO - PID:124713 - Стек установлен из строки: '[(0.02814, 1)]'.
+2025-09-04 09:18:11,276 - INFO - PID:124713 - Запуск основного цикла TradeOverBot...
+2025-09-04 09:18:11,276 - INFO - PID:124713 - 
+2025-09-04 09:18:11,276 - INFO - PID:124713 - Iteration 1
+2025-09-04 09:49:16,816 - INFO - PID:124713 - Элемент добавлен в стек: (0.038386, 1). Текущий размер стека: 2
+2025-09-04 09:49:16,816 - INFO - PID:124713 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.038386
+Стек: [(0.02814, 1), (0.038386, 1)]
+2025-09-04 09:49:16,930 - INFO - PID:124713 - Все итерации выполнены.
+2025-09-04 09:49:17,050 - INFO - PID:124713 - Параметр order_stack_str успешно установлен в значение [(0.02814, 1), (0.038386, 1)]
+2025-09-04 09:49:17,050 - INFO - PID:124713 - Все процессы завершены.
+2025-09-04 11:27:55,947 - INFO - PID:125956 - # Символ
+2025-09-04 11:27:55,947 - INFO - PID:125956 - Symbol: JELLYJELLYUSDT
+2025-09-04 11:27:55,948 - INFO - PID:125956 - 
+2025-09-04 11:27:55,948 - INFO - PID:125956 - # Aver Down
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Timeframe RSI Aver Down: 1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - RSI Threshold Aver Down: 70
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Timeframe HA Aver Down: 1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - offset_aver_down=0.03
+2025-09-04 11:27:55,948 - INFO - PID:125956 - 
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Prof Take
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Timeframe RSI Prof Take: 1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - RSI Threshold Profit Take: 30
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Timeframe HA Prof Take: 1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - offset_prof_take=0.1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - 
+2025-09-04 11:27:55,948 - INFO - PID:125956 - # Рыночный ордер
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Side: Sell
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Position Index: 1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Quantity: 1
+2025-09-04 11:27:55,948 - INFO - PID:125956 - 
+2025-09-04 11:27:55,948 - INFO - PID:125956 - # Стек строка
+2025-09-04 11:27:55,948 - INFO - PID:125956 - order_stack_str: [(0.02814, 1), (0.038386, 1)]
+2025-09-04 11:27:55,948 - INFO - PID:125956 - 
+2025-09-04 11:27:55,948 - INFO - PID:125956 - # Интервал опроса
+2025-09-04 11:27:55,948 - INFO - PID:125956 - Check Interval: 15
+2025-09-04 11:27:55,948 - INFO - PID:125956 - 
+2025-09-04 11:27:55,949 - INFO - PID:125956 - # Кол-во avdo
+2025-09-04 11:27:55,949 - INFO - PID:125956 - AvDo amount: 3
+2025-09-04 11:27:55,949 - INFO - PID:125956 - 
+2025-09-04 11:27:55,949 - INFO - PID:125956 - Стек установлен из строки: '[(0.02814, 1), (0.038386, 1)]'.
+2025-09-04 11:27:56,676 - INFO - PID:125956 - Запуск основного цикла TradeOverBot...
+2025-09-04 11:27:56,677 - INFO - PID:125956 - 
+2025-09-04 11:27:56,677 - INFO - PID:125956 - Iteration 1
+2025-09-04 11:27:57,260 - INFO - PID:125956 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.02814
+2025-09-04 12:57:06,144 - ERROR - PID:125956 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 12:57:06,144 - INFO - PID:125956 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 12:57:06,338 - INFO - PID:125956 - Пересоздаем клиент
+2025-09-04 13:01:10,592 - ERROR - PID:125956 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-04 13:01:10,593 - INFO - PID:125956 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-04 13:01:10,710 - INFO - PID:125956 - Пересоздаем клиент
+2025-09-05 10:03:30,555 - INFO - PID:147602 - # Символ
+2025-09-05 10:03:30,556 - INFO - PID:147602 - Symbol: JELLYJELLYUSDT
+2025-09-05 10:03:30,556 - INFO - PID:147602 - 
+2025-09-05 10:03:30,556 - INFO - PID:147602 - # Aver Down
+2025-09-05 10:03:30,556 - INFO - PID:147602 - Timeframe RSI Aver Down: 1
+2025-09-05 10:03:30,556 - INFO - PID:147602 - RSI Threshold Aver Down: 70
+2025-09-05 10:03:30,556 - INFO - PID:147602 - Timeframe HA Aver Down: 1
+2025-09-05 10:03:30,556 - INFO - PID:147602 - offset_aver_down=0.03
+2025-09-05 10:03:30,556 - INFO - PID:147602 - 
+2025-09-05 10:03:30,556 - INFO - PID:147602 - Prof Take
+2025-09-05 10:03:30,556 - INFO - PID:147602 - Timeframe RSI Prof Take: 1
+2025-09-05 10:03:30,556 - INFO - PID:147602 - RSI Threshold Profit Take: 30
+2025-09-05 10:03:30,556 - INFO - PID:147602 - Timeframe HA Prof Take: 1
+2025-09-05 10:03:30,556 - INFO - PID:147602 - offset_prof_take=0.03
+2025-09-05 10:03:30,556 - INFO - PID:147602 - 
+2025-09-05 10:03:30,556 - INFO - PID:147602 - # Рыночный ордер
+2025-09-05 10:03:30,557 - INFO - PID:147602 - Side: Sell
+2025-09-05 10:03:30,557 - INFO - PID:147602 - Position Index: 1
+2025-09-05 10:03:30,557 - INFO - PID:147602 - Quantity: 1
+2025-09-05 10:03:30,557 - INFO - PID:147602 - 
+2025-09-05 10:03:30,557 - INFO - PID:147602 - # Стек строка
+2025-09-05 10:03:30,557 - INFO - PID:147602 - order_stack_str: [(0.02814, 1), (0.038386, 1)]
+2025-09-05 10:03:30,557 - INFO - PID:147602 - 
+2025-09-05 10:03:30,558 - INFO - PID:147602 - # Интервал опроса
+2025-09-05 10:03:30,558 - INFO - PID:147602 - Check Interval: 15
+2025-09-05 10:03:30,558 - INFO - PID:147602 - 
+2025-09-05 10:03:30,558 - INFO - PID:147602 - # Кол-во avdo
+2025-09-05 10:03:30,558 - INFO - PID:147602 - AvDo amount: 3
+2025-09-05 10:03:30,558 - INFO - PID:147602 - 
+2025-09-05 10:03:30,559 - INFO - PID:147602 - Стек установлен из строки: '[(0.02814, 1), (0.038386, 1)]'.
+2025-09-05 10:03:31,270 - INFO - PID:147602 - Запуск основного цикла TradeOverBot...
+2025-09-05 10:03:31,271 - INFO - PID:147602 - 
+2025-09-05 10:03:31,271 - INFO - PID:147602 - Iteration 1
+2025-09-05 10:03:31,519 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.02814
+2025-09-05 10:49:06,038 - INFO - PID:147602 - order_prof_take_lim удален
+2025-09-05 10:49:07,028 - INFO - PID:147602 - Элемент добавлен в стек: (0.041952, 1). Текущий размер стека: 3
+2025-09-05 10:49:07,028 - INFO - PID:147602 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.041952
+Стек: [(0.02814, 1), (0.038386, 1), (0.041952, 1)]
+2025-09-05 10:49:07,154 - INFO - PID:147602 - 
+2025-09-05 10:49:07,155 - INFO - PID:147602 - Iteration 2
+2025-09-05 10:49:07,325 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.038386
+2025-09-05 11:16:11,279 - INFO - PID:147602 - order_prof_take_lim удален
+2025-09-05 11:16:11,638 - INFO - PID:147602 - Элемент добавлен в стек: (0.043249, 1). Текущий размер стека: 4
+2025-09-05 11:16:11,638 - INFO - PID:147602 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.043249
+Стек: [(0.02814, 1), (0.038386, 1), (0.041952, 1), (0.043249, 1)]
+2025-09-05 11:16:11,851 - INFO - PID:147602 - 
+2025-09-05 11:16:11,852 - INFO - PID:147602 - Iteration 3
+2025-09-05 11:16:12,022 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.041952
+2025-09-05 13:40:08,773 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:08,774 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:09,048 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 13:40:19,283 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:19,283 - INFO - PID:147602 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:19,446 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 13:40:29,880 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:29,881 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:30,022 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 13:40:40,250 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:40:40,250 - INFO - PID:147602 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:40:40,373 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 13:41:08,008 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:41:08,008 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:41:08,122 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 13:41:18,340 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:41:18,340 - INFO - PID:147602 - Ошибка API (попытка 2/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:41:18,462 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 13:41:28,696 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 13:41:28,696 - INFO - PID:147602 - Ошибка API (попытка 3/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 13:41:28,816 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 14:39:36,150 - INFO - PID:147602 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.041952
+Стек: [(0.02814, 1), (0.038386, 1), (0.041952, 1)]
+2025-09-05 14:39:36,342 - INFO - PID:147602 - 
+2025-09-05 14:39:36,343 - INFO - PID:147602 - Iteration 4
+2025-09-05 14:39:36,885 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.038386
+2025-09-05 15:13:03,153 - INFO - PID:147602 - Profit Take lim order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.038386
+Стек: [(0.02814, 1), (0.038386, 1)]
+2025-09-05 15:13:03,273 - INFO - PID:147602 - 
+2025-09-05 15:13:03,273 - INFO - PID:147602 - Iteration 5
+2025-09-05 15:13:03,443 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.02814
+2025-09-05 16:25:09,342 - INFO - PID:147602 - order_prof_take_lim удален
+2025-09-05 16:25:09,737 - INFO - PID:147602 - Элемент добавлен в стек: (0.040817, 1). Текущий размер стека: 3
+2025-09-05 16:25:09,737 - INFO - PID:147602 - Average down order выполнен. JELLYJELLYUSDT Sell PosIdx=1 Qty=1 Price=0.040817
+Стек: [(0.02814, 1), (0.038386, 1), (0.040817, 1)]
+2025-09-05 16:25:09,859 - INFO - PID:147602 - 
+2025-09-05 16:25:09,860 - INFO - PID:147602 - Iteration 6
+2025-09-05 16:25:10,058 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.038386
+2025-09-05 20:28:20,670 - INFO - PID:147602 - order_prof_take_lim удален
+2025-09-05 20:28:21,033 - INFO - PID:147602 - Profit take market order выполнен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price=0.039557. Закрыта позиция по цене 0.040817
+Стек: [(0.02814, 1), (0.038386, 1)]
+2025-09-05 20:28:21,144 - INFO - PID:147602 - 
+2025-09-05 20:28:21,145 - INFO - PID:147602 - Iteration 7
+2025-09-05 20:28:21,344 - INFO - PID:147602 - order_prof_take_lim установлен. JELLYJELLYUSDT Buy PosIdx=2 Qty=1 Price= 0.02814
+2025-09-05 20:37:20,297 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:20,298 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:20,395 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 20:37:32,133 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:32,133 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:32,282 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 20:37:57,844 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:37:57,845 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:37:57,952 - INFO - PID:147602 - Пересоздаем клиент
+2025-09-05 20:38:08,925 - ERROR - PID:147602 - Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit. Sleeping, then trying again. Request: https://api.bybit.com/v5/market/kline
+2025-09-05 20:38:08,925 - INFO - PID:147602 - Ошибка API (попытка 1/5): 'x-bapi-limit-reset-timestamp' 
+2025-09-05 20:38:09,184 - INFO - PID:147602 - Пересоздаем клиент
