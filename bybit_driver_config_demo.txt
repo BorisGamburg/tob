@@ -1,4 +1,0 @@
-api_key="HJj6TpeczLQFQXUss7"
-api_secret="AwXAHSVqKXCdXH533YLVIeEudaxTKqEAw3P9"
-min_order_size=0.1
-order_size_precision=1

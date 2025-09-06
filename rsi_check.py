@@ -27,15 +27,15 @@ class RSICheck:
         self.logger.info(f"{message}")
 
 
-    def rsi_snapped(self, rsi_threshold, side=None):
-        self.rsi_curr = self.bybit_driver.calculate_last_rsi(self.symbol, interval=self.timeframe)
+    def rsi_snapped(self, tf=None, threshold=None, side=None):
+        self.rsi_curr = self.bybit_driver.calculate_last_rsi(self.symbol, interval=tf)
 
         if self.is_rsi_snapped:
             return True
 
-        if self.check_rsi_threshold(rsi_threshold, side=side): 
+        if self.check_rsi_threshold(threshold, side=side): 
             self.is_rsi_snapped = True
-            self.logger.debug(f"rsi_snapped. {side} TF={self.timeframe}")
+            self.logger.debug(f"rsi_snapped. {side} TF={tf}")
             return True
         else:
             return False

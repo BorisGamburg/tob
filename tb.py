@@ -43,12 +43,12 @@ class TradingBot:
         self.api_key = api_key
         self.api_secret = api_secret
         self.symbol = symbol
-        self.rsi_tf_aver_down=rsi_tf_aver_down
+        self.avdo_tf_rsi=rsi_tf_aver_down
         self.rsi_tf_prof_take=rsi_tf_prof_take
         self.rsi_threshold_aver_down = rsi_threshold_aver_down
         self.rsi_threshold_prof_take = rsi_threshold_prof_take
         self.ha_rev_prof_take_tf = ha_rev_prof_take_tf
-        self.ha_rev_aver_down_tf = ha_rev_aver_down_tf
+        self.avdo_tf_ha = ha_rev_aver_down_tf
         self.side = side
         self.posIdx = posIdx
         self.qty = qty
@@ -61,7 +61,6 @@ class TradingBot:
         self.order_aver_down_extrem = None
         self.order_id_aver_down_extrem = None
         self.order_aver_down_extrem_filled = True
-        self.shared_dict = shared_dict
         self.order_prof_take_lim_saved = None
 
 
@@ -79,7 +78,7 @@ class TradingBot:
         
         self.ha_rev_aver_down = HARevers(
             symbol=self.symbol,
-            timeframe=self.ha_rev_aver_down_tf, 
+            timeframe=self.avdo_tf_ha, 
             bybit_driver=self.bybit_driver,
             logger=self.logger,
             telegram=self.telegram
@@ -87,7 +86,7 @@ class TradingBot:
         
         self.rsi_check_aver_down = RSICheck(
             symbol=self.symbol,
-            timeframe=self.rsi_tf_aver_down, 
+            timeframe=self.avdo_tf_rsi, 
             rsi_threshold=self.rsi_threshold_aver_down,
             bybit_driver=self.bybit_driver,
             logger=self.logger,
@@ -140,14 +139,12 @@ class TradingBot:
 
 
     def check_averaging_down(self, base_cond_price=None):
-            # if self.bybit_driver.calculate_last_rsi(self.symbol, "60") > 70:
-            #     h170 = True
-            # else:
-            #     h170 = False
-
-
             # Проверяем rsi
-            rsi_aver_down_snapped = self.rsi_check_aver_down.rsi_snapped(self.rsi_threshold_aver_down, side=self.side)
+            rsi_aver_down_snapped = self.rsi_check_aver_down.rsi_snapped(
+                tf=self.avdo_tf_rsi,
+                threshold=self.rsi_threshold_aver_down, 
+                side=self.side
+            )
 
             # Если RSI пересек 50, то сбрасываем защелку
             if ((self.rsi_check_aver_down.rsi_curr < 50) and (self.side == "Sell")) or \
@@ -159,7 +156,6 @@ class TradingBot:
             # Проверяем price cond
             price_cond_filled =  self.price_check.check_price_cond(
                 base_cond_price=base_cond_price,
-                interval=self.ha_rev_aver_down_tf,
                 side=self.side,
                 offset_min=self.offset_aver_down
             )
@@ -169,7 +165,7 @@ class TradingBot:
             if HA_reversed:
                 self.logger.debug(f"")
                 self.logger.debug(f"check_averaging_down")
-                self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.ha_rev_aver_down_tf}")   
+                self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.avdo_tf_ha}")   
                 self.logger.debug(f"HA Rev Prof Take развернулся. TF={self.ha_rev_prof_take_tf}")   
                 self.logger.debug(f"rsi_aver_down_snapped: {rsi_aver_down_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
@@ -193,7 +189,7 @@ class TradingBot:
     def check_profit_taking(self, base_cond_price):
             if base_cond_price is None:
                 # Базовой цены нет => еще ничего не открыто => закрывать нечего. Выходим
-                self.logger.debug("Базовая цена не задана. Profit taking не выполняем.")
+                #self.logger.debug("Базовая цена не задана. Profit taking не выполняем.")
                 return False   
 
             # *** Проверяем достигла ли цена предыдущую позицию ***
@@ -206,9 +202,13 @@ class TradingBot:
             # *** Проверяем RSI, HA_Resvers, Price_Cond
             # Проверяем rsi
             #self.logger.debug(f"Checking profit taking conditions.")
-            rsi_prof_take_snapped = self.rsi_check_prof_take.rsi_snapped(self.rsi_threshold_prof_take, side=self.inverse_side())
-            if rsi_prof_take_snapped:   
-                self.logger.debug(f"rsi_prof_take_snapped = {rsi_prof_take_snapped}")
+            rsi_prof_take_snapped = self.rsi_check_prof_take.rsi_snapped(
+                tf=self.rsi_tf_prof_take,
+                threshold=self.rsi_threshold_prof_take, 
+                side=self.inverse_side()
+            )
+            #if rsi_prof_take_snapped:   
+            #    self.logger.debug(f"rsi_prof_take_snapped = {rsi_prof_take_snapped}")
 
             # Если RSI пересек 50, то сбрасываем защелку
             if ((self.rsi_check_prof_take.rsi_curr > 50) and (self.side == "Sell")) or \
@@ -220,7 +220,6 @@ class TradingBot:
             # Проверяем price cond 
             price_cond_filled =  self.price_check.check_price_cond(
                 base_cond_price=base_cond_price,
-                interval=self.ha_rev_prof_take_tf,
                 side=self.inverse_side(),
                 offset_min=self.offset_prof_take
             )
@@ -235,6 +234,8 @@ class TradingBot:
                 self.logger.debug(f"rsi_prof_take_snapped: {rsi_prof_take_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
                 self.logger.debug(f"Price condition: {self.price_check.price_cond}")
+                self.logger.debug(f"avdo_tf_rsi: {self.avdo_tf_rsi}")
+                self.logger.debug(f"avdo_tf_ha: {self.avdo_tf_ha}")
 
             # Проверяем выполнение всех условий
             if not (rsi_prof_take_snapped and HA_reversed and price_cond_filled):
@@ -262,13 +263,17 @@ class TradingBot:
             offset_prof_take=None, 
             order_aver_down_extrem=None,
             stack_second_last=None,
-            order_stack_str=None
+            order_stack_str=None,
+            avdo_rsi_tf=None,
+            avdo_ha_tf=None
         ):
         self.offset_aver_down = offset_aver_down 
         self.offset_prof_take = offset_prof_take 
         self.order_stack_str = order_stack_str
         self.order_aver_down_extrem = order_aver_down_extrem
         self.order_prof_take_lim_filled = False
+        self.avdo_tf_rsi = avdo_rsi_tf
+        self.avdo_tf_ha = avdo_ha_tf
         if stack_second_last == None:
             self.stack_second_last_price = None
             self.stack_second_last_qty = None
@@ -288,13 +293,6 @@ class TradingBot:
                              f"PosIdx={res["position_idx"]} Qty={res["qty"]} Price= {res["price"]}")
 
         while True:
-            # Обновляем атрибуты TradingBot из shared_dict на каждой итерации
-            if self.shared_dict:
-                for key, value in self.shared_dict.items():
-                    # Проверяем, существует ли такой атрибут и обновляем его
-                    if hasattr(self, key):
-                        setattr(self, key, value)
-
             if self.order_prof_take_lim_filled:
                 res = "profit_take_lim"
                 break
@@ -315,12 +313,6 @@ class TradingBot:
                 res = "profit_take_market"
                 break
 
-            # Загружаем shared_dict
-            self.shared_dict.update(self.get_exposed_attributes())
-
-            # Выгружаем shared_dict
-            self.update_from_shared_dict()
-
             # Ждем интервал 
             time.sleep(self.check_interval)
 
@@ -338,14 +330,6 @@ class TradingBot:
         if res == 0:
             self.logger.info("order_prof_take_lim удален")
 
-    def update_from_shared_dict(self):
-        if 'offset_aver_down' in self.shared_dict:
-            self.offset_aver_down = self.shared_dict['offset_aver_down']
-        if 'offset_prof_take' in self.shared_dict:
-            self.offset_prof_take = self.shared_dict['offset_prof_take']
-        if 'qty' in self.shared_dict:
-            self.qty = self.shared_dict['qty']
-
 
     def log(self, message):
         self.logger.info(message)
@@ -361,19 +345,6 @@ class TradingBot:
 
 
 
-    def get_exposed_attributes(self):
-        return {
-            "symbol": self.symbol,
-            "side": self.side,
-            "posIdx": self.posIdx,
-            "qty": self.qty,
-            "offset_aver_down": self.offset_aver_down,
-            "offset_prof_take": self.offset_prof_take,
-            "check_interval": self.check_interval,
-            "order_stack_str": self.order_stack_str,
-            "ha_rev_prof_take_tf": self.ha_rev_prof_take_tf,
-            "ha_rev_aver_down_tf": self.ha_rev_aver_down_tf
-        }
 
         
 

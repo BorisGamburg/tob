@@ -1,0 +1,1073 @@
+06 15:36:48-INFO-Symbol: GPSUSDT
+06 15:36:48-INFO-
+06 15:36:48-INFO-# Aver Down
+06 15:36:48-INFO-Timeframe RSI Aver Down: 1
+06 15:36:48-INFO-RSI Threshold Aver Down: 60
+06 15:36:48-INFO-Timeframe HA Aver Down: 1
+06 15:36:48-INFO-offset_aver_down=0.01
+06 15:36:48-INFO-
+06 15:36:48-INFO-Prof Take
+06 15:36:48-INFO-Timeframe RSI Prof Take: 1
+06 15:36:48-INFO-RSI Threshold Profit Take: 40
+06 15:36:48-INFO-Timeframe HA Prof Take: 1
+06 15:36:48-INFO-offset_prof_take=0.01
+06 15:36:48-INFO-
+06 15:36:48-INFO-Side: Sell
+06 15:36:48-INFO-Position Index: 1
+06 15:36:48-INFO-Quantity: 1
+06 15:36:48-INFO-
+06 15:36:48-INFO-order_stack_str: []
+06 15:36:48-INFO-
+06 15:36:48-INFO-Check Interval: 15
+06 15:36:48-INFO-
+06 15:36:48-INFO-AvDo amount: 5
+06 15:36:48-INFO-
+06 15:36:49-INFO-
+06 15:36:49-INFO-Iteration 1
+06 15:37:34-INFO-Symbol: GPSUSDT
+06 15:37:34-INFO-
+06 15:37:34-INFO-# Aver Down
+06 15:37:34-INFO-Timeframe RSI Aver Down: 1
+06 15:37:34-INFO-RSI Threshold Aver Down: 60
+06 15:37:34-INFO-Timeframe HA Aver Down: 1
+06 15:37:34-INFO-offset_aver_down=0.01
+06 15:37:34-INFO-
+06 15:37:34-INFO-Prof Take
+06 15:37:34-INFO-Timeframe RSI Prof Take: 1
+06 15:37:34-INFO-RSI Threshold Profit Take: 40
+06 15:37:34-INFO-Timeframe HA Prof Take: 1
+06 15:37:34-INFO-offset_prof_take=0.01
+06 15:37:34-INFO-
+06 15:37:34-INFO-Side: Sell
+06 15:37:34-INFO-Position Index: 1
+06 15:37:34-INFO-Quantity: 1
+06 15:37:34-INFO-
+06 15:37:34-INFO-order_stack_str: []
+06 15:37:34-INFO-
+06 15:37:34-INFO-Check Interval: 15
+06 15:37:34-INFO-
+06 15:37:34-INFO-AvDo amount: 5
+06 15:37:34-INFO-
+06 15:37:36-INFO-
+06 15:37:36-INFO-Iteration 1
+06 15:46:11-INFO-# Символ
+06 15:46:11-INFO-Symbol: GPSUSDT
+06 15:46:11-INFO-
+06 15:46:11-INFO-# Aver Down
+06 15:46:11-INFO-Timeframe RSI Aver Down: 1
+06 15:46:11-INFO-RSI Threshold Aver Down: 60
+06 15:46:11-INFO-Timeframe HA Aver Down: 1
+06 15:46:11-INFO-offset_aver_down=0.01
+06 15:46:11-INFO-
+06 15:46:11-INFO-Prof Take
+06 15:46:11-INFO-Timeframe RSI Prof Take: 1
+06 15:46:11-INFO-RSI Threshold Profit Take: 40
+06 15:46:11-INFO-Timeframe HA Prof Take: 1
+06 15:46:11-INFO-offset_prof_take=0.01
+06 15:46:11-INFO-
+06 15:46:11-INFO-# Рыночный ордер
+06 15:46:11-INFO-Side: Sell
+06 15:46:11-INFO-Position Index: 1
+06 15:46:11-INFO-Quantity: 1
+06 15:46:11-INFO-
+06 15:46:11-INFO-# Стек строка
+06 15:46:11-INFO-order_stack_str: []
+06 15:46:11-INFO-
+06 15:46:11-INFO-# Интервал опроса
+06 15:46:11-INFO-Check Interval: 15
+06 15:46:11-INFO-
+06 15:46:11-INFO-# Кол-во avdo
+06 15:46:11-INFO-AvDo amount: 5
+06 15:46:11-INFO-
+06 15:46:11-INFO-Стек установлен из строки: '[]'.
+06 15:46:12-INFO-Запуск основного цикла TradeOverBot...
+06 15:46:12-INFO-
+06 15:46:12-INFO-Iteration 1
+06 16:00:11-INFO-Элемент добавлен в стек: (0.01255, 1). Текущий размер стека: 1
+06 16:00:11-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, rsi_tf_aver_down=1
+06 16:00:11-INFO-Average down order выполнен. GPSUSDT Sell PosIdx=1 Qty=1 Price=0.01255
+Стек: [(0.01255, 1)]
+06 16:00:11-INFO-
+06 16:00:11-INFO-Iteration 2
+06 16:13:31-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 16:13:31-INFO-Параметр order_stack_str успешно установлен в значение [(0.01255, 1)]
+06 16:13:31-INFO-Все процессы завершены.
+06 16:13:35-INFO-# Символ
+06 16:13:35-INFO-Symbol: GPSUSDT
+06 16:13:35-INFO-
+06 16:13:35-INFO-# Aver Down
+06 16:13:35-INFO-Timeframe RSI Aver Down: 1
+06 16:13:35-INFO-RSI Threshold Aver Down: 60
+06 16:13:35-INFO-Timeframe HA Aver Down: 1
+06 16:13:35-INFO-offset_aver_down=0.01
+06 16:13:35-INFO-
+06 16:13:35-INFO-Prof Take
+06 16:13:35-INFO-Timeframe RSI Prof Take: 1
+06 16:13:35-INFO-RSI Threshold Profit Take: 40
+06 16:13:35-INFO-Timeframe HA Prof Take: 1
+06 16:13:35-INFO-offset_prof_take=0.01
+06 16:13:35-INFO-
+06 16:13:35-INFO-# Рыночный ордер
+06 16:13:35-INFO-Side: Sell
+06 16:13:35-INFO-Position Index: 1
+06 16:13:35-INFO-Quantity: 1
+06 16:13:35-INFO-
+06 16:13:35-INFO-# Стек строка
+06 16:13:35-INFO-order_stack_str: [(0.01255, 1)]
+06 16:13:35-INFO-
+06 16:13:35-INFO-# Интервал опроса
+06 16:13:35-INFO-Check Interval: 15
+06 16:13:35-INFO-
+06 16:13:35-INFO-# Кол-во avdo
+06 16:13:35-INFO-AvDo amount: 5
+06 16:13:35-INFO-
+06 16:13:35-INFO-Стек установлен из строки: '[(0.01255, 1)]'.
+06 16:13:37-INFO-Запуск основного цикла TradeOverBot...
+06 16:13:37-INFO-
+06 16:13:37-INFO-Iteration 1
+06 18:14:39-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 18:14:39-INFO-Параметр order_stack_str успешно установлен в значение [(0.01255, 1)]
+06 18:14:39-INFO-Все процессы завершены.
+06 18:14:46-INFO-# Символ
+06 18:14:46-INFO-Symbol: GPSUSDT
+06 18:14:46-INFO-
+06 18:14:46-INFO-# Aver Down
+06 18:14:46-INFO-Timeframe RSI Aver Down: 1
+06 18:14:46-INFO-RSI Threshold Aver Down: 60
+06 18:14:46-INFO-Timeframe HA Aver Down: 1
+06 18:14:46-INFO-offset_aver_down=0.01
+06 18:14:46-INFO-
+06 18:14:46-INFO-Prof Take
+06 18:14:46-INFO-Timeframe RSI Prof Take: 1
+06 18:14:46-INFO-RSI Threshold Profit Take: 40
+06 18:14:46-INFO-Timeframe HA Prof Take: 1
+06 18:14:46-INFO-offset_prof_take=0.01
+06 18:14:46-INFO-
+06 18:14:46-INFO-# Рыночный ордер
+06 18:14:46-INFO-Side: Sell
+06 18:14:46-INFO-Position Index: 1
+06 18:14:46-INFO-Quantity: 1
+06 18:14:46-INFO-
+06 18:14:46-INFO-# Стек строка
+06 18:14:46-INFO-order_stack_str: [(0.01255, 1)]
+06 18:14:46-INFO-
+06 18:14:46-INFO-# Интервал опроса
+06 18:14:46-INFO-Check Interval: 15
+06 18:14:46-INFO-
+06 18:14:46-INFO-# Кол-во avdo
+06 18:14:46-INFO-AvDo amount: 5
+06 18:14:46-INFO-
+06 18:14:46-DEBUG-Debug mode is ON
+06 18:14:46-INFO-Стек установлен из строки: '[(0.01255, 1)]'.
+06 18:14:46-DEBUG-OrderManager initialized.
+06 18:14:48-INFO-Запуск основного цикла TradeOverBot...
+06 18:14:48-INFO-
+06 18:14:48-INFO-Iteration 1
+06 18:14:48-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 18:15:08-DEBUG-
+06 18:15:08-DEBUG-Checking profit taking.
+06 18:15:08-DEBUG-HA Prof Take развернулся. TF=1
+06 18:15:08-DEBUG-rsi_prof_take_snapped: False
+06 18:15:08-DEBUG-price_cond_filled: False
+06 18:15:08-DEBUG-Price condition: < 0.0124223
+06 18:18:03-DEBUG-
+06 18:18:03-DEBUG-check_averaging_down
+06 18:18:03-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 18:18:03-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 18:18:03-DEBUG-rsi_aver_down_snapped: False
+06 18:18:03-DEBUG-price_cond_filled: True
+06 18:18:03-DEBUG-Price condition: > 0.012677
+06 18:20:06-DEBUG-GPSUSDT: RSI 61.109347810672865 больше порога 60
+06 18:20:06-DEBUG-rsi_snapped. Sell TF=1
+06 18:20:07-DEBUG-
+06 18:20:07-DEBUG-Checking profit taking.
+06 18:20:07-DEBUG-HA Prof Take развернулся. TF=1
+06 18:20:07-DEBUG-rsi_prof_take_snapped: False
+06 18:20:07-DEBUG-price_cond_filled: False
+06 18:20:07-DEBUG-Price condition: < 0.0124223
+06 18:32:08-DEBUG-
+06 18:32:08-DEBUG-check_averaging_down
+06 18:32:08-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 18:32:08-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 18:32:08-DEBUG-rsi_aver_down_snapped: True
+06 18:32:08-DEBUG-price_cond_filled: True
+06 18:32:08-DEBUG-Price condition: > 0.012799086330415826
+06 18:32:08-DEBUG-Попытка открыть Sell позицию размером 1 (position_idx=1)
+06 18:32:09-DEBUG-Ответ на рыночный ордер Sell: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '1a9e94a7-647f-4431-ba38-c65df8673dc3', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1757176328975}
+06 18:32:09-INFO-Элемент добавлен в стек: (0.01294, 1). Текущий размер стека: 2
+06 18:32:09-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=5, ha_tf_aver_down=5
+06 18:32:09-INFO-Average down order выполнен. GPSUSDT Sell PosIdx=1 Qty=1 Price=0.01294
+Стек: [(0.01255, 1), (0.01294, 1)]
+06 18:32:09-DEBUG-beg_stack_size=1, avdo_amount=5, cur_stack_size=2
+06 18:32:09-INFO-
+06 18:32:09-INFO-Iteration 2
+06 18:32:09-INFO-order_prof_take_lim установлен. GPSUSDT Buy PosIdx=2 Qty=1 Price= 0.01255
+06 18:33:38-DEBUG-GPSUSDT: RSI 62.119474722270375 больше порога 60
+06 18:33:38-DEBUG-rsi_snapped. Sell TF=1
+06 18:34:15-DEBUG-
+06 18:34:15-DEBUG-Checking profit taking.
+06 18:34:15-DEBUG-HA Prof Take развернулся. TF=1
+06 18:34:15-DEBUG-rsi_prof_take_snapped: False
+06 18:34:15-DEBUG-price_cond_filled: False
+06 18:34:15-DEBUG-Price condition: < 0.012691975807631546
+06 18:37:11-DEBUG-
+06 18:37:11-DEBUG-check_averaging_down
+06 18:37:11-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 18:37:11-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 18:37:11-DEBUG-rsi_aver_down_snapped: True
+06 18:37:11-DEBUG-price_cond_filled: False
+06 18:37:11-DEBUG-Price condition: > 0.013153436173129173
+06 18:38:07-DEBUG-
+06 18:38:07-DEBUG-Checking profit taking.
+06 18:38:07-DEBUG-HA Prof Take развернулся. TF=1
+06 18:38:07-DEBUG-rsi_prof_take_snapped: False
+06 18:38:07-DEBUG-price_cond_filled: False
+06 18:38:07-DEBUG-Price condition: < 0.01274109298654893
+06 18:42:15-DEBUG-
+06 18:42:15-DEBUG-check_averaging_down
+06 18:42:15-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 18:42:15-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 18:42:15-DEBUG-rsi_aver_down_snapped: True
+06 18:42:15-DEBUG-price_cond_filled: False
+06 18:42:15-DEBUG-Price condition: > 0.0130702
+06 18:44:20-DEBUG-
+06 18:44:20-DEBUG-Checking profit taking.
+06 18:44:20-DEBUG-HA Prof Take развернулся. TF=1
+06 18:44:20-DEBUG-rsi_prof_take_snapped: False
+06 18:44:20-DEBUG-price_cond_filled: False
+06 18:44:20-DEBUG-Price condition: < 0.0128098
+06 18:45:12-DEBUG-
+06 18:45:12-DEBUG-check_averaging_down
+06 18:45:12-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 18:45:12-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 18:45:12-DEBUG-rsi_aver_down_snapped: True
+06 18:45:12-DEBUG-price_cond_filled: False
+06 18:45:12-DEBUG-Price condition: > 0.0130699
+06 18:49:04-DEBUG-GPSUSDT: RSI 39.47024675461959 меньше порога 40
+06 18:49:04-DEBUG-rsi_snapped. Buy TF=1
+06 18:49:04-DEBUG-rsi_prof_take_snapped = True
+06 18:49:22-DEBUG-rsi_prof_take_snapped = True
+06 18:49:39-DEBUG-rsi_prof_take_snapped = True
+06 18:49:57-DEBUG-rsi_prof_take_snapped = True
+06 18:50:15-DEBUG-rsi_prof_take_snapped = True
+06 18:50:33-DEBUG-rsi_prof_take_snapped = True
+06 18:50:50-DEBUG-rsi_prof_take_snapped = True
+06 18:51:09-DEBUG-rsi_prof_take_snapped = True
+06 18:51:27-DEBUG-rsi_prof_take_snapped = True
+06 18:51:44-DEBUG-rsi_prof_take_snapped = True
+06 18:52:03-DEBUG-rsi_prof_take_snapped = True
+06 18:52:21-DEBUG-rsi_prof_take_snapped = True
+06 18:52:38-DEBUG-rsi_prof_take_snapped = True
+06 18:52:55-DEBUG-rsi_prof_take_snapped = True
+06 18:53:13-DEBUG-Исполнен order_prof_take_lim. GPSUSDT Buy Qty:1 Price: 0.01255
+06 18:53:14-DEBUG-rsi_prof_take_snapped = True
+06 18:53:29-DEBUG-Попытка отменить ордер 4691e188-4a09-409d-b634-2c413b5d1f90, symbol=GPSUSDT
+06 18:53:30-DEBUG-Элемент извлечен из стека: (0.01294, 1). Текущий размер стека: 1
+06 18:53:30-INFO-Profit Take lim order выполнен. GPSUSDT Buy PosIdx=2 Qty=1 Price=0.01255
+Стек: [(0.01255, 1)]
+06 18:53:30-DEBUG-beg_stack_size=1, avdo_amount=5, cur_stack_size=1
+06 18:53:30-INFO-
+06 18:53:30-INFO-Iteration 3
+06 18:53:30-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 18:53:32-DEBUG-rsi_prof_take_snapped = True
+06 18:53:49-DEBUG-rsi_prof_take_snapped = True
+06 18:54:07-DEBUG-rsi_prof_take_snapped = True
+06 18:54:24-DEBUG-rsi_prof_take_snapped = True
+06 18:54:42-DEBUG-rsi_prof_take_snapped = True
+06 18:54:59-DEBUG-rsi_prof_take_snapped = True
+06 18:55:17-DEBUG-rsi_prof_take_snapped = True
+06 18:55:18-DEBUG-
+06 18:55:18-DEBUG-Checking profit taking.
+06 18:55:18-DEBUG-HA Prof Take развернулся. TF=1
+06 18:55:18-DEBUG-rsi_prof_take_snapped: True
+06 18:55:18-DEBUG-price_cond_filled: False
+06 18:55:18-DEBUG-Price condition: < 0.012269707295849464
+06 18:55:34-DEBUG-rsi_prof_take_snapped = True
+06 18:55:51-DEBUG-rsi_prof_take_snapped = True
+06 18:56:09-DEBUG-rsi_prof_take_snapped = True
+06 18:56:26-DEBUG-rsi_prof_take_snapped = True
+06 18:56:44-DEBUG-rsi_prof_take_snapped = True
+06 18:57:03-DEBUG-rsi_prof_take_snapped = True
+06 18:57:20-DEBUG-rsi_prof_take_snapped = True
+06 18:57:37-DEBUG-rsi_prof_take_snapped = True
+06 18:57:56-DEBUG-rsi_prof_take_snapped = True
+06 18:58:14-DEBUG-rsi_prof_take_snapped = True
+06 18:58:32-DEBUG-rsi_prof_take_snapped = True
+06 18:58:49-DEBUG-rsi_prof_take_snapped = True
+06 18:59:07-DEBUG-rsi_prof_take_snapped = True
+06 18:59:26-DEBUG-rsi_prof_take_snapped = True
+06 18:59:43-DEBUG-rsi_prof_take_snapped = True
+06 19:00:00-DEBUG-rsi_prof_take_snapped = True
+06 19:00:18-DEBUG-
+06 19:00:18-DEBUG-check_averaging_down
+06 19:00:18-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:00:18-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:00:18-DEBUG-rsi_aver_down_snapped: False
+06 19:00:18-DEBUG-price_cond_filled: False
+06 19:00:18-DEBUG-Price condition: > 0.012817686383665688
+06 19:00:18-DEBUG-rsi_prof_take_snapped = True
+06 19:00:35-DEBUG-rsi_prof_take_snapped = True
+06 19:00:52-DEBUG-rsi_prof_take_snapped = True
+06 19:01:10-DEBUG-rsi_prof_take_snapped = True
+06 19:01:27-DEBUG-rsi_prof_take_snapped = True
+06 19:01:52-DEBUG-rsi_prof_take_snapped = True
+06 19:02:10-DEBUG-rsi_prof_take_snapped = True
+06 19:02:28-DEBUG-rsi_prof_take_snapped = True
+06 19:02:45-DEBUG-rsi_prof_take_snapped = True
+06 19:03:04-DEBUG-rsi_prof_take_snapped = True
+06 19:03:22-DEBUG-rsi_prof_take_snapped = True
+06 19:03:40-DEBUG-rsi_prof_take_snapped = True
+06 19:03:57-DEBUG-rsi_prof_take_snapped = True
+06 19:04:16-DEBUG-rsi_prof_take_snapped = True
+06 19:04:33-DEBUG-rsi_prof_take_snapped = True
+06 19:04:50-DEBUG-rsi_prof_take_snapped = True
+06 19:05:08-DEBUG-rsi_prof_take_snapped = True
+06 19:05:25-DEBUG-rsi_prof_take_snapped = True
+06 19:05:43-DEBUG-rsi_prof_take_snapped = True
+06 19:06:00-DEBUG-rsi_prof_take_snapped = True
+06 19:06:18-DEBUG-rsi_prof_take_snapped = True
+06 19:06:18-DEBUG-
+06 19:06:18-DEBUG-Checking profit taking.
+06 19:06:18-DEBUG-HA Prof Take развернулся. TF=1
+06 19:06:18-DEBUG-rsi_prof_take_snapped: True
+06 19:06:18-DEBUG-price_cond_filled: False
+06 19:06:18-DEBUG-Price condition: < 0.012307358288828974
+06 19:06:35-DEBUG-rsi_prof_take_snapped = True
+06 19:06:53-DEBUG-rsi_prof_take_snapped = True
+06 19:07:10-DEBUG-
+06 19:07:10-DEBUG-check_averaging_down
+06 19:07:10-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:07:10-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:07:10-DEBUG-rsi_aver_down_snapped: False
+06 19:07:10-DEBUG-price_cond_filled: False
+06 19:07:10-DEBUG-Price condition: > 0.012776139337577527
+06 19:07:11-DEBUG-rsi_prof_take_snapped = True
+06 19:07:28-DEBUG-rsi_prof_take_snapped = True
+06 19:07:46-DEBUG-rsi_prof_take_snapped = True
+06 19:08:04-DEBUG-rsi_prof_take_snapped = True
+06 19:08:22-DEBUG-rsi_prof_take_snapped = True
+06 19:08:39-DEBUG-rsi_prof_take_snapped = True
+06 19:08:57-DEBUG-rsi_prof_take_snapped = True
+06 19:09:14-DEBUG-rsi_prof_take_snapped = True
+06 19:09:32-DEBUG-rsi_prof_take_snapped = True
+06 19:09:50-DEBUG-rsi_prof_take_snapped = True
+06 19:10:07-DEBUG-rsi_prof_take_snapped = True
+06 19:10:08-DEBUG-
+06 19:10:08-DEBUG-Checking profit taking.
+06 19:10:08-DEBUG-HA Prof Take развернулся. TF=1
+06 19:10:08-DEBUG-rsi_prof_take_snapped: True
+06 19:10:08-DEBUG-price_cond_filled: False
+06 19:10:08-DEBUG-Price condition: < 0.01233941984898856
+06 19:10:24-DEBUG-rsi_prof_take_snapped = True
+06 19:10:42-DEBUG-rsi_prof_take_snapped = True
+06 19:10:59-DEBUG-rsi_prof_take_snapped = True
+06 19:11:16-DEBUG-
+06 19:11:16-DEBUG-check_averaging_down
+06 19:11:16-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:11:16-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:11:16-DEBUG-rsi_aver_down_snapped: False
+06 19:11:16-DEBUG-price_cond_filled: False
+06 19:11:16-DEBUG-Price condition: > 0.01276212024891556
+06 19:11:16-DEBUG-rsi_prof_take_snapped = True
+06 19:11:34-DEBUG-rsi_prof_take_snapped = True
+06 19:11:52-DEBUG-rsi_prof_take_snapped = True
+06 19:12:10-DEBUG-rsi_prof_take_snapped = True
+06 19:12:27-DEBUG-rsi_prof_take_snapped = True
+06 19:12:45-DEBUG-rsi_prof_take_snapped = True
+06 19:13:02-DEBUG-rsi_prof_take_snapped = True
+06 19:13:20-DEBUG-rsi_prof_take_snapped = True
+06 19:13:37-DEBUG-rsi_prof_take_snapped = True
+06 19:13:55-DEBUG-rsi_prof_take_snapped = True
+06 19:14:12-DEBUG-rsi_prof_take_snapped = True
+06 19:14:30-DEBUG-rsi_prof_take_snapped = True
+06 19:14:47-DEBUG-rsi_prof_take_snapped = True
+06 19:15:04-DEBUG-rsi_prof_take_snapped = True
+06 19:15:05-DEBUG-
+06 19:15:05-DEBUG-Checking profit taking.
+06 19:15:05-DEBUG-HA Prof Take развернулся. TF=1
+06 19:15:05-DEBUG-rsi_prof_take_snapped: True
+06 19:15:05-DEBUG-price_cond_filled: False
+06 19:15:05-DEBUG-Price condition: < 0.012363731376770007
+06 19:15:22-DEBUG-rsi_prof_take_snapped = True
+06 19:15:40-DEBUG-rsi_prof_take_snapped = True
+06 19:15:57-DEBUG-rsi_prof_take_snapped = True
+06 19:16:15-DEBUG-rsi_prof_take_snapped = True
+06 19:16:33-DEBUG-rsi_prof_take_snapped = True
+06 19:16:50-DEBUG-rsi_prof_take_snapped = True
+06 19:17:08-DEBUG-
+06 19:17:08-DEBUG-check_averaging_down
+06 19:17:08-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:17:08-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:17:08-DEBUG-rsi_aver_down_snapped: False
+06 19:17:08-DEBUG-price_cond_filled: False
+06 19:17:08-DEBUG-Price condition: > 0.012693680200445288
+06 19:17:09-DEBUG-rsi_prof_take_snapped = True
+06 19:17:26-DEBUG-rsi_prof_take_snapped = True
+06 19:17:44-DEBUG-rsi_prof_take_snapped = True
+06 19:18:01-DEBUG-rsi_prof_take_snapped = True
+06 19:18:19-DEBUG-rsi_prof_take_snapped = True
+06 19:18:36-DEBUG-rsi_prof_take_snapped = True
+06 19:18:54-DEBUG-rsi_prof_take_snapped = True
+06 19:19:11-DEBUG-rsi_prof_take_snapped = True
+06 19:19:29-DEBUG-rsi_prof_take_snapped = True
+06 19:19:46-DEBUG-rsi_prof_take_snapped = True
+06 19:20:04-DEBUG-rsi_prof_take_snapped = True
+06 19:20:04-DEBUG-
+06 19:20:04-DEBUG-Checking profit taking.
+06 19:20:04-DEBUG-HA Prof Take развернулся. TF=1
+06 19:20:04-DEBUG-rsi_prof_take_snapped: True
+06 19:20:04-DEBUG-price_cond_filled: False
+06 19:20:04-DEBUG-Price condition: < 0.0124248
+06 19:20:21-DEBUG-rsi_prof_take_snapped = True
+06 19:20:38-DEBUG-rsi_prof_take_snapped = True
+06 19:20:55-DEBUG-rsi_prof_take_snapped = True
+06 19:21:13-DEBUG-rsi_prof_take_snapped = True
+06 19:21:30-DEBUG-rsi_prof_take_snapped = True
+06 19:21:47-DEBUG-rsi_prof_take_snapped = True
+06 19:22:05-DEBUG-rsi_prof_take_snapped = True
+06 19:26:11-DEBUG-
+06 19:26:11-DEBUG-check_averaging_down
+06 19:26:11-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:26:11-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:26:11-DEBUG-rsi_aver_down_snapped: False
+06 19:26:11-DEBUG-price_cond_filled: False
+06 19:26:11-DEBUG-Price condition: > 0.0126756
+06 19:30:50-DEBUG-GPSUSDT: RSI 39.444529427107085 меньше порога 40
+06 19:30:50-DEBUG-rsi_snapped. Buy TF=1
+06 19:30:50-DEBUG-rsi_prof_take_snapped = True
+06 19:31:07-DEBUG-rsi_prof_take_snapped = True
+06 19:31:25-DEBUG-rsi_prof_take_snapped = True
+06 19:31:42-DEBUG-rsi_prof_take_snapped = True
+06 19:32:00-DEBUG-rsi_prof_take_snapped = True
+06 19:32:18-DEBUG-rsi_prof_take_snapped = True
+06 19:32:35-DEBUG-rsi_prof_take_snapped = True
+06 19:32:53-DEBUG-rsi_prof_take_snapped = True
+06 19:33:11-DEBUG-rsi_prof_take_snapped = True
+06 19:33:28-DEBUG-rsi_prof_take_snapped = True
+06 19:33:46-DEBUG-rsi_prof_take_snapped = True
+06 19:34:03-DEBUG-rsi_prof_take_snapped = True
+06 19:34:21-DEBUG-rsi_prof_take_snapped = True
+06 19:34:38-DEBUG-rsi_prof_take_snapped = True
+06 19:34:55-DEBUG-rsi_prof_take_snapped = True
+06 19:35:13-DEBUG-rsi_prof_take_snapped = True
+06 19:35:30-DEBUG-rsi_prof_take_snapped = True
+06 19:35:48-DEBUG-rsi_prof_take_snapped = True
+06 19:36:05-DEBUG-rsi_prof_take_snapped = True
+06 19:36:23-DEBUG-rsi_prof_take_snapped = True
+06 19:36:40-DEBUG-rsi_prof_take_snapped = True
+06 19:36:58-DEBUG-rsi_prof_take_snapped = True
+06 19:37:17-DEBUG-rsi_prof_take_snapped = True
+06 19:37:18-DEBUG-
+06 19:37:18-DEBUG-Checking profit taking.
+06 19:37:18-DEBUG-HA Prof Take развернулся. TF=1
+06 19:37:18-DEBUG-rsi_prof_take_snapped: True
+06 19:37:18-DEBUG-price_cond_filled: False
+06 19:37:18-DEBUG-Price condition: < 0.01240163895389962
+06 19:37:35-DEBUG-rsi_prof_take_snapped = True
+06 19:37:52-DEBUG-rsi_prof_take_snapped = True
+06 19:38:10-DEBUG-rsi_prof_take_snapped = True
+06 19:38:28-DEBUG-rsi_prof_take_snapped = True
+06 19:38:45-DEBUG-rsi_prof_take_snapped = True
+06 19:39:03-DEBUG-rsi_prof_take_snapped = True
+06 19:39:21-DEBUG-rsi_prof_take_snapped = True
+06 19:39:39-DEBUG-rsi_prof_take_snapped = True
+06 19:39:56-DEBUG-rsi_prof_take_snapped = True
+06 19:40:14-DEBUG-
+06 19:40:14-DEBUG-check_averaging_down
+06 19:40:14-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:40:14-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:40:14-DEBUG-rsi_aver_down_snapped: False
+06 19:40:14-DEBUG-price_cond_filled: False
+06 19:40:14-DEBUG-Price condition: > 0.012715948787280893
+06 19:40:14-DEBUG-rsi_prof_take_snapped = True
+06 19:40:32-DEBUG-rsi_prof_take_snapped = True
+06 19:40:49-DEBUG-rsi_prof_take_snapped = True
+06 19:41:07-DEBUG-rsi_prof_take_snapped = True
+06 19:41:25-DEBUG-rsi_prof_take_snapped = True
+06 19:41:42-DEBUG-rsi_prof_take_snapped = True
+06 19:42:00-DEBUG-rsi_prof_take_snapped = True
+06 19:42:17-DEBUG-rsi_prof_take_snapped = True
+06 19:42:34-DEBUG-rsi_prof_take_snapped = True
+06 19:42:52-DEBUG-rsi_prof_take_snapped = True
+06 19:43:09-DEBUG-rsi_prof_take_snapped = True
+06 19:43:27-DEBUG-rsi_prof_take_snapped = True
+06 19:43:44-DEBUG-rsi_prof_take_snapped = True
+06 19:44:01-DEBUG-rsi_prof_take_snapped = True
+06 19:44:19-DEBUG-rsi_prof_take_snapped = True
+06 19:44:37-DEBUG-rsi_prof_take_snapped = True
+06 19:44:54-DEBUG-rsi_prof_take_snapped = True
+06 19:45:11-DEBUG-rsi_prof_take_snapped = True
+06 19:45:14-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 19:45:14-INFO-Параметр order_stack_str успешно установлен в значение [(0.01255, 1)]
+06 19:45:14-INFO-Все процессы завершены.
+06 19:45:18-INFO-# Символ
+06 19:45:18-INFO-Symbol: GPSUSDT
+06 19:45:18-INFO-
+06 19:45:18-INFO-# Aver Down
+06 19:45:18-INFO-Timeframe RSI Aver Down: 1
+06 19:45:18-INFO-RSI Threshold Aver Down: 60
+06 19:45:18-INFO-Timeframe HA Aver Down: 1
+06 19:45:18-INFO-offset_aver_down=0.01
+06 19:45:18-INFO-
+06 19:45:18-INFO-Prof Take
+06 19:45:18-INFO-Timeframe RSI Prof Take: 1
+06 19:45:18-INFO-RSI Threshold Profit Take: 40
+06 19:45:18-INFO-Timeframe HA Prof Take: 1
+06 19:45:18-INFO-offset_prof_take=0.01
+06 19:45:18-INFO-
+06 19:45:18-INFO-# Рыночный ордер
+06 19:45:18-INFO-Side: Sell
+06 19:45:18-INFO-Position Index: 1
+06 19:45:18-INFO-Quantity: 1
+06 19:45:18-INFO-
+06 19:45:18-INFO-# Стек строка
+06 19:45:18-INFO-order_stack_str: [(0.01255, 1)]
+06 19:45:18-INFO-
+06 19:45:18-INFO-# Интервал опроса
+06 19:45:18-INFO-Check Interval: 15
+06 19:45:18-INFO-
+06 19:45:18-INFO-# Кол-во avdo
+06 19:45:18-INFO-AvDo amount: 5
+06 19:45:18-INFO-
+06 19:45:18-DEBUG-Debug mode is ON
+06 19:45:18-INFO-Стек установлен из строки: '[(0.01255, 1)]'.
+06 19:45:18-DEBUG-OrderManager initialized.
+06 19:45:20-INFO-Запуск основного цикла TradeOverBot...
+06 19:45:20-INFO-
+06 19:45:20-INFO-Iteration 1
+06 19:45:20-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 19:45:21-DEBUG-GPSUSDT: RSI 17.11934703156318 меньше порога 40
+06 19:45:21-DEBUG-rsi_snapped. Buy TF=1
+06 19:45:21-DEBUG-rsi_prof_take_snapped = True
+06 19:45:39-DEBUG-rsi_prof_take_snapped = True
+06 19:45:57-DEBUG-rsi_prof_take_snapped = True
+06 19:46:14-DEBUG-rsi_prof_take_snapped = True
+06 19:46:32-DEBUG-rsi_prof_take_snapped = True
+06 19:46:49-DEBUG-rsi_prof_take_snapped = True
+06 19:46:55-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 19:46:55-INFO-Параметр order_stack_str успешно установлен в значение [(0.01255, 1)]
+06 19:46:55-INFO-Все процессы завершены.
+06 19:46:59-INFO-# Символ
+06 19:46:59-INFO-Symbol: GPSUSDT
+06 19:46:59-INFO-
+06 19:46:59-INFO-# Aver Down
+06 19:46:59-INFO-Timeframe RSI Aver Down: 1
+06 19:46:59-INFO-RSI Threshold Aver Down: 60
+06 19:46:59-INFO-Timeframe HA Aver Down: 1
+06 19:46:59-INFO-offset_aver_down=0.01
+06 19:46:59-INFO-
+06 19:46:59-INFO-Prof Take
+06 19:46:59-INFO-Timeframe RSI Prof Take: 1
+06 19:46:59-INFO-RSI Threshold Profit Take: 40
+06 19:46:59-INFO-Timeframe HA Prof Take: 1
+06 19:46:59-INFO-offset_prof_take=0.01
+06 19:46:59-INFO-
+06 19:46:59-INFO-# Рыночный ордер
+06 19:46:59-INFO-Side: Sell
+06 19:46:59-INFO-Position Index: 1
+06 19:46:59-INFO-Quantity: 1
+06 19:46:59-INFO-
+06 19:46:59-INFO-# Стек строка
+06 19:46:59-INFO-order_stack_str: [(0.01255, 1)]
+06 19:46:59-INFO-
+06 19:46:59-INFO-# Интервал опроса
+06 19:46:59-INFO-Check Interval: 15
+06 19:46:59-INFO-
+06 19:46:59-INFO-# Кол-во avdo
+06 19:46:59-INFO-AvDo amount: 5
+06 19:46:59-INFO-
+06 19:46:59-DEBUG-Debug mode is ON
+06 19:46:59-INFO-Стек установлен из строки: '[(0.01255, 1)]'.
+06 19:46:59-DEBUG-OrderManager initialized.
+06 19:47:00-INFO-Запуск основного цикла TradeOverBot...
+06 19:47:00-INFO-
+06 19:47:00-INFO-Iteration 1
+06 19:47:00-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 19:47:01-DEBUG-GPSUSDT: RSI 16.33093096037365 меньше порога 40
+06 19:47:01-DEBUG-rsi_snapped. Buy TF=1
+06 19:51:09-DEBUG-
+06 19:51:09-DEBUG-Checking profit taking.
+06 19:51:09-DEBUG-HA Prof Take развернулся. TF=1
+06 19:51:09-DEBUG-rsi_prof_take_snapped: True
+06 19:51:09-DEBUG-price_cond_filled: True
+06 19:51:09-DEBUG-Price condition: < 0.01199360176132559
+06 19:51:09-DEBUG-Попытка открыть Buy позицию размером 1 (position_idx=2)
+06 19:51:09-DEBUG-Ответ на рыночный ордер Buy: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '56a3b210-06f3-47a3-8e03-e30d6ab5c1d2', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1757181069841}
+06 19:51:09-DEBUG-Элемент извлечен из стека: (0.01255, 1). Текущий размер стека: 0
+06 19:51:09-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 19:51:09-INFO-Profit take market order выполнен. GPSUSDT Buy PosIdx=2 Qty=1 Price=0.01185. Закрыта позиция по цене 0.01255
+Стек: []
+06 19:51:10-DEBUG-beg_stack_size=1, avdo_amount=5, cur_stack_size=0
+06 19:51:10-INFO-
+06 19:51:10-INFO-Iteration 2
+06 19:51:10-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 19:51:10-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:51:26-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:51:43-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:51:58-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:52:15-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:52:31-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:52:47-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:53:03-DEBUG-
+06 19:53:03-DEBUG-check_averaging_down
+06 19:53:03-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:53:03-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:53:03-DEBUG-rsi_aver_down_snapped: False
+06 19:53:03-DEBUG-price_cond_filled: True
+06 19:53:03-DEBUG-Price condition: 
+06 19:53:03-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:53:19-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:53:35-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:53:51-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:54:08-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:54:24-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:54:41-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:54:57-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:55:13-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:55:29-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:55:46-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:56:02-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:56:18-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:56:34-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:56:51-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:57:07-DEBUG-
+06 19:57:07-DEBUG-check_averaging_down
+06 19:57:07-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 19:57:07-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 19:57:07-DEBUG-rsi_aver_down_snapped: False
+06 19:57:07-DEBUG-price_cond_filled: True
+06 19:57:07-DEBUG-Price condition: 
+06 19:57:07-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:57:23-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:57:39-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:57:55-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:58:11-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:58:28-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:58:44-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:59:00-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:59:17-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:59:32-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 19:59:48-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:00:05-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:00:22-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:00:38-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:00:54-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:01:11-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:01:27-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:01:43-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:01:59-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:02:16-DEBUG-
+06 20:02:16-DEBUG-check_averaging_down
+06 20:02:16-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:02:16-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:02:16-DEBUG-rsi_aver_down_snapped: False
+06 20:02:16-DEBUG-price_cond_filled: True
+06 20:02:16-DEBUG-Price condition: 
+06 20:02:16-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:02:32-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:02:48-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:03:04-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:03:20-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:03:36-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:03:52-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:04:08-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:04:25-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:04:41-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:04:56-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:05:13-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:05:29-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:05:45-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:06:01-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:06:17-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:06:34-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:06:50-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:07:06-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:07:22-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:07:38-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:07:54-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:08:11-DEBUG-
+06 20:08:11-DEBUG-check_averaging_down
+06 20:08:11-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:08:11-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:08:11-DEBUG-rsi_aver_down_snapped: False
+06 20:08:11-DEBUG-price_cond_filled: True
+06 20:08:11-DEBUG-Price condition: 
+06 20:08:11-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:08:26-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:08:42-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:08:58-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:09:15-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:09:31-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:09:47-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:10:03-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:10:19-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:10:35-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:10:51-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:11:08-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:11:24-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:11:40-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:11:56-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:12:13-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:12:29-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:12:44-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:13:01-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:13:17-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:13:33-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:13:50-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:14:07-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:14:23-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:14:40-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:14:56-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:15:12-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:15:28-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:15:44-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:16:00-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:16:16-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:16:19-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 20:16:19-INFO-Параметр order_stack_str успешно установлен в значение []
+06 20:16:19-INFO-Все процессы завершены.
+06 20:16:24-INFO-# Символ
+06 20:16:24-INFO-Symbol: GPSUSDT
+06 20:16:24-INFO-
+06 20:16:24-INFO-# Aver Down
+06 20:16:24-INFO-Timeframe RSI Aver Down: 1
+06 20:16:24-INFO-RSI Threshold Aver Down: 60
+06 20:16:24-INFO-Timeframe HA Aver Down: 1
+06 20:16:24-INFO-offset_aver_down=0.01
+06 20:16:24-INFO-
+06 20:16:24-INFO-Prof Take
+06 20:16:24-INFO-Timeframe RSI Prof Take: 1
+06 20:16:24-INFO-RSI Threshold Profit Take: 40
+06 20:16:24-INFO-Timeframe HA Prof Take: 1
+06 20:16:24-INFO-offset_prof_take=0.01
+06 20:16:24-INFO-
+06 20:16:24-INFO-# Рыночный ордер
+06 20:16:24-INFO-Side: Sell
+06 20:16:24-INFO-Position Index: 1
+06 20:16:24-INFO-Quantity: 1
+06 20:16:24-INFO-
+06 20:16:24-INFO-# Стек строка
+06 20:16:24-INFO-order_stack_str: []
+06 20:16:24-INFO-
+06 20:16:24-INFO-# Интервал опроса
+06 20:16:24-INFO-Check Interval: 15
+06 20:16:24-INFO-
+06 20:16:24-INFO-# Кол-во avdo
+06 20:16:24-INFO-AvDo amount: 5
+06 20:16:24-INFO-
+06 20:16:24-DEBUG-Debug mode is ON
+06 20:16:24-INFO-Стек установлен из строки: '[]'.
+06 20:16:24-DEBUG-OrderManager initialized.
+06 20:16:25-INFO-Запуск основного цикла TradeOverBot...
+06 20:16:25-INFO-
+06 20:16:25-INFO-Iteration 1
+06 20:16:25-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 20:16:25-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 20:16:25-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:16:25-INFO-Параметр order_stack_str успешно установлен в значение []
+06 20:16:25-INFO-Все процессы завершены.
+06 20:17:01-INFO-# Символ
+06 20:17:01-INFO-Symbol: GPSUSDT
+06 20:17:01-INFO-
+06 20:17:01-INFO-# Aver Down
+06 20:17:01-INFO-Timeframe RSI Aver Down: 1
+06 20:17:01-INFO-RSI Threshold Aver Down: 60
+06 20:17:01-INFO-Timeframe HA Aver Down: 1
+06 20:17:01-INFO-offset_aver_down=0.01
+06 20:17:01-INFO-
+06 20:17:01-INFO-Prof Take
+06 20:17:01-INFO-Timeframe RSI Prof Take: 1
+06 20:17:01-INFO-RSI Threshold Profit Take: 40
+06 20:17:01-INFO-Timeframe HA Prof Take: 1
+06 20:17:01-INFO-offset_prof_take=0.01
+06 20:17:01-INFO-
+06 20:17:01-INFO-# Рыночный ордер
+06 20:17:01-INFO-Side: Sell
+06 20:17:01-INFO-Position Index: 1
+06 20:17:01-INFO-Quantity: 1
+06 20:17:01-INFO-
+06 20:17:01-INFO-# Стек строка
+06 20:17:01-INFO-order_stack_str: []
+06 20:17:01-INFO-
+06 20:17:01-INFO-# Интервал опроса
+06 20:17:01-INFO-Check Interval: 15
+06 20:17:01-INFO-
+06 20:17:01-INFO-# Кол-во avdo
+06 20:17:01-INFO-AvDo amount: 5
+06 20:17:01-INFO-
+06 20:17:01-DEBUG-Debug mode is ON
+06 20:17:01-INFO-Стек установлен из строки: '[]'.
+06 20:17:01-DEBUG-OrderManager initialized.
+06 20:17:03-INFO-Запуск основного цикла TradeOverBot...
+06 20:17:03-INFO-
+06 20:17:03-INFO-Iteration 1
+06 20:17:03-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 20:17:03-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 20:17:03-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:17:19-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:17:36-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:17:52-DEBUG-Базовая цена не задана. Profit taking не выполняем.
+06 20:18:07-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 20:18:07-INFO-Параметр order_stack_str успешно установлен в значение []
+06 20:18:07-INFO-Все процессы завершены.
+06 20:18:11-INFO-# Символ
+06 20:18:11-INFO-Symbol: GPSUSDT
+06 20:18:11-INFO-
+06 20:18:11-INFO-# Aver Down
+06 20:18:11-INFO-Timeframe RSI Aver Down: 1
+06 20:18:11-INFO-RSI Threshold Aver Down: 60
+06 20:18:11-INFO-Timeframe HA Aver Down: 1
+06 20:18:11-INFO-offset_aver_down=0.01
+06 20:18:11-INFO-
+06 20:18:11-INFO-Prof Take
+06 20:18:11-INFO-Timeframe RSI Prof Take: 1
+06 20:18:11-INFO-RSI Threshold Profit Take: 40
+06 20:18:11-INFO-Timeframe HA Prof Take: 1
+06 20:18:11-INFO-offset_prof_take=0.01
+06 20:18:11-INFO-
+06 20:18:11-INFO-# Рыночный ордер
+06 20:18:11-INFO-Side: Sell
+06 20:18:11-INFO-Position Index: 1
+06 20:18:11-INFO-Quantity: 1
+06 20:18:11-INFO-
+06 20:18:11-INFO-# Стек строка
+06 20:18:11-INFO-order_stack_str: []
+06 20:18:11-INFO-
+06 20:18:11-INFO-# Интервал опроса
+06 20:18:11-INFO-Check Interval: 15
+06 20:18:11-INFO-
+06 20:18:11-INFO-# Кол-во avdo
+06 20:18:11-INFO-AvDo amount: 5
+06 20:18:11-INFO-
+06 20:18:11-DEBUG-Debug mode is ON
+06 20:18:11-INFO-Стек установлен из строки: '[]'.
+06 20:18:11-DEBUG-OrderManager initialized.
+06 20:18:13-INFO-Запуск основного цикла TradeOverBot...
+06 20:18:13-INFO-
+06 20:18:13-INFO-Iteration 1
+06 20:18:13-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 20:18:13-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 20:20:07-DEBUG-
+06 20:20:07-DEBUG-check_averaging_down
+06 20:20:07-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:20:07-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:20:07-DEBUG-rsi_aver_down_snapped: False
+06 20:20:07-DEBUG-price_cond_filled: True
+06 20:20:07-DEBUG-Price condition: 
+06 20:22:16-DEBUG-
+06 20:22:16-DEBUG-check_averaging_down
+06 20:22:16-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:22:16-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:22:16-DEBUG-rsi_aver_down_snapped: False
+06 20:22:16-DEBUG-price_cond_filled: True
+06 20:22:16-DEBUG-Price condition: 
+06 20:28:10-DEBUG-GPSUSDT: RSI 63.88540276499326 больше порога 60
+06 20:28:10-DEBUG-rsi_snapped. Sell TF=1
+06 20:29:06-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 20:29:06-INFO-Параметр order_stack_str успешно установлен в значение []
+06 20:29:06-INFO-Все процессы завершены.
+06 20:29:10-INFO-# Символ
+06 20:29:10-INFO-Symbol: GPSUSDT
+06 20:29:10-INFO-
+06 20:29:10-INFO-# Aver Down
+06 20:29:10-INFO-Timeframe RSI Aver Down: 1
+06 20:29:10-INFO-RSI Threshold Aver Down: 60
+06 20:29:10-INFO-Timeframe HA Aver Down: 1
+06 20:29:10-INFO-offset_aver_down=0.01
+06 20:29:10-INFO-
+06 20:29:10-INFO-Prof Take
+06 20:29:10-INFO-Timeframe RSI Prof Take: 1
+06 20:29:10-INFO-RSI Threshold Profit Take: 40
+06 20:29:10-INFO-Timeframe HA Prof Take: 1
+06 20:29:10-INFO-offset_prof_take=0.01
+06 20:29:10-INFO-
+06 20:29:10-INFO-# Рыночный ордер
+06 20:29:10-INFO-Side: Sell
+06 20:29:10-INFO-Position Index: 1
+06 20:29:10-INFO-Quantity: 1
+06 20:29:10-INFO-
+06 20:29:10-INFO-# Стек строка
+06 20:29:10-INFO-order_stack_str: []
+06 20:29:10-INFO-
+06 20:29:10-INFO-# Интервал опроса
+06 20:29:10-INFO-Check Interval: 15
+06 20:29:10-INFO-
+06 20:29:10-INFO-# Кол-во avdo
+06 20:29:10-INFO-AvDo amount: 5
+06 20:29:10-INFO-
+06 20:29:10-DEBUG-Debug mode is ON
+06 20:29:10-INFO-Стек установлен из строки: '[]'.
+06 20:29:10-DEBUG-OrderManager initialized.
+06 20:29:11-INFO-Запуск основного цикла TradeOverBot...
+06 20:29:11-INFO-
+06 20:29:11-INFO-Iteration 1
+06 20:29:11-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 20:29:11-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 20:29:12-DEBUG-GPSUSDT: RSI 65.16919215089453 больше порога 60
+06 20:29:12-DEBUG-rsi_snapped. Sell TF=1
+06 20:32:08-DEBUG-
+06 20:32:08-DEBUG-check_averaging_down
+06 20:32:08-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:32:08-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:32:08-DEBUG-rsi_aver_down_snapped: True
+06 20:32:08-DEBUG-price_cond_filled: True
+06 20:32:08-DEBUG-Price condition: 
+06 20:32:08-DEBUG-Попытка открыть Sell позицию размером 1 (position_idx=1)
+06 20:32:08-DEBUG-Ответ на рыночный ордер Sell: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '926622aa-06e6-48ae-b31f-902621384244', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1757183528949}
+06 20:32:08-INFO-Элемент добавлен в стек: (0.01199, 1). Текущий размер стека: 1
+06 20:32:08-INFO-Average down order выполнен. GPSUSDT Sell PosIdx=1 Qty=1 Price=0.01199
+Стек: [(0.01199, 1)]
+06 20:32:09-DEBUG-beg_stack_size=0, avdo_amount=5, cur_stack_size=1
+06 20:32:09-INFO-
+06 20:32:09-INFO-Iteration 2
+06 20:32:09-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 20:32:09-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 20:38:11-DEBUG-
+06 20:38:11-DEBUG-Checking profit taking.
+06 20:38:11-DEBUG-HA Prof Take развернулся. TF=1
+06 20:38:11-DEBUG-rsi_prof_take_snapped: False
+06 20:38:11-DEBUG-price_cond_filled: False
+06 20:38:11-DEBUG-Price condition: < 0.011870400000000001
+06 20:38:11-DEBUG-avdo_tf_rsi: 1
+06 20:38:11-DEBUG-avdo_tf_ha: 1
+06 20:40:25-DEBUG-GPSUSDT: RSI 60.82289448039262 больше порога 60
+06 20:40:25-DEBUG-rsi_snapped. Sell TF=1
+06 20:45:15-DEBUG-
+06 20:45:15-DEBUG-check_averaging_down
+06 20:45:15-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:45:15-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:45:15-DEBUG-rsi_aver_down_snapped: True
+06 20:45:15-DEBUG-price_cond_filled: False
+06 20:45:15-DEBUG-Price condition: > 0.0121095
+06 20:49:15-DEBUG-
+06 20:49:15-DEBUG-Checking profit taking.
+06 20:49:15-DEBUG-HA Prof Take развернулся. TF=1
+06 20:49:15-DEBUG-rsi_prof_take_snapped: False
+06 20:49:15-DEBUG-price_cond_filled: False
+06 20:49:15-DEBUG-Price condition: < 0.011870400000000001
+06 20:49:15-DEBUG-avdo_tf_rsi: 1
+06 20:49:15-DEBUG-avdo_tf_ha: 1
+06 20:51:15-DEBUG-
+06 20:51:15-DEBUG-check_averaging_down
+06 20:51:15-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:51:15-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:51:15-DEBUG-rsi_aver_down_snapped: False
+06 20:51:15-DEBUG-price_cond_filled: False
+06 20:51:15-DEBUG-Price condition: > 0.0121083
+06 20:51:15-DEBUG-GPSUSDT: RSI 38.57157033758508 меньше порога 40
+06 20:51:15-DEBUG-rsi_snapped. Buy TF=1
+06 20:54:06-DEBUG-
+06 20:54:06-DEBUG-Checking profit taking.
+06 20:54:06-DEBUG-HA Prof Take развернулся. TF=1
+06 20:54:06-DEBUG-rsi_prof_take_snapped: True
+06 20:54:06-DEBUG-price_cond_filled: False
+06 20:54:06-DEBUG-Price condition: < 0.0118709
+06 20:54:06-DEBUG-avdo_tf_rsi: 1
+06 20:54:06-DEBUG-avdo_tf_ha: 1
+06 20:58:04-DEBUG-
+06 20:58:04-DEBUG-check_averaging_down
+06 20:58:04-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 20:58:04-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 20:58:04-DEBUG-rsi_aver_down_snapped: False
+06 20:58:04-DEBUG-price_cond_filled: False
+06 20:58:04-DEBUG-Price condition: > 0.0121089
+06 20:59:14-DEBUG-
+06 20:59:14-DEBUG-Checking profit taking.
+06 20:59:14-DEBUG-HA Prof Take развернулся. TF=1
+06 20:59:14-DEBUG-rsi_prof_take_snapped: False
+06 20:59:14-DEBUG-price_cond_filled: False
+06 20:59:14-DEBUG-Price condition: < 0.011870200000000001
+06 20:59:14-DEBUG-avdo_tf_rsi: 1
+06 20:59:14-DEBUG-avdo_tf_ha: 1
+06 21:03:30-DEBUG-GPSUSDT: RSI 61.15843890616478 больше порога 60
+06 21:03:30-DEBUG-rsi_snapped. Sell TF=1
+06 21:05:14-DEBUG-
+06 21:05:14-DEBUG-check_averaging_down
+06 21:05:14-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 21:05:14-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 21:05:14-DEBUG-rsi_aver_down_snapped: False
+06 21:05:14-DEBUG-price_cond_filled: False
+06 21:05:14-DEBUG-Price condition: > 0.012108800000000001
+06 21:08:06-DEBUG-
+06 21:08:06-DEBUG-Checking profit taking.
+06 21:08:06-DEBUG-HA Prof Take развернулся. TF=1
+06 21:08:06-DEBUG-rsi_prof_take_snapped: False
+06 21:08:06-DEBUG-price_cond_filled: False
+06 21:08:06-DEBUG-Price condition: < 0.011869900000000001
+06 21:08:06-DEBUG-avdo_tf_rsi: 1
+06 21:08:06-DEBUG-avdo_tf_ha: 1
+06 21:09:31-DEBUG-GPSUSDT: RSI 61.55204934452637 больше порога 60
+06 21:09:31-DEBUG-rsi_snapped. Sell TF=1
+06 21:12:07-DEBUG-
+06 21:12:07-DEBUG-check_averaging_down
+06 21:12:07-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 21:12:07-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 21:12:07-DEBUG-rsi_aver_down_snapped: True
+06 21:12:07-DEBUG-price_cond_filled: False
+06 21:12:07-DEBUG-Price condition: > 0.0121098
+06 21:14:07-DEBUG-
+06 21:14:07-DEBUG-Checking profit taking.
+06 21:14:07-DEBUG-HA Prof Take развернулся. TF=1
+06 21:14:07-DEBUG-rsi_prof_take_snapped: False
+06 21:14:07-DEBUG-price_cond_filled: False
+06 21:14:07-DEBUG-Price condition: < 0.01187
+06 21:14:07-DEBUG-avdo_tf_rsi: 1
+06 21:14:07-DEBUG-avdo_tf_ha: 1
+06 21:18:06-DEBUG-
+06 21:18:06-DEBUG-check_averaging_down
+06 21:18:06-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 21:18:06-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 21:18:06-DEBUG-rsi_aver_down_snapped: False
+06 21:18:06-DEBUG-price_cond_filled: False
+06 21:18:06-DEBUG-Price condition: > 0.0121098
+06 21:19:31-DEBUG-GPSUSDT: RSI 33.21154097803995 меньше порога 40
+06 21:19:31-DEBUG-rsi_snapped. Buy TF=1
+06 21:24:05-DEBUG-
+06 21:24:05-DEBUG-Checking profit taking.
+06 21:24:05-DEBUG-HA Prof Take развернулся. TF=1
+06 21:24:05-DEBUG-rsi_prof_take_snapped: True
+06 21:24:05-DEBUG-price_cond_filled: True
+06 21:24:05-DEBUG-Price condition: < 0.0118732
+06 21:24:05-DEBUG-avdo_tf_rsi: 1
+06 21:24:05-DEBUG-avdo_tf_ha: 1
+06 21:24:05-DEBUG-Попытка открыть Buy позицию размером 1 (position_idx=2)
+06 21:24:05-DEBUG-Ответ на рыночный ордер Buy: {'retCode': 0, 'retMsg': 'OK', 'result': {'orderId': '5f52ff06-fa31-4cd8-a63f-9e291bc5b392', 'orderLinkId': ''}, 'retExtInfo': {}, 'time': 1757186645559}
+06 21:24:05-DEBUG-Элемент извлечен из стека: (0.01199, 1). Текущий размер стека: 0
+06 21:24:05-INFO-Profit take market order выполнен. GPSUSDT Buy PosIdx=2 Qty=1 Price=0.01168. Закрыта позиция по цене 0.01199
+Стек: []
+06 21:24:05-DEBUG-beg_stack_size=0, avdo_amount=5, cur_stack_size=0
+06 21:24:05-INFO-
+06 21:24:05-INFO-Iteration 3
+06 21:24:05-INFO-Установлены новые таймфреймы для усреднения: rsi_tf_aver_down=1, ha_tf_aver_down=1
+06 21:24:05-DEBUG-Попытка просмотреть предпоследний элемент в стеке с менее чем двумя элементами.
+06 21:25:11-DEBUG-
+06 21:25:11-DEBUG-check_averaging_down
+06 21:25:11-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 21:25:11-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 21:25:11-DEBUG-rsi_aver_down_snapped: False
+06 21:25:11-DEBUG-price_cond_filled: True
+06 21:25:11-DEBUG-Price condition: 
+06 21:35:07-DEBUG-
+06 21:35:07-DEBUG-check_averaging_down
+06 21:35:07-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 21:35:07-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 21:35:07-DEBUG-rsi_aver_down_snapped: False
+06 21:35:07-DEBUG-price_cond_filled: True
+06 21:35:07-DEBUG-Price condition: 
+06 21:42:07-DEBUG-
+06 21:42:07-DEBUG-check_averaging_down
+06 21:42:07-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 21:42:07-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 21:42:07-DEBUG-rsi_aver_down_snapped: False
+06 21:42:07-DEBUG-price_cond_filled: True
+06 21:42:07-DEBUG-Price condition: 
+06 22:00:09-DEBUG-
+06 22:00:09-DEBUG-check_averaging_down
+06 22:00:09-DEBUG-HA Rev Aver Down развернулся. TF=1
+06 22:00:09-DEBUG-HA Rev Prof Take развернулся. TF=1
+06 22:00:09-DEBUG-rsi_aver_down_snapped: False
+06 22:00:09-DEBUG-price_cond_filled: True
+06 22:00:09-DEBUG-Price condition: 
+06 22:05:05-INFO-Получен KeyboardInterrupt. Завершение работы...
+06 22:05:05-INFO-Параметр order_stack_str успешно установлен в значение []
+06 22:05:05-INFO-Все процессы завершены.

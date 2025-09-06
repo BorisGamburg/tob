@@ -153,21 +153,14 @@ class PriceCheck:
         else:
             return False
         
-    def calc_price_cond(self, base_cond_price=None, interval=None, side=None, offset_min=None):
+    def calc_price_cond(self, base_cond_price=None, side=None, offset_min=None):
         if base_cond_price is None:
             return ""
         
         cur_price = self.curr_price()
-        # Получаем Bollinger Bands
-        bb_high, bb_mid, bb_low = self.bybit_driver.calc_bb(
-            symbol=self.symbol, interval=interval
-        )
 
         # Вычисляем offset
-        offset = bb_high - bb_mid
-        offset_percent = offset / cur_price
-        if offset_percent < offset_min:
-            offset = offset_min * cur_price
+        offset = offset_min * cur_price
 
         # Вычисляем cond_price
         if side == "Buy":
@@ -181,8 +174,8 @@ class PriceCheck:
 
         return price_cond
 
-    def check_price_cond(self, base_cond_price=None, interval=None, side=None, offset_min=None):
-        self.price_cond = self.calc_price_cond(base_cond_price=base_cond_price, interval=interval, 
+    def check_price_cond(self, base_cond_price=None, side=None, offset_min=None):
+        self.price_cond = self.calc_price_cond(base_cond_price=base_cond_price,  
                                                side=side, offset_min=offset_min)
         price_cond_met = self._check_price_cond(self.price_cond)
         if price_cond_met == None:

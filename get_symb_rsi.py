@@ -56,7 +56,7 @@ if tokens:
     for token in tokens:
         try:
             last_rsi = bybit_driver.calculate_last_rsi(token, interval="D")
-            if last_rsi > 70:
+            if last_rsi > 60:
                 cur_price = bybit_driver.get_last_price(token)
                 print(f"{token} - RSI: {last_rsi} (overbought), Price={cur_price}")
         except:

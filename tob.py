@@ -4,10 +4,8 @@ from config_manager import ConfigManager
 import argparse
 from stack import Stack
 from telegram import Telegram
-from flask import Flask, current_app, jsonify, request
-from multiprocessing import Process, Manager
-from waitress import serve
-import os
+from multiprocessing import Manager
+import sys
 
 # Настройка логирования
 logging.getLogger('pybit').setLevel(logging.WARNING)
@@ -94,13 +92,16 @@ class TradeOverBot:
             base_cond_price = float(price) if price is not None else None
 
             try:
+                self.set_tf_aver_down()
                 res = self.tb.run(
                     base_cond_price, 
                     self.offset_aver_down, 
                     self.offset_prof_take, 
                     self.order_aver_down_extrem,
                     self.order_stack.peek_second_last(),
-                    self.order_stack.to_string()
+                    self.order_stack.to_string(),
+                    self.rsi_tf_aver_down,
+                    self.ha_tf_aver_down
                 )
             finally:
                 self.tb.stop()
@@ -108,33 +109,39 @@ class TradeOverBot:
 
             cur_price = self.tb.bybit_driver.get_last_price(self.symbol)
             if res == "average_down":
-                self.tb.place_market_order(self.tb.side, self.tb.posIdx,self.qty)
-                self.order_stack.push((cur_price, self.tb.qty))
-                self.log(f"Average down order выполнен. {self.symbol} {self.tb.side} PosIdx={self.tb.posIdx} " \
-                         f"Qty={self.tb.qty} Price={cur_price}\n" \
-                         f"Стек: {self.order_stack.items}")
+                self.handle_avdo(cur_price)
             elif res == "profit_take_market":
-                self.check_pos_for_close(cur_price)
+                self.handle_prof_take_market(cur_price)
             elif res == "profit_take_lim":
-                self.order_stack.pop()
-                self.log(
+                self.handle_prof_take_lim()
+            else:
+                raise ValueError(f"Unknown result from trading bot: {res}")
+            
+            i += 1
+            self.logger.debug(f"beg_stack_size={beg_stack_size}, avdo_amount={self.avdo_amount}, cur_stack_size={len(self.order_stack.items)}")
+            if beg_stack_size + self.avdo_amount == len(self.order_stack.items):
+                self.log("Все итерации выполнены.")
+                break
+
+    def handle_prof_take_lim(self):
+        self.order_stack.pop()
+        self.log(
                     f"Profit Take lim order выполнен. {self.symbol} {self.tb.order_prof_take_lim_saved.get('side')} " \
                     f"PosIdx={self.tb.order_prof_take_lim_saved.get('positionIdx')} " \
                     f"Qty={self.tb.order_prof_take_lim_saved.get('qty')} "
                     f"Price={self.tb.order_prof_take_lim_saved.get('price')}\n" \
                     f"Стек: {self.order_stack.items}"
                 )
-            else:
-                raise ValueError(f"Unknown result from trading bot: {res}")
-            
-            i += 1
-            print(f"beg_stack_size={beg_stack_size}, avdo_amount={self.avdo_amount}, cur_stack_size={len(self.order_stack.items)}")
-            if beg_stack_size + self.avdo_amount == len(self.order_stack.items):
-                self.log("Все итерации выполнены.")
-                break
+
+    def handle_avdo(self, cur_price):
+        self.tb.place_market_order(self.tb.side, self.tb.posIdx,self.qty)
+        self.order_stack.push((cur_price, self.tb.qty))
+        self.log(f"Average down order выполнен. {self.symbol} {self.tb.side} PosIdx={self.tb.posIdx} " \
+                         f"Qty={self.tb.qty} Price={cur_price}\n" \
+                         f"Стек: {self.order_stack.items}")
 
 
-    def check_pos_for_close(self, cur_price):
+    def handle_prof_take_market(self, cur_price):
         while True:
             # ЕСли стек пустой - выходим
             if self.order_stack.is_empty():
@@ -158,6 +165,39 @@ class TradeOverBot:
                 continue
             else:
                 return 
+
+    def set_tf_aver_down(self):
+        self.tb.rsi_check_aver_down.is_rsi_snapped = False
+        if self.order_stack.size() == 0:
+            self.rsi_tf_aver_down = "1"
+            self.ha_tf_aver_down = "1"
+
+        elif self.order_stack.size() == 1:
+            self.rsi_tf_aver_down = "1"
+            self.ha_tf_aver_down = "1"
+
+        elif self.order_stack.size() == 2:
+            self.rsi_tf_aver_down = "5"
+            self.ha_tf_aver_down = "5"
+
+        elif self.order_stack.size() == 3:
+            self.rsi_tf_aver_down = "15" 
+            self.ha_tf_aver_down = "15"
+
+        elif self.order_stack.size() == 4:
+            self.rsi_tf_aver_down = "60"
+            self.ha_tf_aver_down = "60"
+
+        elif self.order_stack.size() == 5:
+            self.rsi_tf_aver_down = "240"
+            self.ha_tf_aver_down = "240"
+
+        else:
+            self.rsi_tf_aver_down = "D"
+            self.ha_tf_aver_down = "D"
+
+        self.logger.info(f"Установлены новые таймфреймы для усреднения: " \
+                         f"rsi_tf_aver_down={self.rsi_tf_aver_down}, ha_tf_aver_down={self.ha_tf_aver_down}")  
 
     def get_side_factor(self):
         if self.tb.side == "Sell":
@@ -209,15 +249,15 @@ def setup_logging(config_tag):
     formatter = logging.Formatter('%(asctime)s-%(levelname)s-%(message)s', datefmt='%d %H:%M:%S')
     #formatter = logging.Formatter('%(asctime)s - %(levelname)s - PID:%(process)d - %(message)s')
 
-    # Обработчик для вывода в консоль
-    ch = logging.StreamHandler()
+    # Обработчик для вывода в консоль. Указываем 'utf-8' для поддержки кириллицы.
+    ch = logging.StreamHandler(sys.stdout)
     ch.setFormatter(formatter)
     logger.addHandler(ch)
 
-    # Обработчик для вывода в файл
-    fh = logging.FileHandler("LOG/" + config_tag + ".log")  # Создаем обработчик для файла 'bot.log'
-    fh.setFormatter(formatter)           # Устанавливаем тот же формат
-    logger.addHandler(fh)                # Добавляем обработчик к логгеру
+    # Обработчик для вывода в файл. Указываем 'utf-8' для поддержки кириллицы.
+    fh = logging.FileHandler("LOG/" + config_tag + ".log", encoding='utf-8')
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
 
     return logger
 
