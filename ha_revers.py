@@ -9,21 +9,23 @@ from price_check import PriceCheck
 
 
 class HARevers:
-    def __init__(self, symbol='DOGEUSDT', timeframe='5', candle_limit=200,
-                 bybit_driver=None, percent_of_interval=0.99, logger=None, telegram=None, offset_min=None
-                ):
+    def __init__(self, symbol='DOGEUSDT', bybit_driver=None, logger=None
+    ):
         self.symbol = symbol
-        self.timeframe = timeframe
-        self.candle_limit = candle_limit
-        self.percent_of_interval = percent_of_interval
+        self.timeframe = None
+        self.candle_limit = 200
+        self.percent_of_interval = 0.99
         self.logger = logger
-        self.telegram = telegram
         self.last_candle_ts = None  
         self.revers_signal = None
         self.bybit_driver = bybit_driver
-        self.price_check = PriceCheck(symbol=self.symbol, bybit_driver=self.bybit_driver,  # type: ignore
-                                      logger=self.logger, telegram=self.telegram) # type: ignore
-        self.signal_data = None
+
+
+    def reset(self, tf=None):
+        self.timeframe = tf
+        self.last_candle_ts = None  
+        self.revers_signal = None
+
 
     # --- Heikin Ashi Calculation Function ---
     def _calc_HA(self, ohlcv_df):
@@ -94,18 +96,6 @@ class HARevers:
             return
 
 
-    # def wait_next_candle(self):
-    #     # Запоминаем TS текущей свечи
-    #     ts_prev_candle_s = self.get_curr_candle_ts()
-
-    #     while(1):
-    #         # Ждем
-    #         time.sleep(self.check_interval)
-    #         if self._is_new_candle(ts_prev_candle_s):
-    #             return
-    #         else:
-    #             continue
-
     def get_curr_candle_ts(self):
         ohlcv_df = self.bybit_driver.get_kline_data(self.symbol, self.timeframe, self.candle_limit)
         ts_prev_candle_s = ohlcv_df.iloc[-1]['timestamp'].timestamp()
@@ -163,16 +153,15 @@ class HARevers:
         ohlcv_df = self.bybit_driver.get_kline_data(self.symbol, self.timeframe, self.candle_limit)
         ha_df = self.calc_HA(ohlcv_df)
         if not ha_df.empty:
-            revers_signal, self.signal_data = self.check_for_reversal(ha_df)
+            revers_signal, signal_data = self.check_for_reversal(ha_df)
             if revers_signal is not None:
-                #self.log_signal(self.signal_data)
                 return revers_signal
             else:
-                #logger.info(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] No new reversal signals for the closed interval.")
                 return None
         else:
             self.logger.warning("Received empty Heikin Ashi DataFrame. Check OHLCV data.")
             return None # No signal, return old timestamp
+        
 
     def calc_HA(self, ohlcv_df):
         # Prepare OHLCV data for Heikin Ashi calculation
@@ -191,6 +180,7 @@ class HARevers:
         self.logger.debug(f"Time: {log_time}")
         self.logger.debug(f"Type: {signal['type']}")
         self.logger.debug(f"Price: {signal['price']:.3f}")
+        self.logger.debug(f"Timeframe: {self.timeframe}")
         self.logger.debug(f"Description: {signal['description']}")
         self.logger.debug(f"-------------------------")
 

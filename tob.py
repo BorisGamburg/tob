@@ -15,7 +15,7 @@ logging.getLogger('urllib3').setLevel(logging.WARNING)
 
 # Функция для запуска Flask-сервера
 class TradeOverBot:
-    def __init__(self, config_tag=None, logger=None, telegram=None, shared_dict=None):
+    def __init__(self, config_tag=None, logger=None, telegram=None):
         self.api_key = None
         self.api_secret = None
         self.symbol = None
@@ -64,7 +64,7 @@ class TradeOverBot:
             rsi_tf_prof_take=self.rsi_tf_prof_take,
             rsi_threshold_aver_down=self.rsi_threshold_aver_down,
             rsi_threshold_prof_take=self.rsi_threshold_prof_take,
-            ha_rev_prof_take_tf=self.ha_tf_prof_take,
+            prof_take_tf_ha=self.ha_tf_prof_take,
             ha_rev_aver_down_tf=self.ha_tf_aver_down,
             side=self.side,
             posIdx=self.posIdx,
@@ -73,7 +73,6 @@ class TradeOverBot:
             check_interval=self.check_interval,
             logger=self.logger,
             telegram=self.telegram,
-            shared_dict=shared_dict
         )
 
     def stop(self):
@@ -167,7 +166,6 @@ class TradeOverBot:
                 return 
 
     def set_tf_aver_down(self):
-        self.tb.rsi_check_aver_down.is_rsi_snapped = False
         if self.order_stack.size() == 0:
             self.rsi_tf_aver_down = "1"
             self.ha_tf_aver_down = "1"
@@ -278,8 +276,7 @@ if __name__ == '__main__':
         tob = TradeOverBot(
             config_tag=args.config, 
             logger=logger, 
-            telegram=telegram, 
-            shared_dict=shared_dict
+            telegram=telegram
         )
 
         try:

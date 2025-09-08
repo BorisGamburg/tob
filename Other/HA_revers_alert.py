@@ -1,12 +1,7 @@
 import logging
 import time
-import argparse
 from ha_revers import HARevers
-from rsi_check import RSICheck
 from telegram import Telegram
-from preis_check import PriceCheck
-from bybit_driver import BybitDriver
-from config_manager import ConfigManager
 
 
 class TradingBot:

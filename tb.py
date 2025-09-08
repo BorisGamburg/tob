@@ -2,7 +2,7 @@ import logging
 import time
 import argparse
 from ha_revers import HARevers
-from rsi_check import RSICheck
+from rsi_snap import RSICheck
 from telegram import Telegram
 from price_check import PriceCheck
 from bybit_driver import BybitDriver
@@ -23,7 +23,7 @@ class TradingBot:
         rsi_tf_prof_take=None,
         rsi_threshold_aver_down=None,  
         rsi_threshold_prof_take=None,
-        ha_rev_prof_take_tf=None,
+        prof_take_tf_ha=None,
         ha_rev_aver_down_tf=None,
         side=None,
         posIdx=None,
@@ -31,8 +31,7 @@ class TradingBot:
         qty1h70=None,
         check_interval=None,
         logger=None, 
-        telegram=None,
-        shared_dict=None
+        telegram=None
     ):
         """Initialize the trading bot with configuration and dependencies."""
 
@@ -47,7 +46,7 @@ class TradingBot:
         self.rsi_tf_prof_take=rsi_tf_prof_take
         self.rsi_threshold_aver_down = rsi_threshold_aver_down
         self.rsi_threshold_prof_take = rsi_threshold_prof_take
-        self.ha_rev_prof_take_tf = ha_rev_prof_take_tf
+        self.prof_take_tf_ha = prof_take_tf_ha
         self.avdo_tf_ha = ha_rev_aver_down_tf
         self.side = side
         self.posIdx = posIdx
@@ -70,37 +69,32 @@ class TradingBot:
         # Initialize strategy components
         self.ha_rev_prof_take = HARevers(
             symbol=self.symbol,
-            timeframe=self.ha_rev_prof_take_tf, 
             bybit_driver=self.bybit_driver,
             logger=self.logger,
-            telegram=self.telegram
         )
+        self.ha_rev_prof_take.reset(tf=self.prof_take_tf_ha)
         
         self.ha_rev_aver_down = HARevers(
             symbol=self.symbol,
-            timeframe=self.avdo_tf_ha, 
             bybit_driver=self.bybit_driver,
             logger=self.logger,
-            telegram=self.telegram
         )
+        self.ha_rev_aver_down.reset(tf=self.avdo_tf_ha)
+
         
         self.rsi_check_aver_down = RSICheck(
             symbol=self.symbol,
-            timeframe=self.avdo_tf_rsi, 
-            rsi_threshold=self.rsi_threshold_aver_down,
             bybit_driver=self.bybit_driver,
             logger=self.logger,
-            telegram=self.telegram
         )
+        self.rsi_check_aver_down.reset(tf=self.avdo_tf_rsi, threshold=self.rsi_threshold_aver_down, side=self.side)
         
         self.rsi_check_prof_take = RSICheck(
             symbol=self.symbol,
-            timeframe=self.rsi_tf_prof_take, 
-            rsi_threshold=self.rsi_threshold_prof_take,
             bybit_driver=self.bybit_driver,
             logger=self.logger,
-            telegram=self.telegram
         )
+        self.rsi_check_prof_take.reset(tf=self.rsi_tf_prof_take, threshold=self.rsi_threshold_prof_take, side=self.inverse_side())
         
         self.price_check = PriceCheck(
             symbol=self.symbol,
@@ -140,11 +134,7 @@ class TradingBot:
 
     def check_averaging_down(self, base_cond_price=None):
             # Проверяем rsi
-            rsi_aver_down_snapped = self.rsi_check_aver_down.rsi_snapped(
-                tf=self.avdo_tf_rsi,
-                threshold=self.rsi_threshold_aver_down, 
-                side=self.side
-            )
+            rsi_aver_down_snapped = self.rsi_check_aver_down.rsi_snapped()
 
             # Если RSI пересек 50, то сбрасываем защелку
             if ((self.rsi_check_aver_down.rsi_curr < 50) and (self.side == "Sell")) or \
@@ -166,7 +156,7 @@ class TradingBot:
                 self.logger.debug(f"")
                 self.logger.debug(f"check_averaging_down")
                 self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.avdo_tf_ha}")   
-                self.logger.debug(f"HA Rev Prof Take развернулся. TF={self.ha_rev_prof_take_tf}")   
+                self.logger.debug(f"HA Rev Prof Take развернулся. TF={self.prof_take_tf_ha}")   
                 self.logger.debug(f"rsi_aver_down_snapped: {rsi_aver_down_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
                 self.logger.debug(f"Price condition: {self.price_check.price_cond}")
@@ -202,11 +192,7 @@ class TradingBot:
             # *** Проверяем RSI, HA_Resvers, Price_Cond
             # Проверяем rsi
             #self.logger.debug(f"Checking profit taking conditions.")
-            rsi_prof_take_snapped = self.rsi_check_prof_take.rsi_snapped(
-                tf=self.rsi_tf_prof_take,
-                threshold=self.rsi_threshold_prof_take, 
-                side=self.inverse_side()
-            )
+            rsi_prof_take_snapped = self.rsi_check_prof_take.rsi_snapped()
             #if rsi_prof_take_snapped:   
             #    self.logger.debug(f"rsi_prof_take_snapped = {rsi_prof_take_snapped}")
 
@@ -230,7 +216,7 @@ class TradingBot:
             if HA_reversed:
                 self.logger.debug(f"")
                 self.logger.debug(f"Checking profit taking.")
-                self.logger.debug(f"HA Prof Take развернулся. TF={self.ha_rev_prof_take_tf}")   
+                self.logger.debug(f"HA Prof Take развернулся. TF={self.prof_take_tf_ha}")   
                 self.logger.debug(f"rsi_prof_take_snapped: {rsi_prof_take_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
                 self.logger.debug(f"Price condition: {self.price_check.price_cond}")
@@ -291,6 +277,9 @@ class TradingBot:
             self.order_prof_take_lim_id = res["orderId"]
             self.logger.info(f"order_prof_take_lim установлен. {self.symbol} {res["side"]} " \
                              f"PosIdx={res["position_idx"]} Qty={res["qty"]} Price= {res["price"]}")
+            
+        self.rsi_check_aver_down.reset(tf=self.avdo_tf_rsi, threshold=self.rsi_threshold_aver_down, side=self.side)
+        self.ha_rev_aver_down.reset(tf=self.avdo_tf_ha)
 
         while True:
             if self.order_prof_take_lim_filled:
