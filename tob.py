@@ -4,7 +4,6 @@ from config_manager import ConfigManager
 import argparse
 from stack import Stack
 from telegram import Telegram
-from multiprocessing import Manager
 import sys
 
 # Настройка логирования
@@ -37,10 +36,12 @@ class TradeOverBot:
         self.order_aver_down_extrem=None
         self.avdo_amount=None
         self.debug=False
+        self.tf_avdo_mapping = None
+        self.tf_avdo_default = None
+        self.tf_avdo_map_dict = None
 
         self.logger = logger
         self.telegram = telegram
-        self.shared_dict = shared_dict        
 
         self.config_manager = ConfigManager(
             config_file="CFG/" + config_tag + ".cfg", 
@@ -53,6 +54,9 @@ class TradeOverBot:
             self.logger.setLevel(logging.DEBUG)
             self.logger.debug("Debug mode is ON")
 
+        # Преобразуем tf_aver_down_mapping в словарь
+        self.tf_avdo_map_dict = {int(k.strip()): v.strip() for k, v in (pair.split(':') for pair in self.tf_avdo_mapping.split(','))}
+    
         self.order_stack = Stack()
         self.order_stack.from_string(self.order_stack_str)
 
@@ -164,38 +168,18 @@ class TradeOverBot:
                 continue
             else:
                 return 
-
+            
     def set_tf_aver_down(self):
-        if self.order_stack.size() == 0:
-            self.rsi_tf_aver_down = "1"
-            self.ha_tf_aver_down = "1"
+        stack_size = self.order_stack.size()
 
-        elif self.order_stack.size() == 1:
-            self.rsi_tf_aver_down = "1"
-            self.ha_tf_aver_down = "1"
+        # Получаем таймфрейм из словаря, используя значение по умолчанию, если ключа нет
+        tf = self.tf_avdo_map_dict.get(stack_size, self.tf_avdo_default)
 
-        elif self.order_stack.size() == 2:
-            self.rsi_tf_aver_down = "5"
-            self.ha_tf_aver_down = "5"
+        self.rsi_tf_aver_down = tf
+        self.ha_tf_aver_down = tf
 
-        elif self.order_stack.size() == 3:
-            self.rsi_tf_aver_down = "15" 
-            self.ha_tf_aver_down = "15"
-
-        elif self.order_stack.size() == 4:
-            self.rsi_tf_aver_down = "60"
-            self.ha_tf_aver_down = "60"
-
-        elif self.order_stack.size() == 5:
-            self.rsi_tf_aver_down = "240"
-            self.ha_tf_aver_down = "240"
-
-        else:
-            self.rsi_tf_aver_down = "D"
-            self.ha_tf_aver_down = "D"
-
-        self.logger.info(f"Установлены новые таймфреймы для усреднения: " \
-                         f"rsi_tf_aver_down={self.rsi_tf_aver_down}, ha_tf_aver_down={self.ha_tf_aver_down}")  
+        self.logger.info(f"Установлены новые таймфреймы для усреднения: "
+                        f"rsi_tf_aver_down={self.rsi_tf_aver_down}, ha_tf_aver_down={self.ha_tf_aver_down}")            
 
     def get_side_factor(self):
         if self.tb.side == "Sell":
@@ -270,20 +254,17 @@ if __name__ == '__main__':
 
     telegram = Telegram(logger=logger)
 
-    with Manager() as manager:
-        shared_dict = manager.dict()
+    tob = TradeOverBot(
+        config_tag=args.config, 
+        logger=logger, 
+        telegram=telegram
+    )
 
-        tob = TradeOverBot(
-            config_tag=args.config, 
-            logger=logger, 
-            telegram=telegram
-        )
-
-        try:
-            logger.info("Запуск основного цикла TradeOverBot...")
-            tob.run()   
-        except KeyboardInterrupt:
-            logger.info("Получен KeyboardInterrupt. Завершение работы...")
-        finally:
-            tob.stop()
-            logger.info("Все процессы завершены.")
+    try:
+        logger.info("Запуск основного цикла TradeOverBot...")
+        tob.run()   
+    except KeyboardInterrupt:
+        logger.info("Получен KeyboardInterrupt. Завершение работы...")
+    finally:
+        tob.stop()
+        logger.info("Все процессы завершены.")
