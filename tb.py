@@ -1,14 +1,10 @@
-import logging
 import time
-import argparse
 from ha_revers import HARevers
 from rsi_snap import RSICheck
-from telegram import Telegram
 from price_check import PriceCheck
 from bybit_driver import BybitDriver
-from config_manager import ConfigManager
 from order_manag import OrderManager
-import sys
+import json
 
 
 class TradingBot:
@@ -31,10 +27,11 @@ class TradingBot:
         qty1h70=None,
         check_interval=None,
         logger=None, 
-        telegram=None
+        telegram=None,
+        config_tag=None,
+        tf_avdo_mapping=None
     ):
         """Initialize the trading bot with configuration and dependencies."""
-
 
         # Default trading parameters
         self.logger = logger
@@ -61,6 +58,8 @@ class TradingBot:
         self.order_id_aver_down_extrem = None
         self.order_aver_down_extrem_filled = True
         self.order_prof_take_lim_saved = None
+        self.config_tag = config_tag
+        self.tf_avdo_mapping = tf_avdo_mapping
 
 
         # Create an instance of the BybitDriver
@@ -253,6 +252,7 @@ class TradingBot:
             avdo_rsi_tf=None,
             avdo_ha_tf=None
         ):
+
         self.offset_aver_down = offset_aver_down 
         self.offset_prof_take = offset_prof_take 
         self.order_stack_str = order_stack_str
@@ -301,6 +301,23 @@ class TradingBot:
             if self.check_profit_taking(base_cond_price=base_cond_price):
                 res = "profit_take_market"
                 break
+
+            # Записываем состояние бота в файл
+            buy_size, sell_size, buy_pl, sell_pl, bp, sp = self.bybit_driver.get_position_data(self.symbol)            
+            state = {
+                "Symbol": self.symbol,
+                "Stack": self.order_stack_str, 
+                "avdo_tf_rsi": self.avdo_tf_rsi,
+                "avdo_tf_ha": self.avdo_tf_ha,
+                "avdo_tf_mapping": self.tf_avdo_mapping,
+                "buy_pos_size": buy_size,
+                "buy_pos_pl": buy_pl,
+                "sell_pos_size": sell_size,
+                "sell_pos_pl": sell_pl,
+            }
+            # прямое перезаписывание файла
+            with open(f"STATE/{self.config_tag}.sta", "w") as f:
+                json.dump(state, f, indent=4)
 
             # Ждем интервал 
             time.sleep(self.check_interval)

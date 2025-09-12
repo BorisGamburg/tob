@@ -49,7 +49,6 @@ class TradeOverBot:
             logger=self.logger
         )
         self.config_manager.load_config_to_instance()
-        self.log_parameters()
         if self.debug:
             self.logger.setLevel(logging.DEBUG)
             self.logger.debug("Debug mode is ON")
@@ -77,7 +76,12 @@ class TradeOverBot:
             check_interval=self.check_interval,
             logger=self.logger,
             telegram=self.telegram,
+            config_tag=config_tag,
+            tf_avdo_mapping=self.tf_avdo_mapping
         )
+
+        self.log_parameters()
+
 
     def stop(self):
         self.order_stack_str = self.order_stack.to_string()
@@ -122,14 +126,15 @@ class TradeOverBot:
             
             i += 1
             self.logger.debug(f"beg_stack_size={beg_stack_size}, avdo_amount={self.avdo_amount}, cur_stack_size={len(self.order_stack.items)}")
-            if beg_stack_size + self.avdo_amount == len(self.order_stack.items):
+            if self.avdo_amount < len(self.order_stack.items):
                 self.log("Все итерации выполнены.")
                 break
 
     def handle_prof_take_lim(self):
         self.order_stack.pop()
         self.log(
-                    f"Profit Take lim order выполнен. {self.symbol} {self.tb.order_prof_take_lim_saved.get('side')} " \
+                    f"Prof Take lim выпол {self.symbol} {self.tb.order_prof_take_lim_saved.get('side')} " \
+                    f"Stack Size: {self.order_stack.size}"
                     f"PosIdx={self.tb.order_prof_take_lim_saved.get('positionIdx')} " \
                     f"Qty={self.tb.order_prof_take_lim_saved.get('qty')} "
                     f"Price={self.tb.order_prof_take_lim_saved.get('price')}\n" \
@@ -202,6 +207,7 @@ class TradeOverBot:
         self.logger.info(f"RSI Threshold Aver Down: {self.rsi_threshold_aver_down}")
         self.logger.info(f"Timeframe HA Aver Down: {self.ha_tf_aver_down}")
         self.logger.info(f"offset_aver_down={self.offset_aver_down}")
+        self.logger.info(f"tf_avdo_mapping={self.tf_avdo_mapping}")
         self.logger.info("")
         self.logger.info("Prof Take")
         self.logger.info(f"Timeframe RSI Prof Take: {self.rsi_tf_prof_take}")
@@ -214,8 +220,9 @@ class TradeOverBot:
         self.logger.info(f"Position Index: {self.posIdx}")
         self.logger.info(f"Quantity: {self.qty}")
         self.logger.info("")
-        self.logger.info("# Стек строка")
-        self.logger.info(f"order_stack_str: {self.order_stack_str}")
+        self.logger.info("# Стек")
+        self.logger.info(f"Stack Str: {self.order_stack_str}")
+        self.logger.info(f"Stack Size: {self.order_stack.size()}")
         self.logger.info("")
         self.logger.info("# Интервал опроса")
         self.logger.info(f"Check Interval: {self.check_interval}")

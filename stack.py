@@ -58,7 +58,7 @@ class Stack:
             if not isinstance(parsed_list, list):
                 raise ValueError("Строка должна представлять собой список Python (например, '[(1, 2), (3, 4)]').")
             self.items = parsed_list
-            self.logger.info(f"Стек установлен из строки: '{string}'.")
+            self.logger.debug(f"Стек установлен из строки: '{string}'.")
         except (ValueError, SyntaxError) as e:
             self.logger.error(f"Ошибка при парсинге строки '{string}' в from_string: {e}")
             raise ValueError(f"Невозможно распарсить строку как список: {string}") from e
