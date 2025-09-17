@@ -433,6 +433,148 @@ class BybitDriver:
         self.logger.info(message)
         self.telegram.send_telegram_message(message)
 
+    def get_limit_orders(self, category="linear", symbol=None, side=None):
+        """
+        Получает список лимитных ордеров.
+        """
+        def call():
+            response = self.http_client.get_open_orders(category=category, symbol=symbol, limit=50)
+            if response.get("retCode") != 0:
+                self.logger.error(f"Ошибка получения открытых ордеров: {response.get('retMsg')}")
+                return None
+
+            orders = response.get("result", {}).get("list", [])
+            limit_orders = [o for o in orders if o.get("orderType") == "Limit"]
+
+            if side:
+                limit_orders = [o for o in limit_orders if o.get("side") == side]
+            
+            return limit_orders
+        
+        result = self.retry_api_call(call)
+        return result if result is not None else []
+
+
+    def change_order_price(self, order, new_price):
+        """
+        Изменяет цену существующего ордера.
+        """
+        def call():
+            response = self.http_client.amend_order(
+                category="linear",
+                symbol=order["symbol"],
+                orderId=order["orderId"],
+                price=str(new_price)
+            )
+            if response.get("retCode") != 0:
+                self.logger.error(f"Ошибка изменения ордера: {response.get('retMsg')}")
+                return None
+            return response
+
+        result = self.retry_api_call(call)
+        return result
+    
+    
+    def move_limit_order(self, symbol, side, new_price):
+        """
+        Ищет существующий лимитный ордер по символу и стороне и перемещает его на новую цену.
+        """
+        self.logger.info(f"Ищем лимитный ордер {side} для {symbol} для перемещения на цену {new_price}.")
+        
+        # Шаг 1: Находим существующий лимитный ордер
+        open_limit_orders = self.get_limit_orders(symbol=symbol, side=side)
+
+        if not open_limit_orders:
+            self.logger.warning(f"Нет открытых лимитных ордеров {side} для {symbol}.")
+            return {"retCode": "NO_ORDERS"} 
+
+        # Шаг 2: Выбираем первый найденный ордер
+        order_to_move = open_limit_orders[0]
+        order_id = order_to_move["orderId"]
+        current_price = order_to_move["price"]
+
+        self.logger.info(f"Найден ордер для перемещения: ID={order_id}, Текущая цена={current_price}, Новая цена={new_price}.")
+        
+        # Шаг 3: Перемещаем ордер, используя метод change_order_price
+        result = self.change_order_price(order_to_move, new_price)
+
+        if result.get("retCode") == 0:
+            self.logger.info(f"✅ Ордер {order_id} успешно перемещен на цену {new_price}.")
+            return {"retCode": "OK", "orderId": order_id, "newPrice": new_price}
+        else:
+            self.logger.error(f"❌ Не удалось переместить ордер {order_id}. Ошибка: {result.get('retMsg')}")
+            raise Exception(f"Не удалось переместить ордер: {result.get('retMsg')}")
+        
+        
+    def wait_chase_order(self, symbol=None, side=None, poll_interval=5):
+        self.logger.info(f"Попытка выставить и отслеживать лимитный ордер {side} для {symbol}...")
+        my_order_id = None
+        my_order_price = None
+        is_order_active = True
+
+        # Основной цикл, который работает, пока ордер активен
+        while is_order_active:
+            if my_order_id is not None:
+                # Существует ли еще ордер?
+                if not self.exist_order(symbol=symbol, side=side, order_id=my_order_id):
+                    # Ордер больше не существует, выходим из функции
+                    self.logger.info(f"Ордер {my_order_id} больше не существует. Выходим из функции.")
+                    return "OK"
+
+                # Получение последней цены 
+                current_price = self.get_last_price(symbol=symbol)
+                # Сместилась ли цена?  
+                if my_order_price != current_price:
+                    # Цена сместилась, перемещаем ордер
+                    self.logger.info(f"Цена {current_price} сместилась. Перемещаем ордер {my_order_id} с цены {my_order_price} на {current_price}.")
+                    move_order = True
+                else:
+                    # Цена не сместилась, ордер не двигаем
+                    self.logger.info(f"Цена {current_price} не сместилась. Ордер {my_order_id} остается на цене {my_order_price}.")
+                    move_order = False  
+            else:
+                # Ордер еще не выставлен, выставляем новый лимитный ордер
+                self.logger.info(f"Выставляем новый лимитный ордер {side} для {symbol} по цене рыночной {self.get_last_price(symbol=symbol)}.")
+                move_order = True
+                # Получение последней цены 
+                current_price = self.get_last_price(symbol=symbol)
+
+            if move_order:
+                # Вызываем функцию для перемещения ордера
+                move_result = self.move_limit_order(symbol=symbol, side=side, new_price=current_price)
+                if move_result.get("retCode") == "OK":
+                    self.logger.info("✅ Ордер успешно перемещен.")
+                    my_order_id = move_result.get("orderId")
+                    my_order_price = move_result.get("newPrice")
+                elif move_result.get("retCode") == "NO_ORDERS":
+                    # Нет ордеров для перемещения, выходим из функции
+                    self.logger.info("Нет ордеров для перемещения.")
+                    return "NO_ORDERS"
+            
+            # Ожидание перед следующей проверкой
+            sleep(poll_interval)
+
+
+    def exist_order(self, symbol=None, side= None, order_id=None):
+        # Получаем список лим ордеров
+        existing_orders = self.get_limit_orders(symbol=symbol, side=side)
+
+        # Ищем наш ордер по ID
+        my_order = next((o for o in existing_orders if o['orderId'] == order_id), None)
+
+        # Если ордер не найден
+        if not my_order:
+            self.logger.info(f"✅ Ордер с ID {order_id} больше не активен.")
+            return False
+        
+        return True
+
+
+        
+        
+
+
+
 
 
 

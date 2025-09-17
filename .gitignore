@@ -9,5 +9,9 @@ STATE/*
 !LOG/.keep
 !STATE/.keep
 
-# Игнорировать кэш Python
+# Python
+venv/
 __pycache__/
+
+# IDE
+.vscode/

@@ -60,7 +60,7 @@ class TradingBot:
         self.order_prof_take_lim_saved = None
         self.config_tag = config_tag
         self.tf_avdo_mapping = tf_avdo_mapping
-
+        self.stack_size = None
 
         # Create an instance of the BybitDriver
         self.bybit_driver = BybitDriver(api_key=self.api_key, api_secret=self.api_secret, logger=self.logger, telegram=self.telegram)
@@ -250,7 +250,8 @@ class TradingBot:
             stack_second_last=None,
             order_stack_str=None,
             avdo_rsi_tf=None,
-            avdo_ha_tf=None
+            avdo_ha_tf=None,
+            stack_size=None
         ):
 
         self.offset_aver_down = offset_aver_down 
@@ -260,6 +261,8 @@ class TradingBot:
         self.order_prof_take_lim_filled = False
         self.avdo_tf_rsi = avdo_rsi_tf
         self.avdo_tf_ha = avdo_ha_tf
+        self.stack_size = stack_size
+        
         if stack_second_last == None:
             self.stack_second_last_price = None
             self.stack_second_last_qty = None
@@ -303,21 +306,7 @@ class TradingBot:
                 break
 
             # Записываем состояние бота в файл
-            buy_size, sell_size, buy_pl, sell_pl, bp, sp = self.bybit_driver.get_position_data(self.symbol)            
-            state = {
-                "Symbol": self.symbol,
-                "Stack": self.order_stack_str, 
-                "avdo_tf_rsi": self.avdo_tf_rsi,
-                "avdo_tf_ha": self.avdo_tf_ha,
-                "avdo_tf_mapping": self.tf_avdo_mapping,
-                "buy_pos_size": buy_size,
-                "buy_pos_pl": buy_pl,
-                "sell_pos_size": sell_size,
-                "sell_pos_pl": sell_pl,
-            }
-            # прямое перезаписывание файла
-            with open(f"STATE/{self.config_tag}.sta", "w") as f:
-                json.dump(state, f, indent=4)
+            self.write_state()
 
             # Ждем интервал 
             time.sleep(self.check_interval)
@@ -326,6 +315,25 @@ class TradingBot:
             continue
 
         return res
+    
+    def write_state(self):
+            buy_size, sell_size, buy_pl, sell_pl, bp, sp = self.bybit_driver.get_position_data(self.symbol)            
+            state = {
+                "Symbol": self.symbol,
+                "Stack": self.order_stack_str, 
+                "Stack size": self.stack_size,
+                "avdo_tf_rsi": self.avdo_tf_rsi,
+                "avdo_tf_ha": self.avdo_tf_ha,
+                "rsi_threshold_aver_down": self.rsi_threshold_aver_down,
+                "avdo_tf_mapping": self.tf_avdo_mapping,
+                "buy_pos_size": buy_size,
+                "sell_pos_size": sell_size,
+                "buy_pos_pl": buy_pl,
+                "sell_pos_pl": sell_pl,
+            }
+            # прямое перезаписывание файла
+            with open(f"STATE/{self.config_tag}.sta", "w") as f:
+                json.dump(state, f, indent=4)
 
     def stop(self):
         # Удаляем order_prof_take_lim, если он есть
@@ -340,6 +348,7 @@ class TradingBot:
     def log(self, message):
         self.logger.info(message)
         self.telegram.send_telegram_message(message)
+
     def inverse_side(self):
         if self.side == "Buy":
             return "Sell"

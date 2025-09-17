@@ -108,7 +108,8 @@ class TradeOverBot:
                     self.order_stack.peek_second_last(),
                     self.order_stack.to_string(),
                     self.rsi_tf_aver_down,
-                    self.ha_tf_aver_down
+                    self.ha_tf_aver_down,
+                    self.order_stack.size()
                 )
             finally:
                 self.tb.stop()
@@ -134,7 +135,7 @@ class TradeOverBot:
         self.order_stack.pop()
         self.log(
                     f"Prof Take lim выпол {self.symbol} {self.tb.order_prof_take_lim_saved.get('side')} " \
-                    f"Stack Size: {self.order_stack.size}"
+                    f"Stack Size: {self.order_stack.size()}"
                     f"PosIdx={self.tb.order_prof_take_lim_saved.get('positionIdx')} " \
                     f"Qty={self.tb.order_prof_take_lim_saved.get('qty')} "
                     f"Price={self.tb.order_prof_take_lim_saved.get('price')}\n" \
@@ -142,12 +143,14 @@ class TradeOverBot:
                 )
 
     def handle_avdo(self, cur_price):
-        self.tb.place_market_order(self.tb.side, self.tb.posIdx,self.qty)
+        res = self.tb.bybit_driver.wait_chase_order(symbol=self.symbol, side=self.side)
+        if res == "NO_ORDERS":
+            self.tb.place_market_order(self.tb.side, self.tb.posIdx, self.qty)
+
         self.order_stack.push((cur_price, self.tb.qty))
         self.log(f"Average down order выполнен. {self.symbol} {self.tb.side} PosIdx={self.tb.posIdx} " \
                          f"Qty={self.tb.qty} Price={cur_price}\n" \
                          f"Стек: {self.order_stack.items}")
-
 
     def handle_prof_take_market(self, cur_price):
         while True:
@@ -181,9 +184,9 @@ class TradeOverBot:
         tf = self.tf_avdo_map_dict.get(stack_size, self.tf_avdo_default)
 
         self.rsi_tf_aver_down = tf
-        self.ha_tf_aver_down = tf
+        #self.ha_tf_aver_down = tf
 
-        self.logger.info(f"Установлены новые таймфреймы для усреднения: "
+        self.logger.info(f"Таймфреймы для усреднения: "
                         f"rsi_tf_aver_down={self.rsi_tf_aver_down}, ha_tf_aver_down={self.ha_tf_aver_down}")            
 
     def get_side_factor(self):
@@ -272,6 +275,8 @@ if __name__ == '__main__':
         tob.run()   
     except KeyboardInterrupt:
         logger.info("Получен KeyboardInterrupt. Завершение работы...")
+    except Exception as e:
+        tob.log(f"{tob.symbol} Выход по Exception: {e}")
     finally:
         tob.stop()
         logger.info("Все процессы завершены.")
