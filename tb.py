@@ -15,12 +15,10 @@ class TradingBot:
         api_key=None,
         api_secret=None,
         symbol=None,
-        rsi_tf_aver_down=None,
         rsi_tf_prof_take=None,
         rsi_threshold_aver_down=None,  
         rsi_threshold_prof_take=None,
         prof_take_tf_ha=None,
-        ha_rev_aver_down_tf=None,
         side=None,
         posIdx=None,
         qty=None,
@@ -39,12 +37,10 @@ class TradingBot:
         self.api_key = api_key
         self.api_secret = api_secret
         self.symbol = symbol
-        self.avdo_tf_rsi=rsi_tf_aver_down
         self.rsi_tf_prof_take=rsi_tf_prof_take
         self.rsi_threshold_aver_down = rsi_threshold_aver_down
         self.rsi_threshold_prof_take = rsi_threshold_prof_take
         self.prof_take_tf_ha = prof_take_tf_ha
-        self.avdo_tf_ha = ha_rev_aver_down_tf
         self.side = side
         self.posIdx = posIdx
         self.qty = qty
@@ -78,7 +74,7 @@ class TradingBot:
             bybit_driver=self.bybit_driver,
             logger=self.logger,
         )
-        self.ha_rev_aver_down.reset(tf=self.avdo_tf_ha)
+        #self.ha_rev_aver_down.reset(tf=self.avdo_tf_ha)
 
         
         self.rsi_check_aver_down = RSICheck(
@@ -86,7 +82,7 @@ class TradingBot:
             bybit_driver=self.bybit_driver,
             logger=self.logger,
         )
-        self.rsi_check_aver_down.reset(tf=self.avdo_tf_rsi, threshold=self.rsi_threshold_aver_down, side=self.side)
+        #self.rsi_check_aver_down.reset(tf=self.avdo_tf_rsi, threshold=self.rsi_threshold_aver_down, side=self.side)
         
         self.rsi_check_prof_take = RSICheck(
             symbol=self.symbol,
@@ -251,7 +247,8 @@ class TradingBot:
             order_stack_str=None,
             avdo_rsi_tf=None,
             avdo_ha_tf=None,
-            stack_size=None
+            stack_size=None,
+            stack_last=None
         ):
 
         self.offset_aver_down = offset_aver_down 
@@ -274,7 +271,7 @@ class TradingBot:
                 self.symbol, 
                 self.inverse_side(), 
                 "Close", 
-                self.stack_second_last_qty, 
+                stack_last[1],  # qty
                 self.stack_second_last_price
             )
             self.order_prof_take_lim_id = res["orderId"]

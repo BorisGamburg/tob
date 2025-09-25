@@ -3,6 +3,8 @@ from bybit_driver import BybitDriver
 from telegram import Telegram
 import pandas as pd
 import logging
+#import signal
+#import sys
 
 # Logging Setup
 logger = logging.getLogger()
@@ -105,16 +107,23 @@ tokens = get_perpetual_tokens()
 # Вывод списка токенов
 if tokens:
     print("Список символов:")
+    i = 0
     for token in tokens:
+        i += 1
+        if i % 10 == 0:
+            print(f"\r{i}", end="")        
         try:
             last_rsi = bybit_driver.calculate_last_rsi(token, interval="D")
-            if last_rsi > 70:
+            if last_rsi > 45:
                 min_size = get_min_size_in_usdt(token, category="linear")
-                if min_size < 0.2:
+                if min_size < 0.02:
                     cur_price = bybit_driver.get_last_price(token)
-                    print(f"{token} - RSI: {last_rsi} (overbought), Price={cur_price}")
+                    print(f"\r{token} - RSI: {last_rsi} (overbought), Price={cur_price}")
                     print(f"Минимальный размер контракта в USDT для {token}: {min_size}\n")
-        except:
+        except KeyboardInterrupt:
+            print("Прервано пользователем")
+            break
+        except Exception as e:
             pass
         
 

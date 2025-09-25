@@ -54,8 +54,13 @@ class TradeOverBot:
             self.logger.debug("Debug mode is ON")
 
         # Преобразуем tf_aver_down_mapping в словарь
-        self.tf_avdo_map_dict = {int(k.strip()): v.strip() for k, v in (pair.split(':') for pair in self.tf_avdo_mapping.split(','))}
-    
+        self.tf_avdo_map_dict = {
+            int(parts[0].strip()): {
+                "tf_rsi": int(parts[1].strip()),
+                "tf_ha": int(parts[2].strip())
+            }
+            for parts in (pair.split(':') for pair in self.tf_avdo_mapping.split(','))
+}    
         self.order_stack = Stack()
         self.order_stack.from_string(self.order_stack_str)
 
@@ -63,12 +68,10 @@ class TradeOverBot:
             api_key=self.api_key, 
             api_secret=self.api_secret,
             symbol=self.symbol,
-            rsi_tf_aver_down=self.rsi_tf_aver_down,
             rsi_tf_prof_take=self.rsi_tf_prof_take,
             rsi_threshold_aver_down=self.rsi_threshold_aver_down,
             rsi_threshold_prof_take=self.rsi_threshold_prof_take,
             prof_take_tf_ha=self.ha_tf_prof_take,
-            ha_rev_aver_down_tf=self.ha_tf_aver_down,
             side=self.side,
             posIdx=self.posIdx,
             qty=self.qty,
@@ -109,7 +112,8 @@ class TradeOverBot:
                     self.order_stack.to_string(),
                     self.rsi_tf_aver_down,
                     self.ha_tf_aver_down,
-                    self.order_stack.size()
+                    self.order_stack.size(),
+                    self.order_stack.peek()
                 )
             finally:
                 self.tb.stop()
@@ -181,10 +185,14 @@ class TradeOverBot:
         stack_size = self.order_stack.size()
 
         # Получаем таймфрейм из словаря, используя значение по умолчанию, если ключа нет
-        tf = self.tf_avdo_map_dict.get(stack_size, self.tf_avdo_default)
+        #tf = self.tf_avdo_map_dict.get(stack_size, self.tf_avdo_default)
+        cfg = self.tf_avdo_map_dict.get(stack_size, {"tf_rsi": self.tf_avdo_default, "tf_ha": self.tf_avdo_default})
+        tf_rsi = cfg["tf_rsi"]
+        tf_ha = cfg["tf_ha"]
 
-        self.rsi_tf_aver_down = tf
-        #self.ha_tf_aver_down = tf
+
+        self.rsi_tf_aver_down = tf_rsi
+        self.ha_tf_aver_down = tf_ha
 
         self.logger.info(f"Таймфреймы для усреднения: "
                         f"rsi_tf_aver_down={self.rsi_tf_aver_down}, ha_tf_aver_down={self.ha_tf_aver_down}")            
@@ -206,9 +214,7 @@ class TradeOverBot:
         self.logger.info(f"Symbol: {self.symbol}")
         self.logger.info("")
         self.logger.info("# Aver Down")
-        self.logger.info(f"Timeframe RSI Aver Down: {self.rsi_tf_aver_down}")
         self.logger.info(f"RSI Threshold Aver Down: {self.rsi_threshold_aver_down}")
-        self.logger.info(f"Timeframe HA Aver Down: {self.ha_tf_aver_down}")
         self.logger.info(f"offset_aver_down={self.offset_aver_down}")
         self.logger.info(f"tf_avdo_mapping={self.tf_avdo_mapping}")
         self.logger.info("")
