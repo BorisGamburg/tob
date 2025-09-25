@@ -20,20 +20,19 @@ class TradeOverBot:
         self.symbol = None
         self.base_cond_price = None
         self.order_stack_str = None
-        self.offset_aver_down=None
-        self.offset_prof_take=None
-        self.rsi_tf_aver_down=None
+        self.avdo_offset=None
+        self.tp_offset=None
+        self.rsi_tf=None
         self.rsi_tf_prof_take=None
         self.rsi_threshold_aver_down=None
         self.rsi_threshold_prof_take=None
         self.ha_tf_prof_take=None
-        self.ha_tf_aver_down=None
+        self.ha_tf=None
         self.side=None
         self.posIdx=None
         self.qty=None
         self.qty1h70=None
         self.check_interval=None
-        self.order_aver_down_extrem=None
         self.avdo_amount=None
         self.debug=False
         self.tf_avdo_mapping = None
@@ -69,9 +68,9 @@ class TradeOverBot:
             api_secret=self.api_secret,
             symbol=self.symbol,
             rsi_tf_prof_take=self.rsi_tf_prof_take,
-            rsi_threshold_aver_down=self.rsi_threshold_aver_down,
-            rsi_threshold_prof_take=self.rsi_threshold_prof_take,
-            prof_take_tf_ha=self.ha_tf_prof_take,
+            avdo_rsi_threshold=self.rsi_threshold_aver_down,
+            tp_rsi_threshold=self.rsi_threshold_prof_take,
+            tp_tf_ha=self.ha_tf_prof_take,
             side=self.side,
             posIdx=self.posIdx,
             qty=self.qty,
@@ -105,13 +104,12 @@ class TradeOverBot:
                 self.set_tf_aver_down()
                 res = self.tb.run(
                     base_cond_price, 
-                    self.offset_aver_down, 
-                    self.offset_prof_take, 
-                    self.order_aver_down_extrem,
+                    self.avdo_offset, 
+                    self.tp_offset, 
                     self.order_stack.peek_second_last(),
                     self.order_stack.to_string(),
-                    self.rsi_tf_aver_down,
-                    self.ha_tf_aver_down,
+                    self.rsi_tf,
+                    self.ha_tf,
                     self.order_stack.size(),
                     self.order_stack.peek()
                 )
@@ -158,7 +156,7 @@ class TradeOverBot:
 
     def handle_prof_take_market(self, cur_price):
         while True:
-            # ЕСли стек пустой - выходим
+            # Если стек пустой - выходим
             if self.order_stack.is_empty():
                 return 
 
@@ -168,7 +166,7 @@ class TradeOverBot:
             offset_cur =(cur_price - stack_top_price) / cur_price * self.get_side_factor()
 
             # Проверяем надо ли выполнить order_prof_take
-            if offset_cur > self.offset_prof_take:
+            if offset_cur > self.tp_offset:
                 # Выполняем order_prof_take
                 self.tb.place_market_order(self.tb.inverse_side(), self.tb.inverse_posIdx(), qty_stack)
                 # Уменьшаем стек
@@ -191,11 +189,10 @@ class TradeOverBot:
         tf_ha = cfg["tf_ha"]
 
 
-        self.rsi_tf_aver_down = tf_rsi
-        self.ha_tf_aver_down = tf_ha
+        self.rsi_tf = tf_rsi
+        self.ha_tf = tf_ha
 
-        self.logger.info(f"Таймфреймы для усреднения: "
-                        f"rsi_tf_aver_down={self.rsi_tf_aver_down}, ha_tf_aver_down={self.ha_tf_aver_down}")            
+        self.logger.info(f"Таймфреймы для AvDo и TP: rsi_tf={self.rsi_tf}, ha_tf={self.ha_tf}")            
 
     def get_side_factor(self):
         if self.tb.side == "Sell":
@@ -214,15 +211,15 @@ class TradeOverBot:
         self.logger.info(f"Symbol: {self.symbol}")
         self.logger.info("")
         self.logger.info("# Aver Down")
-        self.logger.info(f"RSI Threshold Aver Down: {self.rsi_threshold_aver_down}")
-        self.logger.info(f"offset_aver_down={self.offset_aver_down}")
-        self.logger.info(f"tf_avdo_mapping={self.tf_avdo_mapping}")
+        self.logger.info(f"RSI Threshold: {self.rsi_threshold_aver_down}")
+        self.logger.info(f"offset={self.avdo_offset}")
         self.logger.info("")
-        self.logger.info("Prof Take")
-        self.logger.info(f"Timeframe RSI Prof Take: {self.rsi_tf_prof_take}")
-        self.logger.info(f"RSI Threshold Profit Take: {self.rsi_threshold_prof_take}")
-        self.logger.info(f"Timeframe HA Prof Take: {self.ha_tf_prof_take}")
-        self.logger.info(f"offset_prof_take={self.offset_prof_take}")
+        self.logger.info("# Prof Take")
+        self.logger.info(f"RSI Threshold: {self.rsi_threshold_prof_take}")
+        self.logger.info(f"offset={self.tp_offset}")
+        self.logger.info("")
+        self.logger.info("# Mapping")
+        self.logger.info(f"tf_mapping={self.tf_avdo_mapping}")
         self.logger.info("")
         self.logger.info("# Рыночный ордер")
         self.logger.info(f"Side: {self.side}")

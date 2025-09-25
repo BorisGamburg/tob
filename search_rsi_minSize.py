@@ -116,9 +116,9 @@ if tokens:
             last_rsi = bybit_driver.calculate_last_rsi(token, interval="D")
             if last_rsi > 45:
                 min_size = get_min_size_in_usdt(token, category="linear")
-                if min_size < 0.02:
+                if min_size < 0.1:
                     cur_price = bybit_driver.get_last_price(token)
-                    print(f"\r{token} - RSI: {last_rsi} (overbought), Price={cur_price}")
+                    print(f"\r{token} - RSI: {last_rsi}, Price={cur_price}")
                     print(f"Минимальный размер контракта в USDT для {token}: {min_size}\n")
         except KeyboardInterrupt:
             print("Прервано пользователем")

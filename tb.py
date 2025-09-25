@@ -16,9 +16,9 @@ class TradingBot:
         api_secret=None,
         symbol=None,
         rsi_tf_prof_take=None,
-        rsi_threshold_aver_down=None,  
-        rsi_threshold_prof_take=None,
-        prof_take_tf_ha=None,
+        avdo_rsi_threshold=None,  
+        tp_rsi_threshold=None,
+        tp_tf_ha=None,
         side=None,
         posIdx=None,
         qty=None,
@@ -38,9 +38,9 @@ class TradingBot:
         self.api_secret = api_secret
         self.symbol = symbol
         self.rsi_tf_prof_take=rsi_tf_prof_take
-        self.rsi_threshold_aver_down = rsi_threshold_aver_down
-        self.rsi_threshold_prof_take = rsi_threshold_prof_take
-        self.prof_take_tf_ha = prof_take_tf_ha
+        self.avdo_rsi_threshold = avdo_rsi_threshold
+        self.tp_rsi_threshold = tp_rsi_threshold
+        self.tp_tf_ha = tp_tf_ha
         self.side = side
         self.posIdx = posIdx
         self.qty = qty
@@ -50,9 +50,6 @@ class TradingBot:
         self.order_prof_take_lim_filled = False
         self.offset_aver_down = None
         self.offset_prof_take = None
-        self.order_aver_down_extrem = None
-        self.order_id_aver_down_extrem = None
-        self.order_aver_down_extrem_filled = True
         self.order_prof_take_lim_saved = None
         self.config_tag = config_tag
         self.tf_avdo_mapping = tf_avdo_mapping
@@ -67,7 +64,7 @@ class TradingBot:
             bybit_driver=self.bybit_driver,
             logger=self.logger,
         )
-        self.ha_rev_prof_take.reset(tf=self.prof_take_tf_ha)
+        #self.ha_rev_prof_take.reset(tf=self.prof_take_tf_ha)
         
         self.ha_rev_aver_down = HARevers(
             symbol=self.symbol,
@@ -89,7 +86,7 @@ class TradingBot:
             bybit_driver=self.bybit_driver,
             logger=self.logger,
         )
-        self.rsi_check_prof_take.reset(tf=self.rsi_tf_prof_take, threshold=self.rsi_threshold_prof_take, side=self.inverse_side())
+        #self.rsi_check_prof_take.reset(tf=self.rsi_tf_prof_take, threshold=self.rsi_threshold_prof_take, side=self.inverse_side())
         
         self.price_check = PriceCheck(
             symbol=self.symbol,
@@ -150,8 +147,8 @@ class TradingBot:
             if HA_reversed:
                 self.logger.debug(f"")
                 self.logger.debug(f"check_averaging_down")
-                self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.avdo_tf_ha}")   
-                self.logger.debug(f"HA Rev Prof Take развернулся. TF={self.prof_take_tf_ha}")   
+                self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.ha_tf}")   
+                self.logger.debug(f"HA Rev Prof Take развернулся. TF={self.tp_tf_ha}")   
                 self.logger.debug(f"rsi_aver_down_snapped: {rsi_aver_down_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
                 self.logger.debug(f"Price condition: {self.price_check.price_cond}")
@@ -211,12 +208,12 @@ class TradingBot:
             if HA_reversed:
                 self.logger.debug(f"")
                 self.logger.debug(f"Checking profit taking.")
-                self.logger.debug(f"HA Prof Take развернулся. TF={self.prof_take_tf_ha}")   
+                self.logger.debug(f"HA Prof Take развернулся. TF={self.tp_tf_ha}")   
                 self.logger.debug(f"rsi_prof_take_snapped: {rsi_prof_take_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
                 self.logger.debug(f"Price condition: {self.price_check.price_cond}")
-                self.logger.debug(f"avdo_tf_rsi: {self.avdo_tf_rsi}")
-                self.logger.debug(f"avdo_tf_ha: {self.avdo_tf_ha}")
+                self.logger.debug(f"avdo_tf_rsi: {self.rsi_tf}")
+                self.logger.debug(f"avdo_tf_ha: {self.ha_tf}")
 
             # Проверяем выполнение всех условий
             if not (rsi_prof_take_snapped and HA_reversed and price_cond_filled):
@@ -242,11 +239,10 @@ class TradingBot:
             base_cond_price=None, 
             offset_aver_down=None, 
             offset_prof_take=None, 
-            order_aver_down_extrem=None,
             stack_second_last=None,
             order_stack_str=None,
-            avdo_rsi_tf=None,
-            avdo_ha_tf=None,
+            rsi_tf=None,
+            ha_tf=None,
             stack_size=None,
             stack_last=None
         ):
@@ -254,10 +250,9 @@ class TradingBot:
         self.offset_aver_down = offset_aver_down 
         self.offset_prof_take = offset_prof_take 
         self.order_stack_str = order_stack_str
-        self.order_aver_down_extrem = order_aver_down_extrem
         self.order_prof_take_lim_filled = False
-        self.avdo_tf_rsi = avdo_rsi_tf
-        self.avdo_tf_ha = avdo_ha_tf
+        self.rsi_tf = rsi_tf
+        self.ha_tf = ha_tf
         self.stack_size = stack_size
         
         if stack_second_last == None:
@@ -278,8 +273,10 @@ class TradingBot:
             self.logger.info(f"order_prof_take_lim установлен. {self.symbol} {res["side"]} " \
                              f"PosIdx={res["position_idx"]} Qty={res["qty"]} Price= {res["price"]}")
             
-        self.rsi_check_aver_down.reset(tf=self.avdo_tf_rsi, threshold=self.rsi_threshold_aver_down, side=self.side)
-        self.ha_rev_aver_down.reset(tf=self.avdo_tf_ha)
+        self.rsi_check_aver_down.reset(tf=self.rsi_tf, threshold=self.avdo_rsi_threshold, side=self.side)
+        self.rsi_check_prof_take.reset(tf=self.rsi_tf, threshold=self.tp_rsi_threshold, side=self.inverse_side())
+        self.ha_rev_aver_down.reset(tf=self.ha_tf)
+        self.ha_rev_prof_take.reset(tf=self.ha_tf)
 
         while True:
             if self.order_prof_take_lim_filled:
@@ -319,9 +316,9 @@ class TradingBot:
                 "Symbol": self.symbol,
                 "Stack": self.order_stack_str, 
                 "Stack size": self.stack_size,
-                "avdo_tf_rsi": self.avdo_tf_rsi,
-                "avdo_tf_ha": self.avdo_tf_ha,
-                "rsi_threshold_aver_down": self.rsi_threshold_aver_down,
+                "tf_rsi": self.rsi_tf,
+                "tf_ha": self.ha_tf,
+                "rsi_threshold_aver_down": self.avdo_rsi_threshold,
                 "avdo_tf_mapping": self.tf_avdo_mapping,
                 "buy_pos_size": buy_size,
                 "sell_pos_size": sell_size,
