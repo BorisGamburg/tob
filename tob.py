@@ -31,7 +31,6 @@ class TradeOverBot:
         self.side=None
         self.posIdx=None
         self.qty=None
-        self.qty1h70=None
         self.check_interval=None
         self.avdo_amount=None
         self.debug=False
@@ -144,7 +143,7 @@ class TradeOverBot:
                 )
 
     def handle_avdo(self, cur_price):
-        res = self.tb.bybit_driver.wait_chase_order(symbol=self.symbol, side=self.side)
+        res = self.tb.bybit_driver.wait_chase_order(symbol=self.symbol, side=self.side, qty=self.qty)
         if res == "NO_ORDERS":
             raise ValueError(f"{self.symbol} Нет лим ордеров для AvDo.")
             #self.tb.place_market_order(self.tb.side, self.tb.posIdx, self.qty)

@@ -455,7 +455,7 @@ class BybitDriver:
         return result if result is not None else []
 
 
-    def change_order_price(self, order, new_price):
+    def change_order_price(self, order, new_price, new_qty=None):
         """
         Изменяет цену существующего ордера.
         """
@@ -464,7 +464,8 @@ class BybitDriver:
                 category="linear",
                 symbol=order["symbol"],
                 orderId=order["orderId"],
-                price=str(new_price)
+                price=str(new_price),
+                qty=str(new_qty)
             )
             if response.get("retCode") != 0:
                 self.logger.error(f"Ошибка изменения ордера: {response.get('retMsg')}")
@@ -475,7 +476,7 @@ class BybitDriver:
         return result
     
     
-    def move_limit_order(self, symbol, side, new_price):
+    def move_limit_order(self, symbol, side, new_price, new_qty):
         """
         Ищет существующий лимитный ордер по символу и стороне и перемещает его на новую цену.
         """
@@ -496,7 +497,7 @@ class BybitDriver:
         self.logger.info(f"Найден ордер для перемещения: ID={order_id}, Текущая цена={current_price}, Новая цена={new_price}.")
         
         # Шаг 3: Перемещаем ордер, используя метод change_order_price
-        result = self.change_order_price(order_to_move, new_price)
+        result = self.change_order_price(order_to_move, new_price, new_qty=new_qty)
 
         if result.get("retCode") == 0:
             self.logger.info(f"✅ Ордер {order_id} успешно перемещен на цену {new_price}.")
@@ -506,7 +507,7 @@ class BybitDriver:
             raise Exception(f"Не удалось переместить ордер: {result.get('retMsg')}")
         
         
-    def wait_chase_order(self, symbol=None, side=None, poll_interval=5):
+    def wait_chase_order(self, symbol=None, side=None, poll_interval=5, qty=None):
         self.logger.info(f"Попытка выставить и отслеживать лимитный ордер {side} для {symbol}...")
         my_order_id = None
         my_order_price = None
@@ -541,7 +542,7 @@ class BybitDriver:
 
             if move_order:
                 # Вызываем функцию для перемещения ордера
-                move_result = self.move_limit_order(symbol=symbol, side=side, new_price=current_price)
+                move_result = self.move_limit_order(symbol=symbol, side=side, new_price=current_price, new_qty=qty)
                 if move_result.get("retCode") == "OK":
                     self.logger.info("✅ Ордер успешно перемещен.")
                     my_order_id = move_result.get("orderId")
