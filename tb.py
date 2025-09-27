@@ -22,7 +22,6 @@ class TradingBot:
         side=None,
         posIdx=None,
         qty=None,
-        qty1h70=None,
         check_interval=None,
         logger=None, 
         telegram=None,
@@ -44,7 +43,6 @@ class TradingBot:
         self.side = side
         self.posIdx = posIdx
         self.qty = qty
-        self.qty1h70 = qty1h70
         self.check_interval = check_interval
         self.order_prof_take_lim_id = None
         self.order_prof_take_lim_filled = False

@@ -114,7 +114,7 @@ if tokens:
             print(f"\r{i}", end="")        
         try:
             last_rsi = bybit_driver.calculate_last_rsi(token, interval="D")
-            if last_rsi > 45:
+            if last_rsi > 60:
                 min_size = get_min_size_in_usdt(token, category="linear")
                 if min_size < 0.1:
                     cur_price = bybit_driver.get_last_price(token)
