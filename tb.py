@@ -71,6 +71,12 @@ class TradingBot:
         )
         #self.ha_rev_aver_down.reset(tf=self.avdo_tf_ha)
 
+
+        self.rsi_check_avdo_trig = RSICheck(
+            symbol=self.symbol,
+            bybit_driver=self.bybit_driver,
+            logger=self.logger,
+        )
         
         self.rsi_check_aver_down = RSICheck(
             symbol=self.symbol,
@@ -98,14 +104,14 @@ class TradingBot:
         self.order_man = OrderManager(
             api_key=self.api_key, 
             api_secret=self.api_secret, 
-            bybit_driver=self.bybit_driver, 
-            callback_function=self.order_manag_callback,
+            callback_order=self.callback_order,
+            callback_tp=self.callback_tp,
             logger=self.logger
         )
         self.order_man.start()
 
 
-    def order_manag_callback(self, order):
+    def callback_order(self, order):
         if order.get("orderId") == self.order_prof_take_lim_id:
             # Запоминаем для вывода позже
             self.order_prof_take_lim_saved = order
@@ -113,6 +119,10 @@ class TradingBot:
             self.order_prof_take_lim_filled = True
             self.logger.debug(f"Исполнен order_prof_take_lim. {self.symbol} {order.get('side')} Qty:{order.get('qty')} " \
                      f"Price: {order.get('price')}")
+            
+    def callback_tp(self, order):
+        if order.get("symbol") == self.symbol:
+            raise Exception("TP сработал! Останавливаем бота.")
 
 
     def place_market_order(self, side, posIdx, qty):
@@ -145,7 +155,7 @@ class TradingBot:
             if HA_reversed:
                 self.logger.debug(f"")
                 self.logger.debug(f"check_averaging_down")
-                self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.ha_tf}")   
+                self.logger.debug(f"HA Rev Aver Down развернулся. TF={self.avdo_ha_tf}")   
                 self.logger.debug(f"HA Rev Prof Take развернулся. TF={self.tp_tf_ha}")   
                 self.logger.debug(f"rsi_aver_down_snapped: {rsi_aver_down_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
@@ -210,8 +220,8 @@ class TradingBot:
                 self.logger.debug(f"rsi_prof_take_snapped: {rsi_prof_take_snapped}")  
                 self.logger.debug(f"price_cond_filled: {price_cond_filled}")
                 self.logger.debug(f"Price condition: {self.price_check.price_cond}")
-                self.logger.debug(f"avdo_tf_rsi: {self.rsi_tf}")
-                self.logger.debug(f"avdo_tf_ha: {self.ha_tf}")
+                self.logger.debug(f"avdo_tf_rsi: {self.avdo_rsi_tf}")
+                self.logger.debug(f"avdo_tf_ha: {self.avdo_ha_tf}")
 
             # Проверяем выполнение всех условий
             if not (rsi_prof_take_snapped and HA_reversed and price_cond_filled):
@@ -239,8 +249,10 @@ class TradingBot:
             offset_prof_take=None, 
             stack_second_last=None,
             order_stack_str=None,
-            rsi_tf=None,
-            ha_tf=None,
+            avdo_rsi_tf=None,
+            avdo_ha_tf=None,
+            tp_rsi_tf=None,
+            tp_ha_tf=None,
             stack_size=None,
             stack_last=None
         ):
@@ -249,8 +261,10 @@ class TradingBot:
         self.offset_prof_take = offset_prof_take 
         self.order_stack_str = order_stack_str
         self.order_prof_take_lim_filled = False
-        self.rsi_tf = rsi_tf
-        self.ha_tf = ha_tf
+        self.avdo_rsi_tf = avdo_rsi_tf
+        self.avdo_ha_tf = avdo_ha_tf
+        self.tp_rsi_tf = tp_rsi_tf
+        self.tp_ha_tf = tp_ha_tf
         self.stack_size = stack_size
         
         if stack_second_last == None:
@@ -271,10 +285,10 @@ class TradingBot:
             self.logger.info(f"order_prof_take_lim установлен. {self.symbol} {res["side"]} " \
                              f"PosIdx={res["position_idx"]} Qty={res["qty"]} Price= {res["price"]}")
             
-        self.rsi_check_aver_down.reset(tf=self.rsi_tf, threshold=self.avdo_rsi_threshold, side=self.side)
-        self.rsi_check_prof_take.reset(tf=self.rsi_tf, threshold=self.tp_rsi_threshold, side=self.inverse_side())
-        self.ha_rev_aver_down.reset(tf=self.ha_tf)
-        self.ha_rev_prof_take.reset(tf=self.ha_tf)
+        self.rsi_check_aver_down.reset(tf=self.avdo_rsi_tf, threshold=self.avdo_rsi_threshold, side=self.side)
+        self.rsi_check_prof_take.reset(tf=self.tp_rsi_tf, threshold=self.tp_rsi_threshold, side=self.inverse_side())
+        self.ha_rev_aver_down.reset(tf=self.avdo_ha_tf)
+        self.ha_rev_prof_take.reset(tf=self.tp_ha_tf)
 
         while True:
             if self.order_prof_take_lim_filled:
@@ -314,8 +328,8 @@ class TradingBot:
                 "Symbol": self.symbol,
                 "Stack": self.order_stack_str, 
                 "Stack size": self.stack_size,
-                "tf_rsi": self.rsi_tf,
-                "tf_ha": self.ha_tf,
+                "tf_rsi": self.avdo_rsi_tf,
+                "tf_ha": self.avdo_ha_tf,
                 "rsi_threshold_aver_down": self.avdo_rsi_threshold,
                 "avdo_tf_mapping": self.tf_avdo_mapping,
                 "buy_pos_size": buy_size,

@@ -5,7 +5,12 @@ from bybit_driver import BybitDriver
 
 
 class OrderManager:
-    def __init__(self, api_key: str, api_secret: str, bybit_driver: BybitDriver, callback_function=None, logger=None):
+    def __init__(self, 
+                 api_key: str, 
+                 api_secret: str, 
+                 callback_tp=None, 
+                 callback_order=None, 
+                 logger=None):
         """
         Initializes the BybitOrderTracker.
 
@@ -16,8 +21,8 @@ class OrderManager:
         """
         self.api_key = api_key
         self.api_secret = api_secret
-        self.bybit_driver = bybit_driver 
-        self.callback_func = callback_function
+        self.callback_tp = callback_tp
+        self.callback_order = callback_order
         self.logger = logger 
 
         self.ws = None
@@ -35,13 +40,21 @@ class OrderManager:
             if "topic" in message and message["topic"] == "order":
                 for order in message["data"]:
                     if order.get("orderStatus") == "Filled":
-                        if self.callback_func:
-                            self.callback_func(order)
+                        # проверяем, что это TP
+                        if order.get("stopOrderType") == "TakeProfit":
+                            self.logger.debug(f"✅ TP сработал! Ордер: {order['orderId']}")
+                            if self.callback_tp:
+                                self.callback_tp(order)
+                        else:
+                            self.logger.debug(f"Исполнен ордер: {order['orderId']}, тип: {order.get('stopOrderType')}")
+                            if self.callback_order:
+                                self.callback_order(order)
             else:
-                self.logger.info(f"Получено сообщение: {message}")
+                self.logger.debug(f"Получено сообщение: {message}")
 
         except Exception as e:
             self.logger.error(f"Ошибка при обработке сообщения: {e}")
+
 
 
     def start(self):

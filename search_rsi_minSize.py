@@ -106,17 +106,22 @@ tokens = get_perpetual_tokens()
 
 # Вывод списка токенов
 if tokens:
-    print("Список символов:")
+    rsi_interval = "D"
+    rsi_threshold = 30
+    min_size_threshold = 0.1
+    print(f"rsi_interval={rsi_interval}")
+    print(f"rsi_threshold={rsi_threshold}")
+    print(f"min_size_threshold={min_size_threshold}")
     i = 0
     for token in tokens:
         i += 1
         if i % 10 == 0:
             print(f"\r{i}", end="")        
         try:
-            last_rsi = bybit_driver.calculate_last_rsi(token, interval="D")
-            if last_rsi > 60:
+            last_rsi = bybit_driver.calculate_last_rsi(token, interval=rsi_interval)
+            if last_rsi < rsi_threshold:
                 min_size = get_min_size_in_usdt(token, category="linear")
-                if min_size < 0.1:
+                if min_size < min_size_threshold:
                     cur_price = bybit_driver.get_last_price(token)
                     print(f"\r{token} - RSI: {last_rsi}, Price={cur_price}")
                     print(f"Минимальный размер контракта в USDT для {token}: {min_size}\n")

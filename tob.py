@@ -22,12 +22,12 @@ class TradeOverBot:
         self.order_stack_str = None
         self.avdo_offset=None
         self.tp_offset=None
-        self.rsi_tf=None
+        self.avdo_tf_rsi=None
         self.rsi_tf_prof_take=None
         self.rsi_threshold_aver_down=None
         self.rsi_threshold_prof_take=None
         self.ha_tf_prof_take=None
-        self.ha_tf=None
+        self.avdo_tf_ha=None
         self.side=None
         self.posIdx=None
         self.qty=None
@@ -52,13 +52,36 @@ class TradeOverBot:
             self.logger.debug("Debug mode is ON")
 
         # Преобразуем tf_aver_down_mapping в словарь
-        self.tf_avdo_map_dict = {
-            int(parts[0].strip()): {
-                "tf_rsi": int(parts[1].strip()),
-                "tf_ha": int(parts[2].strip())
+        self.tf_avdo_map_dict = {}  # создаём пустой словарь
+
+        for pair in self.tf_avdo_mapping.split(','):
+            parts = pair.split(':')           # разбиваем, например "0:15:60" → ["0", "15", "60"]
+
+            key = int(parts[0].strip())       # ключ верхнего уровня, например 0
+            avdo_tf_rsi = int(parts[1].strip())    #
+            avdo_tf_ha = int(parts[2].strip())     # 
+            tp_tf_rsi_ = int(parts[3].strip())     # 
+            tp_tf_ha = int(parts[4].strip())     # 
+
+            # формируем вложенный словарь
+            self.tf_avdo_map_dict[key] = {
+                "avdo_tf_rsi": avdo_tf_rsi,
+                "avdo_tf_ha": avdo_tf_ha,
+                "tp_tf_rsi": tp_tf_rsi_,
+                "tp_tf_ha": tp_tf_ha
             }
-            for parts in (pair.split(':') for pair in self.tf_avdo_mapping.split(','))
-}    
+
+
+        # self.tf_avdo_map_dict = {
+        #     int(parts[0].strip()): {
+        #         "avdo_tf_rsi": int(parts[1].strip()),
+        #         "avdo_tf_ha": int(parts[2].strip())
+        #     }
+        #     for parts in (pair.split(':') for pair in self.tf_avdo_mapping.split(','))
+
+        # }    
+
+        # Инициализируем стек
         self.order_stack = Stack()
         self.order_stack.from_string(self.order_stack_str)
 
@@ -77,7 +100,7 @@ class TradeOverBot:
             logger=self.logger,
             telegram=self.telegram,
             config_tag=config_tag,
-            tf_avdo_mapping=self.tf_avdo_mapping
+            tf_avdo_mapping=self.tf_avdo_mapping,
         )
 
         self.log_parameters()
@@ -106,8 +129,10 @@ class TradeOverBot:
                     self.tp_offset, 
                     self.order_stack.peek_second_last(),
                     self.order_stack.to_string(),
-                    self.rsi_tf,
-                    self.ha_tf,
+                    self.avdo_tf_rsi,
+                    self.avdo_tf_ha,
+                    self.tp_tf_rsi,
+                    self.tp_tf_ha,
                     self.order_stack.size(),
                     self.order_stack.peek()
                 )
@@ -124,10 +149,12 @@ class TradeOverBot:
                 self.handle_prof_take_lim()
             else:
                 raise ValueError(f"Unknown result from trading bot: {res}")
+
+            # Приверяем сколько осталось AvDo лим ордеров
             
             i += 1
             self.logger.debug(f"beg_stack_size={beg_stack_size}, avdo_amount={self.avdo_amount}, cur_stack_size={len(self.order_stack.items)}")
-            if self.avdo_amount < len(self.order_stack.items):
+            if self.avdo_amount <= len(self.order_stack.items):
                 self.log("Все итерации выполнены.")
                 break
 
@@ -183,15 +210,15 @@ class TradeOverBot:
 
         # Получаем таймфрейм из словаря, используя значение по умолчанию, если ключа нет
         #tf = self.tf_avdo_map_dict.get(stack_size, self.tf_avdo_default)
-        cfg = self.tf_avdo_map_dict.get(stack_size, {"tf_rsi": self.tf_avdo_default, "tf_ha": self.tf_avdo_default})
-        tf_rsi = cfg["tf_rsi"]
-        tf_ha = cfg["tf_ha"]
+        cfg = self.tf_avdo_map_dict.get(stack_size, {"avdo_tf_rsi": self.tf_avdo_default, "avdo_tf_ha": self.tf_avdo_default})
+        self.avdo_tf_rsi = cfg["avdo_tf_rsi"]
+        self.avdo_tf_ha = cfg["avdo_tf_ha"]
+        self.tp_tf_rsi = cfg["tp_tf_rsi"]
+        self.tp_tf_ha = cfg["tp_tf_ha"]
 
-
-        self.rsi_tf = tf_rsi
-        self.ha_tf = tf_ha
-
-        self.logger.info(f"Таймфреймы для AvDo и TP: rsi_tf={self.rsi_tf}, ha_tf={self.ha_tf}")            
+        self.logger.info(f"Таймфреймы для AvDo и TP: rsi_tf=" \
+                         f"avdo_tf_rsi={self.avdo_tf_rsi}, avdo_tf_ha={self.avdo_tf_ha}, " \
+                        f"tp_tf_rsi={self.tp_tf_rsi}, tp_tf_ha={self.tp_tf_ha}")            
 
     def get_side_factor(self):
         if self.tb.side == "Sell":
