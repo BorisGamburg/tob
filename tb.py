@@ -5,6 +5,7 @@ from price_check import PriceCheck
 from bybit_driver import BybitDriver
 from order_manag import OrderManager
 import json
+from hedge import check_hedge
 
 
 class TradingBot:
@@ -26,7 +27,10 @@ class TradingBot:
         logger=None, 
         telegram=None,
         config_tag=None,
-        tf_avdo_mapping=None
+        tf_avdo_mapping=None,
+        hegde_loss_ratio=None,
+        hedge_order_size=None,
+        hedge_sl_ratio=None
     ):
         """Initialize the trading bot with configuration and dependencies."""
 
@@ -52,6 +56,9 @@ class TradingBot:
         self.config_tag = config_tag
         self.tf_avdo_mapping = tf_avdo_mapping
         self.stack_size = None
+        self.hedge_loss_ratio=hegde_loss_ratio
+        self.hedge_order_size=hedge_order_size
+        self.hedge_sl_ratio=hedge_sl_ratio
 
         # Create an instance of the BybitDriver
         self.bybit_driver = BybitDriver(api_key=self.api_key, api_secret=self.api_secret, logger=self.logger, telegram=self.telegram)
@@ -291,10 +298,21 @@ class TradingBot:
         self.ha_rev_prof_take.reset(tf=self.tp_ha_tf)
 
         while True:
+            exclude_ids = [self.order_prof_take_lim_id] if self.order_prof_take_lim_id else []
+            hedge_res = check_hedge(
+                symbol=self.symbol,
+                hedge_loss_ratio=self.hedge_loss_ratio,
+                hedge_order_size=self.hedge_order_size,
+                hedge_sl_ratio=self.hedge_sl_ratio,
+                exclude_ids=exclude_ids,
+                bybit_driver=self.bybit_driver,
+                logger=self.logger
+            )
+            
+
             if self.order_prof_take_lim_filled:
                 res = "profit_take_lim"
                 break
-
 
             # Получаем реверс сигнал. Можно только один раз за цикл
             self.ha_rev_prof_take._check_HA_revers()            

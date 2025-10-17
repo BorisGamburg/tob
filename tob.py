@@ -5,6 +5,7 @@ import argparse
 from stack import Stack
 from telegram import Telegram
 import sys
+from KS.keys import API_KEY, DB_PASSWORD
 
 # Настройка логирования
 logging.getLogger('pybit').setLevel(logging.WARNING)
@@ -12,7 +13,6 @@ logging.getLogger('websocket').setLevel(logging.WARNING)
 logging.getLogger('requests').setLevel(logging.WARNING)
 logging.getLogger('urllib3').setLevel(logging.WARNING)
 
-# Функция для запуска Flask-сервера
 class TradeOverBot:
     def __init__(self, config_tag=None, logger=None, telegram=None):
         self.api_key = None
@@ -37,6 +37,9 @@ class TradeOverBot:
         self.tf_avdo_mapping = None
         self.tf_avdo_default = None
         self.tf_avdo_map_dict = None
+        self.hedge_loss_ratio=None
+        self.hedge_order_size=None  
+        self.hedge_sl_ratio=None
 
         self.logger = logger
         self.telegram = telegram
@@ -47,6 +50,8 @@ class TradeOverBot:
             logger=self.logger
         )
         self.config_manager.load_config_to_instance()
+        self.api_key = API_KEY
+        self.api_secret = DB_PASSWORD
         if self.debug:
             self.logger.setLevel(logging.DEBUG)
             self.logger.debug("Debug mode is ON")
@@ -71,16 +76,6 @@ class TradeOverBot:
                 "tp_tf_ha": tp_tf_ha
             }
 
-
-        # self.tf_avdo_map_dict = {
-        #     int(parts[0].strip()): {
-        #         "avdo_tf_rsi": int(parts[1].strip()),
-        #         "avdo_tf_ha": int(parts[2].strip())
-        #     }
-        #     for parts in (pair.split(':') for pair in self.tf_avdo_mapping.split(','))
-
-        # }    
-
         # Инициализируем стек
         self.order_stack = Stack()
         self.order_stack.from_string(self.order_stack_str)
@@ -101,6 +96,9 @@ class TradeOverBot:
             telegram=self.telegram,
             config_tag=config_tag,
             tf_avdo_mapping=self.tf_avdo_mapping,
+            hegde_loss_ratio=self.hedge_loss_ratio,
+            hedge_order_size=self.hedge_order_size,
+            hedge_sl_ratio=self.hedge_sl_ratio
         )
 
         self.log_parameters()
@@ -170,7 +168,13 @@ class TradeOverBot:
                 )
 
     def handle_avdo(self, cur_price):
-        res = self.tb.bybit_driver.wait_chase_order(symbol=self.symbol, side=self.side, qty=self.qty)
+        res = self.tb.bybit_driver.wait_chase_order(
+            symbol=self.symbol, 
+            side=self.side, 
+            qty=self.qty,
+            sl_ratio=None,
+            exclude_ids=[]
+        )
         if res == "NO_ORDERS":
             raise ValueError(f"{self.symbol} Нет лим ордеров для AvDo.")
             #self.tb.place_market_order(self.tb.side, self.tb.posIdx, self.qty)

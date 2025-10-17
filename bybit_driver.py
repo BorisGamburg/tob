@@ -8,6 +8,8 @@ from ta.volatility import BollingerBands
 from pybit.exceptions import InvalidRequestError
 from ta.trend import ADXIndicator
 import ta
+import json
+from pprint import pprint
 
 class BybitDriver:
     def __init__(self, api_key, api_secret, logger, telegram, timeout=20):
@@ -56,8 +58,13 @@ class BybitDriver:
                 
                 sleep(self.retry_delay)
                 
+    def get_balance(self):
+        def call():
+            balances = self.http_client.get_wallet_balance(accountType="UNIFIED", coin="USDT",)  
+            #return balances
+            return float(balances['result']['list'][0]['coin'][0]['walletBalance'])
+        return self.retry_api_call(call)
     
-
     def get_last_price(self, symbol):
         """Получает последнюю цену тикера."""
         def call():
@@ -118,7 +125,8 @@ class BybitDriver:
     def get_active_orders(self, symbol):
         """Получает список активных ордеров."""
         def call():
-            response = self.http_client.get_open_orders(category="linear", symbol=symbol)
+            response = self.http_client.get_open_orders(category="linear", symbol=symbol, limit=50)
+            #pprint(json.dumps(response, indent=4))            
             if response["retCode"] != 0:
                 self.logger.error(f"Ошибка получения активных ордеров: {response['retMsg']}")
                 return None
@@ -128,7 +136,9 @@ class BybitDriver:
                     "order_id": order["orderId"],
                     "price": float(order["price"]),
                     "side": order["side"],
-                    "qty": float(order["qty"])
+                    "qty": float(order["qty"]),
+                    "orderType": order["orderType"],
+                    "stopOrderType": order.get("stopOrderType", None)
                 })
             return active_orders
         result = self.retry_api_call(call)
@@ -154,34 +164,6 @@ class BybitDriver:
         return df["close"]
     
 
-
-    def get_close_prices_old(self, symbol=None, interval="15", limit=100):
-        """Получает цены закрытия для расчёта индикаторов."""
-        def call():
-            url = "https://api.bybit.com/v5/market/kline"
-            params = {
-                "category": "linear",
-                "symbol": symbol,
-                "interval": str(interval),  # Преобразуем в строку для API
-                "limit": limit
-            }
-            response = requests.get(url, params=params, timeout=self.timeout)
-            data = response.json()
-            if data["retCode"] != 0:
-                self.logger.error(f"Ошибка получения свечей: {data['retMsg']}")
-                return None
-            if not data["result"]["list"]:
-                self.logger.warning("Нет данных в ответе от API")
-                return pd.Series()
-            df = pd.DataFrame(data["result"]["list"], columns=["timestamp", "open", "high", "low", "close", "volume", "turnover"])
-            df["timestamp"] = pd.to_datetime(df["timestamp"].astype(int), unit="ms")
-            df["close"] = df["close"].astype(float)
-            df = df.sort_values(by="timestamp", ascending=True)
-            self.logger.debug(f"Получено свеч: {len(df)}, последние 5: {df[['timestamp', 'close']].tail(5).to_dict('records')}")
-            return df["close"]
-        result = self.retry_api_call(call)
-        return result if result is not None else pd.Series()
-    
 
     def _calculate_atr(self, window=14, interval=5):
         """Рассчитывает ATR."""
@@ -374,7 +356,7 @@ class BybitDriver:
             
             # Проверяем успешность запроса
             if response['retCode'] != 0:
-                print(f"Ошибка API: {response['retMsg']}")
+                self.logger.error(f"Ошибка API: {response['retMsg']}")
                 return None
             
             # Извлекаем данные
@@ -454,19 +436,36 @@ class BybitDriver:
         result = self.retry_api_call(call)
         return result if result is not None else []
 
-
-    def change_order_price(self, order, new_price, new_qty=None):
+    def change_order_price(self, order, new_price, new_qty=None, sl_ratio=None):
         """
         Изменяет цену существующего ордера.
         """
         def call():
-            response = self.http_client.amend_order(
-                category="linear",
-                symbol=order["symbol"],
-                orderId=order["orderId"],
-                price=str(new_price),
-                qty=str(new_qty)
-            )
+            params = {
+                "category": "linear",
+                "symbol": order["symbol"],
+                "orderId": order["orderId"],
+                "price": str(new_price),
+                "qty": str(new_qty)
+            }
+
+            # --- вычисляем стоп-лосс ---
+            if sl_ratio is not None:
+                side = order.get("side")
+                if side == "Buy":
+                    sl_price = new_price * (1 - sl_ratio)
+                elif side == "Sell":
+                    sl_price = new_price * (1 + sl_ratio)
+                else:
+                    sl_price = None
+
+                if sl_price:
+                    params["stopLoss"] = str(sl_price)
+                    params["slTriggerBy"] = "LastPrice"
+                    params["tpslMode"] = "Partial"  # 👈 стоп-лосс только для этого ордера
+
+            response = self.http_client.amend_order(**params)
+
             if response.get("retCode") != 0:
                 self.logger.error(f"Ошибка изменения ордера: {response.get('retMsg')}")
                 return None
@@ -476,7 +475,7 @@ class BybitDriver:
         return result
     
     
-    def move_limit_order(self, symbol, side, new_price, new_qty):
+    def move_limit_order(self, symbol, side, new_price, new_qty, sl_ratio=None, exclude_ids=[]):
         """
         Ищет существующий лимитный ордер по символу и стороне и перемещает его на новую цену.
         """
@@ -489,15 +488,24 @@ class BybitDriver:
             self.logger.warning(f"Нет открытых лимитных ордеров {side} для {symbol}.")
             return {"retCode": "NO_ORDERS"} 
 
-        # Шаг 2: Выбираем первый найденный ордер
-        order_to_move = open_limit_orders[0]
-        order_id = order_to_move["orderId"]
-        current_price = order_to_move["price"]
+        # Шаг 2: Ищем первый подходящий ордер, исключая определенные ID
+        order_to_move = next(
+            (order for order in open_limit_orders if order["orderId"] not in exclude_ids),
+            None  # если ничего не найдено
+        )
+
+        if order_to_move:
+            order_id = order_to_move["orderId"]
+            current_price = order_to_move["price"]
+        else:
+            self.logger.warning(f"Нет лимитных ордеров {side} для {symbol}.")
+            return {"retCode": "NO_ORDERS"} 
+
 
         self.logger.info(f"Найден ордер для перемещения: ID={order_id}, Текущая цена={current_price}, Новая цена={new_price}.")
         
         # Шаг 3: Перемещаем ордер, используя метод change_order_price
-        result = self.change_order_price(order_to_move, new_price, new_qty=new_qty)
+        result = self.change_order_price(order_to_move, new_price, new_qty=new_qty, sl_ratio=sl_ratio)
 
         if result.get("retCode") == 0:
             self.logger.info(f"✅ Ордер {order_id} успешно перемещен на цену {new_price}.")
@@ -507,7 +515,7 @@ class BybitDriver:
             raise Exception(f"Не удалось переместить ордер: {result.get('retMsg')}")
         
         
-    def wait_chase_order(self, symbol=None, side=None, poll_interval=5, qty=None):
+    def wait_chase_order(self, symbol=None, side=None, poll_interval=5, qty=None, sl_ratio=None, exclude_ids=[]):
         self.logger.info(f"Попытка выставить и отслеживать лимитный ордер {side} для {symbol}...")
         my_order_id = None
         my_order_price = None
@@ -542,7 +550,14 @@ class BybitDriver:
 
             if move_order:
                 # Вызываем функцию для перемещения ордера
-                move_result = self.move_limit_order(symbol=symbol, side=side, new_price=current_price, new_qty=qty)
+                move_result = self.move_limit_order(
+                    symbol=symbol, 
+                    side=side, 
+                    new_price=current_price, 
+                    new_qty=qty,
+                    sl_ratio=sl_ratio,
+                    exclude_ids=exclude_ids
+                )
                 if move_result.get("retCode") == "OK":
                     self.logger.info("✅ Ордер успешно перемещен.")
                     my_order_id = move_result.get("orderId")

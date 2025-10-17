@@ -107,8 +107,10 @@ tokens = get_perpetual_tokens()
 # Вывод списка токенов
 if tokens:
     rsi_interval = "D"
-    rsi_threshold = 30
-    min_size_threshold = 0.1
+    rsi_threshold = 50
+    min_size_threshold = 0.01
+    side = "Buy"
+    print("side=", side)
     print(f"rsi_interval={rsi_interval}")
     print(f"rsi_threshold={rsi_threshold}")
     print(f"min_size_threshold={min_size_threshold}")
@@ -119,7 +121,10 @@ if tokens:
             print(f"\r{i}", end="")        
         try:
             last_rsi = bybit_driver.calculate_last_rsi(token, interval=rsi_interval)
-            if last_rsi < rsi_threshold:
+            condition = (
+                last_rsi < rsi_threshold if side == "Buy" else last_rsi > rsi_threshold
+            )
+            if condition:
                 min_size = get_min_size_in_usdt(token, category="linear")
                 if min_size < min_size_threshold:
                     cur_price = bybit_driver.get_last_price(token)
